@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>吉田法務事務所｜大阪市北区の司法書士・行政書士</title>
+<meta name="description" content="大阪市北区曽根崎の司法書士・行政書士事務所。不動産登記、相続、会社設立、遺言、債務整理、許認可申請などのご相談を承ります。初回相談無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1f4f3c;      /* 名刺の楕円・枠・罫線の深緑 */
+  --green-pale:#eef3f0;
+  --ink:#26302b;
+  --muted:#55615a;
+  --orange:#c9541c;     /* 名刺のメールアドレスの色 */
+  --line-green:#06c755;
+  --paper:#fff;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
+  --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans CJK JP",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.85 var(--gothic);padding-bottom:76px;overflow-wrap:anywhere}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* 名刺の上段：楕円＋事務所名 */
+.card-head{display:flex;align-items:center;gap:14px;padding:22px 0 18px}
+.seal{flex:none;display:grid;place-items:center;width:84px;height:52px;border-radius:50%;background:var(--green);color:#fff;font:700 15px/1.15 var(--mincho);letter-spacing:.14em;text-align:center;padding-left:.14em}
+.name{font:700 clamp(23px,6.6vw,38px)/1.25 var(--mincho);letter-spacing:.08em}
+.subname{font-size:13px;color:var(--muted);letter-spacing:.04em;line-height:1.5}
+/* 名刺の中央の線 */
+.rule{height:2px;background:var(--green);border:0;margin:0}
+
+.hero{display:grid;gap:24px;padding:30px 0 40px}
+.hero h1{font:700 clamp(21px,6vw,34px)/1.65 var(--mincho);letter-spacing:.03em}
+.hero h1 span{display:block}
+.person{display:flex;align-items:center;gap:16px}
+.person img{width:124px;height:auto;display:block;border:2px solid var(--green);border-radius:12px}
+.person .title{font-size:14px;color:var(--muted)}
+.person .pname{font:700 26px/1.4 var(--mincho);letter-spacing:.22em}
+.person .free{margin-top:6px;font-size:15px;font-weight:700;color:var(--green)}
+
+.contact{display:grid;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;text-align:center;line-height:1.4}
+.btn-tel{background:var(--green);color:#fff;font:700 27px/1.2 var(--mincho);letter-spacing:.04em;flex-direction:column}
+.btn-tel small{font:500 12.5px/1.5 var(--gothic);letter-spacing:.02em}
+.btn-line{background:var(--line-green);color:#04331a}
+.btn-line.pending{opacity:.55}
+.btn-mail{border:2px solid var(--orange);color:var(--orange);font-size:15px}
+
+/* 名刺の左下の枠 */
+.frame{border:2px solid var(--green);border-radius:12px}
+.jump{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-bottom:44px}
+.jump a{display:block;padding:12px 14px;text-decoration:none;font-weight:700;color:var(--green);line-height:1.5}
+.jump small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+
+section{padding-bottom:56px}
+.sec-title{font:700 clamp(23px,6vw,30px)/1.45 var(--mincho);letter-spacing:.06em;padding-bottom:10px;border-bottom:2px solid var(--green);margin-bottom:14px}
+.note{font-size:13.5px;line-height:1.75;color:var(--muted);margin-bottom:20px}
+.svc-grid{display:grid;gap:16px;align-items:start}
+
+.svc{padding:18px 18px 8px}
+.svc h3{font:700 21px/1.5 var(--mincho);color:var(--green);letter-spacing:.04em}
+.svc .lead{margin-top:4px}
+.prices{margin-top:12px;border-top:1px solid #cfdad4}
+.prices div{padding:9px 0;border-bottom:1px solid #cfdad4;line-height:1.55}
+.prices dt{font-size:14.5px}
+.prices dd{font:700 20px/1.4 var(--mincho);color:var(--ink);letter-spacing:.02em}
+.price-text{margin-top:12px;font-weight:700}
+details{margin-top:8px}
+summary{cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--green);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";font-size:20px}
+details[open] summary::after{content:"－"}
+.detail h4{margin:12px 0 2px;font-size:15px;color:var(--green)}
+.detail ul{padding-left:1.2em;font-size:15px;line-height:1.75}
+.detail .small{margin:12px 0 10px;font-size:13.5px;line-height:1.75;color:var(--muted)}
+
+.flow{list-style:none;display:grid;gap:0}
+.flow li{display:grid;grid-template-columns:44px 1fr;gap:14px;padding-bottom:20px;position:relative}
+.flow li:not(:last-child)::before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--green)}
+.flow .num{width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font:700 20px var(--mincho)}
+.flow strong{display:block;font:700 18px/1.5 var(--mincho)}
+.flow span.t{font-size:15px;color:var(--muted)}
+
+.office{display:grid;gap:0}
+.office div{display:grid;grid-template-columns:5.5em 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #cfdad4;line-height:1.65}
+.office dt{color:var(--muted);font-size:14.5px}
+.office a.mail{color:var(--orange)}
+footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var(--muted);text-align:center;line-height:1.7}
+
+/* スマホ下部の連絡ボタン */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:3fr 2fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--green)}
+.bar a{min-height:50px;display:flex;align-items:center;justify-content:center;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px}
+.bar .t{background:var(--green);color:#fff}
+.bar .m{border:2px solid var(--orange);color:var(--orange)}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .card-head{gap:20px;padding:30px 0 22px}
+  .seal{width:112px;height:68px;font-size:20px}
+  .hero{grid-template-columns:1.25fr 1fr;align-items:center;gap:32px 48px;padding:48px 0 52px}
+  .hero h1,.person{grid-column:1}
+  .contact{grid-column:2;grid-row:1 / span 2}
+  .person img{width:150px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .jump{gap:16px}
+  .flow{grid-template-columns:repeat(5,1fr);gap:14px}
+  .flow li{grid-template-columns:1fr;gap:8px}
+  .flow li:not(:last-child)::before{left:44px;right:-14px;top:21px;bottom:auto;width:auto;height:2px}
+  .office div{grid-template-columns:8em 1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="card-head">
+    <div class="seal" aria-hidden="true">司法<br>書士</div>
+    <div>
+      <div class="name">吉田法務事務所</div>
+      <div class="subname">リーガル行政書士事務所</div>
+    </div>
+  </header>
+</div>
+<hr class="rule">
+
+<main class="wrap">
+  <div class="hero">
+    <h1><span>「あのときしておいて</span><span>よかった」と、いつかきっと</span><span>思う日が来ます。</span><span>まずはお気軽に</span><span>ご相談ください。</span></h1>
+    <div class="person">
+      <img src="assets/yoshida.jpg" width="193" height="170" alt="吉田隆治の似顔絵イラスト">
+      <div>
+        <div class="title">司法書士・行政書士</div>
+        <div class="pname">吉田 隆治</div>
+        <div class="free">初回相談無料</div>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <a class="btn btn-tel" href="tel:0663667910">06-6366-7910<small>平日 9:00〜18:00（土日祝は要予約）</small></a>
+      <span class="btn btn-line pending" aria-disabled="true">LINEで相談する（リンク準備中）</span>
+      <a class="btn btn-mail" href="mailto:yoshidahoumujimusho@gmail.com">メールで相談する</a>
+    </div>
+  </div>
+
+  <nav class="jump" aria-label="サービスの種類">
+    <a class="frame" href="#shihou">司法書士のサービス<small>登記・相続・遺言・債務整理</small></a>
+    <a class="frame" href="#gyousei">行政書士のサービス<small>許認可・契約書・在留資格</small></a>
+  </nav>
+
+  <section id="shihou">
+    <h2 class="sec-title">司法書士のサービス</h2>
+    <p class="note">※表示の料金はすべて報酬のみです。公的書類の収集等にかかる郵送費・交通費・手数料、登記費用（登録免許税など）、定款認証等の公証役場への費用などは別にかかります。内容により変わりますので、初回相談でお見積りします。</p>
+    <div class="svc-grid">
+
+      <article class="svc frame">
+        <h3>不動産登記</h3>
+        <p class="lead">売買・相続・贈与に伴う名義変更、抵当権の抹消など。</p>
+        <dl class="prices">
+          <div><dt>売買の所有権移転登記（立会込み）売主側</dt><dd>40,000円〜</dd></div>
+          <div><dt>売買の所有権移転登記（立会込み）買主側</dt><dd>60,000円〜</dd></div>
+          <div><dt>抵当権抹消登記</dt><dd>20,000円〜</dd></div>
+        </dl>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>不動産を購入・売却した</li><li>親から家や土地をもらう</li><li>住宅ローンを完済した</li><li>離婚で名義を変えたい</li></ul>
+          <h4>主な手続き</h4><ul><li>売買・贈与・財産分与による所有権移転登記</li><li>住宅ローン完済後の抵当権抹消登記</li><li>住所・氏名の変更登記</li></ul>
+          <h4>必要書類の例</h4><ul><li>登記識別情報（権利証）</li><li>印鑑証明書・本人確認書類</li><li>固定資産評価証明書</li></ul>
+          <p class="small">※内容により異なります。詳しくはご相談ください。</p>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>商業・法人登記</h3>
+        <p class="lead">会社設立、役員変更、本店移転などの登記。</p>
+        <dl class="prices">
+          <div><dt>株式会社の設立（報酬）</dt><dd>80,000円〜</dd></div>
+          <div><dt>合同会社の設立（報酬）</dt><dd>60,000円〜</dd></div>
+        </dl>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>会社を作りたい</li><li>役員が変わった・任期が来た</li><li>本店を移転する、社名を変える</li></ul>
+          <h4>主な手続き</h4><ul><li>株式会社・合同会社の設立登記</li><li>役員変更登記</li><li>本店移転・商号変更・目的変更の登記</li><li>解散・清算の登記</li></ul>
+          <h4>必要書類の例</h4><ul><li>定款の内容、役員の就任承諾書</li><li>役員の印鑑証明書</li><li>資本金の払込みを証する書面</li></ul>
+          <p class="small">※会社の状況により異なります。</p>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>相続手続き</h3>
+        <p class="lead">相続登記、戸籍収集、遺産整理までサポート。</p>
+        <dl class="prices">
+          <div><dt>相続登記（公的書類の収集作業報酬を含む）</dt><dd>75,000円</dd></div>
+        </dl>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>親が亡くなり、不動産の名義を変えたい</li><li>何から始めればよいかわからない</li><li>相続登記の期限が心配</li></ul>
+          <p class="small">相続登記は2024年4月から義務化され、不動産を相続したことを知った日から3年以内の申請が必要です。</p>
+          <h4>主な手続き</h4><ul><li>戸籍の収集・相続人の調査</li><li>遺産分割協議書の作成</li><li>相続登記の申請</li><li>預貯金などの遺産整理</li></ul>
+          <h4>必要書類の例</h4><ul><li>亡くなった方の出生から死亡までの戸籍</li><li>相続人の戸籍・住民票</li><li>固定資産評価証明書</li></ul>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>遺言</h3>
+        <p class="lead">将来に備えた遺言書作成のご相談。</p>
+        <dl class="prices">
+          <div><dt>自筆証書遺言の作成支援・原案作成</dt><dd>50,000円〜</dd></div>
+          <div><dt>公正証書遺言の作成サポート</dt><dd>80,000円〜</dd></div>
+          <div><dt>法務局での自筆証書遺言保管制度の申請サポート</dt><dd>40,000円〜</dd></div>
+        </dl>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>遺言を残したい</li><li>認知症になる前に備えたい</li></ul>
+          <h4>主な手続き</h4><ul><li>自筆証書遺言・公正証書遺言の作成サポート</li><li>法務局での自筆証書遺言保管制度の申請サポート</li></ul>
+          <h4>必要書類の例</h4><ul><li>戸籍、不動産の登記情報</li><li>財産の一覧（預貯金・不動産など）</li></ul>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>債務整理</h3>
+        <p class="lead">任意整理・自己破産・個人再生・過払い金請求。借金のお悩みをご相談ください。</p>
+        <p class="price-text">債務整理は、債務額により費用が大きく変わります。</p>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>返済が苦しい</li><li>督促の連絡が来ている</li><li>以前、高い金利で借りていた</li></ul>
+          <h4>主な手続き</h4><ul><li>任意整理：債権者と交渉し、返済条件の見直しを目指します</li><li>個人再生：裁判所の手続きで借金の減額を目指します</li><li>自己破産：裁判所の手続きで免責を目指します</li><li>過払い金返還請求</li></ul>
+          <h4>必要書類の例</h4><ul><li>借入先と金額のわかる資料</li><li>取引明細・請求書</li><li>収入のわかる資料（給与明細など）</li></ul>
+          <p class="small">※個人再生・自己破産は、裁判所に提出する書類の作成をサポートします。債権者1社あたりの額が140万円を超える交渉・訴訟の代理は司法書士にはできないため、その場合は弁護士へのご相談をご案内します。</p>
+        </div></details>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="gyousei">
+    <h2 class="sec-title">行政書士のサービス</h2>
+    <p class="note">※表示の料金はすべて報酬のみです。公的書類の収集等にかかる郵送費・交通費・手数料、官公署（都道府県・保健所・警察署など）へ納める申請手数料・証紙代などは別にかかります。内容により変わりますので、初回相談でお見積りします。</p>
+    <div class="svc-grid">
+
+      <article class="svc frame">
+        <h3>許認可申請</h3>
+        <p class="lead">建設業・飲食業などの許認可を代行。</p>
+        <dl class="prices">
+          <div><dt>建設業許可（知事・新規）</dt><dd>130,000円〜</dd></div>
+          <div><dt>飲食店営業許可</dt><dd>40,000円〜</dd></div>
+          <div><dt>風俗営業許可（風営法）</dt><dd>160,000円〜</dd></div>
+          <div><dt>宅建業免許（知事・新規）</dt><dd>110,000円〜</dd></div>
+        </dl>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>建設業を始めたい・許可を更新したい</li><li>飲食店を開業したい</li><li>中古品の売買を始めたい</li></ul>
+          <h4>主な手続き</h4><ul><li>建設業許可の新規・更新・変更</li><li>飲食店営業許可</li><li>風俗営業許可（風営法）</li><li>宅建業免許の新規・更新</li><li>古物商許可</li><li>各種届出</li></ul>
+          <h4>必要書類の例</h4><ul><li>登記事項証明書・身分証明書</li><li>事務所や店舗の図面</li><li>経歴や資格のわかる書類</li></ul>
+          <p class="small">※許可の種類により異なります。</p>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>契約書・内容証明</h3>
+        <p class="lead">契約書の作成や内容証明郵便の作成。</p>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>取引先との契約書を作りたい</li><li>未払い代金などを書面で請求したい</li></ul>
+          <h4>主な手続き</h4><ul><li>業務委託・賃貸借・売買などの契約書の作成・チェック</li><li>内容証明郵便の作成</li></ul>
+          <h4>必要書類の例</h4><ul><li>これまでのやり取りの資料</li><li>相手方の情報</li></ul>
+          <p class="small">※紛争になっている案件の、相手方との交渉の代理はできません。</p>
+        </div></details>
+      </article>
+
+      <article class="svc frame">
+        <h3>在留資格・各種届出</h3>
+        <p class="lead">在留資格の申請や各種届出のサポート。</p>
+        <details><summary>詳しく見る</summary><div class="detail">
+          <h4>こんなときに</h4><ul><li>外国人の方を雇用したい</li><li>在留期間を更新したい</li></ul>
+          <h4>主な手続き</h4><ul><li>在留資格認定証明書交付申請</li><li>在留期間の更新・在留資格の変更</li><li>各種届出</li></ul>
+          <h4>必要書類の例</h4><ul><li>パスポート・在留カード</li><li>雇用契約書など</li></ul>
+          <p class="small">※在留資格の種類により異なります。</p>
+        </div></details>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="flow">
+    <h2 class="sec-title">ご相談の流れ</h2>
+    <ol class="flow">
+      <li><div class="num">1</div><div><strong>お問い合わせ</strong><span class="t">電話・LINE・メール</span></div></li>
+      <li><div class="num">2</div><div><strong>初回相談</strong><span class="t">状況をうかがいます</span></div></li>
+      <li><div class="num">3</div><div><strong>お見積り・ご依頼</strong><span class="t">費用を明示します</span></div></li>
+      <li><div class="num">4</div><div><strong>書類の収集・手続き</strong><span class="t">状況をご連絡します</span></div></li>
+      <li><div class="num">5</div><div><strong>完了報告・書類のお渡し</strong><span class="t">必要書類をお返しします</span></div></li>
+    </ol>
+  </section>
+
+  <section id="office">
+    <h2 class="sec-title">事務所案内</h2>
+    <dl class="office">
+      <div><dt>事務所名</dt><dd>吉田法務事務所（司法書士）<br>リーガル行政書士事務所</dd></div>
+      <div><dt>代表</dt><dd>司法書士・行政書士 吉田 隆治<br>簡裁訴訟代理等関係業務認定 第212236号</dd></div>
+      <div><dt>所在地</dt><dd>〒530-0057<br>大阪市北区曽根崎2-1-12 国道ビル701</dd></div>
+      <div><dt>電話</dt><dd><a href="tel:0663667910">06-6366-7910</a></dd></div>
+      <div><dt>FAX</dt><dd>06-6314-1118</dd></div>
+      <div><dt>メール</dt><dd><a class="mail" href="mailto:yoshidahoumujimusho@gmail.com">yoshidahoumujimusho@gmail.com</a></dd></div>
+      <div><dt>受付時間</dt><dd>平日 9:00〜18:00（土日祝は要予約）</dd></div>
+      <div><dt>相談料</dt><dd>初回無料<br>2回目以降 1時間 5,000円</dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer>© 吉田法務事務所／リーガル行政書士事務所</footer>
+
+<div class="bar" aria-label="連絡先">
+  <a class="t" href="tel:0663667910">電話する 06-6366-7910</a>
+  <a class="m" href="mailto:yoshidahoumujimusho@gmail.com">メール</a>
+</div>
+</body>
+</html>
