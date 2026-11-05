@@ -22,22 +22,20 @@
   --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans CJK JP",sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:58px}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.85 var(--gothic);padding-bottom:76px;overflow-wrap:anywhere}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.wrap{max-width:960px;margin:0 auto;padding-left:20px;padding-right:20px}
 
 /* 名刺の上段：楕円＋事務所名 */
 .card-head{display:flex;align-items:center;gap:14px;padding:22px 0 18px}
 .seal{flex:none;display:grid;place-items:center;width:84px;height:52px;border-radius:50%;background:var(--green);color:#fff;font:700 15px/1.15 var(--mincho);letter-spacing:.14em;text-align:center;padding-left:.14em}
 .name{font:700 clamp(23px,6.6vw,38px)/1.25 var(--mincho);letter-spacing:.08em}
 .subname{font-size:13px;color:var(--muted);letter-spacing:.04em;line-height:1.5}
-/* 名刺の中央の線 */
-.rule{height:2px;background:var(--green);border:0;margin:0}
 
-.hero{display:grid;gap:24px;padding:30px 0 40px}
+.hero{display:grid;gap:24px;padding-top:30px;padding-bottom:44px}
 .hero h1{font:700 clamp(21px,6vw,34px)/1.65 var(--mincho);letter-spacing:.03em}
 .hero h1 span{display:block}
 .person{display:flex;align-items:center;gap:16px}
@@ -56,11 +54,15 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 
 /* 名刺の左下の枠 */
 .frame{border:2px solid var(--green);border-radius:12px;background:#fff}
-.jump{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-bottom:44px}
-.jump a{display:block;padding:12px 10px;text-decoration:none;font-weight:700;font-size:14.5px;color:var(--green);line-height:1.5}
-.jump small{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
 
-section{padding-bottom:56px}
+/* ナビゲーション：名刺の中央の線を太くした帯 */
+.gnav{position:sticky;top:0;z-index:6;background:var(--green)}
+.gnav ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);max-width:960px;margin:0 auto}
+.gnav a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:4px 2px;color:#fff;text-decoration:none;font-weight:700;font-size:13px;line-height:1.3;text-align:center}
+.gnav a:focus-visible{outline-color:#fff;outline-offset:-4px}
+/* セクションの区切り：背景を交互に変える */
+.band{padding:48px 0 56px}
+.band-pale{background:var(--green-pale)}
 .sec-title{font:700 clamp(23px,6vw,30px)/1.45 var(--mincho);letter-spacing:.06em;padding-bottom:10px;border-bottom:2px solid var(--green);margin-bottom:14px}
 .note{font-size:13.5px;line-height:1.75;color:var(--muted);margin-bottom:20px}
 .svc-grid{display:grid;gap:16px;align-items:start}
@@ -106,12 +108,13 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
   .bar{display:none}
   .card-head{gap:20px;padding:30px 0 22px}
   .seal{width:112px;height:68px;font-size:20px}
-  .hero{grid-template-columns:1.25fr 1fr;align-items:center;gap:32px 48px;padding:48px 0 52px}
+  .hero{grid-template-columns:1.25fr 1fr;align-items:center;gap:32px 48px;padding-top:48px;padding-bottom:52px}
   .hero h1,.person{grid-column:1}
   .contact{grid-column:2;grid-row:1 / span 2}
   .person img{width:150px}
   .svc-grid{grid-template-columns:1fr 1fr}
-  .jump{gap:16px}
+  .gnav a{font-size:15px;min-height:52px}
+  .band{padding:64px 0 72px}
   .flow{grid-template-columns:repeat(5,1fr);gap:14px}
   .flow li{grid-template-columns:1fr;gap:8px}
   .flow li:not(:last-child)::before{left:44px;right:-14px;top:21px;bottom:auto;width:auto;height:2px}
@@ -130,10 +133,17 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
     </div>
   </header>
 </div>
-<hr class="rule">
+<nav class="gnav" aria-label="ページ内メニュー">
+  <ul>
+    <li><a href="#shihou">司法書士</a></li>
+    <li><a href="#gyousei">行政書士</a></li>
+    <li><a href="#flow">相談の流れ</a></li>
+    <li><a href="#office">事務所案内</a></li>
+  </ul>
+</nav>
 
-<main class="wrap">
-  <div class="hero">
+<main>
+  <div class="wrap hero">
     <h1><span>「あのときしておいて</span><span>よかった」と、いつかきっと</span><span>思う日が来ます。</span><span>まずはお気軽に</span><span>ご相談ください。</span></h1>
     <div class="person">
       <img src="assets/yoshida.jpg" width="193" height="170" alt="吉田隆治の似顔絵イラスト">
@@ -150,12 +160,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
     </div>
   </div>
 
-  <nav class="jump" aria-label="サービスの種類">
-    <a class="frame" href="#shihou">司法書士のサービス<small>登記・相続・遺言・債務整理</small></a>
-    <a class="frame" href="#gyousei">行政書士のサービス<small>許認可・契約書・在留資格</small></a>
-  </nav>
-
-  <section id="shihou">
+  <section id="shihou" class="band band-pale"><div class="wrap">
     <h2 class="sec-title">司法書士のサービス</h2>
     <p class="note">※表示の料金はすべて報酬のみです。公的書類の収集等にかかる郵送費・交通費・手数料、登記費用（登録免許税など）、定款認証等の公証役場への費用などは別にかかります。内容により変わりますので、初回相談でお見積りします。</p>
     <div class="svc-grid">
@@ -233,9 +238,9 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       </article>
 
     </div>
-  </section>
+  </div></section>
 
-  <section id="gyousei">
+  <section id="gyousei" class="band"><div class="wrap">
     <h2 class="sec-title">行政書士のサービス</h2>
     <p class="note">※表示の料金はすべて報酬のみです。公的書類の収集等にかかる郵送費・交通費・手数料、官公署（都道府県・保健所・警察署など）へ納める申請手数料・証紙代などは別にかかります。内容により変わりますので、初回相談でお見積りします。</p>
     <div class="svc-grid">
@@ -280,9 +285,9 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       </article>
 
     </div>
-  </section>
+  </div></section>
 
-  <section id="flow">
+  <section id="flow" class="band band-pale"><div class="wrap">
     <h2 class="sec-title">ご相談の流れ</h2>
     <ol class="flow">
       <li><div class="num">1</div><div><strong>お問い合わせ</strong><span class="t">電話・LINE・メール</span></div></li>
@@ -291,9 +296,9 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       <li><div class="num">4</div><div><strong>書類の収集・手続き</strong><span class="t">状況をご連絡します</span></div></li>
       <li><div class="num">5</div><div><strong>完了報告・書類のお渡し</strong><span class="t">必要書類をお返しします</span></div></li>
     </ol>
-  </section>
+  </div></section>
 
-  <section id="office">
+  <section id="office" class="band"><div class="wrap">
     <h2 class="sec-title">事務所案内</h2>
     <dl class="office">
       <div><dt>事務所名</dt><dd>吉田法務事務所（司法書士）<br>リーガル行政書士事務所</dd></div>
@@ -303,7 +308,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       <div><dt>受付時間</dt><dd>平日 9:00〜18:00（土日祝は要予約）</dd></div>
       <div><dt>相談料</dt><dd>初回無料<br>2回目以降 1時間 5,000円</dd></div>
     </dl>
-  </section>
+  </div></section>
 </main>
 
 <footer>© 吉田法務事務所／リーガル行政書士事務所</footer>
