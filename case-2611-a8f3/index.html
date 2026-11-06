@@ -49,9 +49,10 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 .btn-tel{background:var(--green);color:#fff;font:700 27px/1.2 var(--mincho);letter-spacing:.04em;flex-direction:column}
 .btn-tel small{font:500 12.5px/1.5 var(--gothic);letter-spacing:.02em}
 .btn-line{background:var(--line-green);color:#04331a}
-.btn-line.pending{opacity:.55}
 .btn-mail{border:2px solid var(--orange);color:var(--orange);font-size:15px}
 
+.sns{display:flex;align-items:center;justify-content:center;gap:16px;font-size:14.5px;color:var(--muted)}
+.sns a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--green)}
 /* 名刺の左下の枠 */
 .frame{border:2px solid var(--green);border-radius:12px;background:#fff}
 
@@ -101,9 +102,10 @@ details[open] summary::after{content:"－"}
 footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var(--muted);text-align:center;line-height:1.7}
 
 /* スマホ下部の連絡ボタン */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:3fr 2fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--green)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:5fr 4fr 4fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--green)}
 .bar a{min-height:50px;display:flex;align-items:center;justify-content:center;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px}
 .bar .t{background:var(--green);color:#fff}
+.bar .l{background:var(--line-green);color:#04331a}
 .bar .m{border:2px solid var(--orange);color:var(--orange)}
 
 @media (min-width:760px){
@@ -161,8 +163,9 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
     </div>
     <div class="contact" id="contact">
       <a class="btn btn-tel" href="tel:0663667910">06-6366-7910<small>平日 9:00〜18:00（土日祝は要予約）</small></a>
-      <span class="btn btn-line pending" aria-disabled="true">LINEで相談する（リンク準備中）</span>
+      <a class="btn btn-line" href="https://lin.ee/ox8c9HK" target="_blank" rel="noopener">LINEで相談する</a>
       <a class="btn btn-mail" href="mailto:yoshidahoumujimusho@gmail.com">メールで相談する</a>
+      <p class="sns">SNS：<a href="https://www.facebook.com/share/156BoX4msZd/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/yoshidahoumujimusho/" target="_blank" rel="noopener">Instagram</a></p>
     </div>
   </div>
 
@@ -314,6 +317,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       <div><dt>FAX</dt><dd>06-6314-1118</dd></div>
       <div><dt>受付時間</dt><dd>平日 9:00〜18:00（土日祝は要予約）</dd></div>
       <div><dt>相談料</dt><dd>初回無料<br>2回目以降 1時間 5,000円</dd></div>
+      <div><dt>SNS</dt><dd><a href="https://www.facebook.com/share/156BoX4msZd/" target="_blank" rel="noopener">Facebook</a>　<a href="https://www.instagram.com/yoshidahoumujimusho/" target="_blank" rel="noopener">Instagram</a></dd></div>
     </dl>
     <div class="map">
       <iframe src="https://www.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%9B%BE%E6%A0%B9%E5%B4%8E2-1-12&amp;z=17&amp;hl=ja&amp;output=embed" title="吉田法務事務所の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -326,7 +330,8 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 <footer>© 吉田法務事務所／リーガル行政書士事務所</footer>
 
 <div class="bar" aria-label="連絡先">
-  <a class="t" href="tel:0663667910">電話する 06-6366-7910</a>
+  <a class="t" href="tel:0663667910">電話する</a>
+  <a class="l" href="https://lin.ee/ox8c9HK" target="_blank" rel="noopener">LINE</a>
   <a class="m" href="mailto:yoshidahoumujimusho@gmail.com">メール</a>
 </div>
 </body>
