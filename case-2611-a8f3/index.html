@@ -92,6 +92,9 @@ details[open] summary::after{content:"－"}
 .flow span.t{font-size:15px;color:var(--muted)}
 
 .office{display:grid;gap:0}
+.office-layout{display:grid;gap:24px}
+.map iframe{display:block;width:100%;height:280px;border:2px solid var(--green);border-radius:12px;background:var(--green-pale)}
+.map a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--green)}
 .office div{display:grid;grid-template-columns:5.5em 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #cfdad4;line-height:1.65}
 .office dt{color:var(--muted);font-size:14.5px}
 .office a.mail{color:var(--orange)}
@@ -118,7 +121,10 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
   .flow{grid-template-columns:repeat(5,1fr);gap:14px}
   .flow li{grid-template-columns:1fr;gap:8px}
   .flow li:not(:last-child)::before{left:44px;right:-14px;top:21px;bottom:auto;width:auto;height:2px}
-  .office div{grid-template-columns:8em 1fr}
+  .office div{grid-template-columns:7em 1fr}
+  .office-layout{grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .map{display:flex;flex-direction:column}
+  .map iframe{flex:1;min-height:320px;height:auto}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -300,6 +306,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 
   <section id="office" class="band"><div class="wrap">
     <h2 class="sec-title">事務所案内</h2>
+    <div class="office-layout">
     <dl class="office">
       <div><dt>事務所名</dt><dd>吉田法務事務所（司法書士）<br>リーガル行政書士事務所</dd></div>
       <div><dt>所在地</dt><dd>大阪市北区曾根崎2-1-12 国道ビル701</dd></div>
@@ -308,6 +315,11 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       <div><dt>受付時間</dt><dd>平日 9:00〜18:00（土日祝は要予約）</dd></div>
       <div><dt>相談料</dt><dd>初回無料<br>2回目以降 1時間 5,000円</dd></div>
     </dl>
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%9B%BE%E6%A0%B9%E5%B4%8E2-1-12%20%E5%9B%BD%E9%81%93%E3%83%93%E3%83%AB&amp;z=17&amp;hl=ja&amp;output=embed" title="吉田法務事務所の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%9B%BE%E6%A0%B9%E5%B4%8E2-1-12%20%E5%9B%BD%E9%81%93%E3%83%93%E3%83%AB" target="_blank" rel="noopener">Googleマップで開く</a>
+    </div>
+    </div>
   </div></section>
 </main>
 
