@@ -8,16 +8,18 @@
 <meta name="description" content="大阪市北区曾根崎の司法書士・行政書士事務所。不動産登記、相続、会社設立、遺言、債務整理、許認可申請などのご相談を承ります。初回相談無料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --green:#1f4f3c;      /* 名刺の楕円・枠・罫線の深緑 */
   --green-pale:#eef3f0;
+  --skin-deep:#f2e0cb;
   --ink:#26302b;
   --muted:#55615a;
   --orange:#c9541c;     /* 名刺のメールアドレスの色 */
   --line-green:#06c755;
-  --paper:#f9f8f4;
+  --paper:#f8ecdf;
+  --brush:"Yuji Syuku","Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
   --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
   --gothic:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans CJK JP",sans-serif;
 }
@@ -31,17 +33,17 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 
 /* 名刺の上段：楕円＋事務所名 */
 .card-head{display:flex;align-items:center;gap:14px;padding:22px 0 18px}
-.seal{flex:none;display:grid;place-items:center;width:84px;height:52px;border-radius:50%;background:var(--green);color:#fff;font:700 15px/1.15 var(--mincho);letter-spacing:.14em;text-align:center;padding-left:.14em}
-.name{font:700 clamp(23px,6.6vw,38px)/1.25 var(--mincho);letter-spacing:.08em}
+.seal{flex:none;display:grid;place-items:center;width:84px;height:52px;border-radius:50%;background:var(--green);color:#fff;font:400 16px/1.15 var(--brush);letter-spacing:.14em;text-align:center;padding-left:.14em}
+.name{font:400 clamp(25px,7vw,40px)/1.25 var(--brush);letter-spacing:.08em}
 .subname{font-size:13px;color:var(--muted);letter-spacing:.04em;line-height:1.5}
 
 .hero{display:grid;gap:24px;padding-top:30px;padding-bottom:44px}
-.hero h1{font:700 clamp(21px,6vw,34px)/1.65 var(--mincho);letter-spacing:.03em}
+.hero h1{font:400 clamp(21px,6vw,34px)/1.65 var(--brush);letter-spacing:.03em}
 .hero h1 span{display:block}
 .person{display:flex;align-items:center;gap:16px}
 .person img{width:124px;height:auto;display:block;border:2px solid var(--green);border-radius:12px}
 .person .title{font-size:14px;color:var(--muted)}
-.person .pname{font:700 26px/1.4 var(--mincho);letter-spacing:.22em}
+.person .pname{font:400 27px/1.4 var(--brush);letter-spacing:.22em}
 .person rt{font:500 11px var(--gothic);letter-spacing:.08em;color:var(--muted)}
 .person .free{margin-top:6px;font-size:15px;font-weight:700;color:var(--green)}
 .person .fee{font-size:13.5px;line-height:1.5}
@@ -75,8 +77,8 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 .gnav a:focus-visible{outline-color:#fff;outline-offset:-4px}
 /* セクションの区切り：背景を交互に変える */
 .band{padding:48px 0 56px}
-.band-pale{background:var(--green-pale)}
-.sec-title{font:700 clamp(23px,6vw,30px)/1.45 var(--mincho);letter-spacing:.06em;padding-bottom:10px;border-bottom:2px solid var(--green);margin-bottom:14px}
+.band-pale{background:var(--skin-deep)}
+.sec-title{font:400 clamp(24px,6.2vw,31px)/1.45 var(--brush);letter-spacing:.06em;padding-bottom:10px;border-bottom:2px solid var(--green);margin-bottom:14px}
 .note{font-size:13.5px;line-height:1.75;color:var(--muted);margin-bottom:20px}
 .svc-grid{display:grid;gap:16px;align-items:start}
 
@@ -153,7 +155,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 <body>
 <div class="wrap">
   <header class="card-head">
-    <div class="seal" aria-hidden="true">司法<br>書士</div>
+    <div class="seal" aria-hidden="true">司法<br>行政</div>
     <div>
       <div class="name">吉田法務事務所</div>
       <div class="subname">リーガル行政書士事務所</div>
