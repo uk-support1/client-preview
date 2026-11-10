@@ -17,7 +17,7 @@
   --ink:#26302b;
   --muted:#55615a;
   --orange:#c9541c;     /* 名刺のメールアドレスの色 */
-  --line-green:#06c755;
+  --matcha:#9aa865;
   --paper:#f8ecdf;
   --brush:"Yuji Syuku","Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
   --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;
@@ -40,6 +40,9 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 .hero{display:grid;gap:24px;padding-top:30px;padding-bottom:44px}
 .hero h1{font:400 clamp(21px,6vw,34px)/1.65 var(--brush);letter-spacing:.03em}
 .hero h1 span{display:block}
+.hero .h-main{font-size:min(8.2vw,42px);line-height:1.45;margin-bottom:.35em}
+.hero .h-main small{font-size:.55em;margin-left:.15em}
+.hero .h-sub{font-size:min(5.3vw,24px);letter-spacing:0;line-height:1.75;white-space:nowrap}
 .person{display:flex;align-items:center;gap:16px}
 .person img{width:124px;height:auto;display:block;border:2px solid var(--green);border-radius:12px}
 .person .title{font-size:14px;color:var(--muted)}
@@ -53,11 +56,12 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 .btn{display:flex;align-items:center;justify-content:center;min-height:56px;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;text-align:center;line-height:1.4}
 .btn-tel{background:var(--green);color:#fff;font:700 27px/1.2 var(--mincho);letter-spacing:.04em;flex-direction:column}
 .btn-tel small{font:500 12.5px/1.5 var(--gothic);letter-spacing:.02em}
-.btn-line{background:var(--line-green);color:#04331a}
+.btn-line{background:var(--matcha);color:#1e2610}
 .btn-mail{border:2px solid var(--orange);color:var(--orange);font-size:15px}
 
-.sns{display:flex;align-items:center;justify-content:center;gap:16px;font-size:14.5px;color:var(--muted)}
-.sns a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--green)}
+.sns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sns a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border:2px solid var(--green);border-radius:10px;background:#fff;color:var(--green);font-weight:700;text-decoration:none}
+.sns svg{width:18px;height:18px;flex:none}
 /* 名刺の左下の枠 */
 .frame{border:2px solid var(--green);border-radius:12px;background:#fff}
 
@@ -123,7 +127,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:grid;grid-template-columns:5fr 4fr 4fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--green)}
 .bar a{min-height:50px;display:flex;align-items:center;justify-content:center;border-radius:9px;text-decoration:none;font-weight:700;font-size:15px}
 .bar .t{background:var(--green);color:#fff}
-.bar .l{background:var(--line-green);color:#04331a}
+.bar .l{background:var(--matcha);color:#1e2610}
 .bar .m{border:2px solid var(--orange);color:var(--orange)}
 
 @media (min-width:760px){
@@ -133,7 +137,6 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
   .seal{width:112px;height:68px;font-size:20px}
   .hero{grid-template-columns:1.25fr 1fr;align-items:center;gap:32px 48px;padding-top:48px;padding-bottom:52px}
   .hero h1,.person{grid-column:1}
-  .hero h1{font-size:min(3.3vw,30px)}
   .contact{grid-column:2;grid-row:1 / span 2}
   .person img{width:150px}
   .svc-grid{grid-template-columns:1fr 1fr}
@@ -174,7 +177,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 
 <main>
   <div class="wrap hero">
-    <h1><span>「あのときしておいて</span><span>よかった」と</span><span>いつかきっと思う日が来ます。</span><span>まずはお気軽に</span><span>ご相談ください。</span></h1>
+    <h1><span class="h-main">「あのときしておいて<br>よかった」<small>と</small></span><span class="h-sub">いつかきっと思う日が来ます。</span><span class="h-sub">まずはお気軽にご相談ください。</span></h1>
     <div class="person">
       <img src="assets/yoshida.jpg" width="520" height="569" alt="吉田隆治の似顔絵イラスト">
       <div>
@@ -188,7 +191,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
       <a class="btn btn-tel" href="tel:0663667910">06-6366-7910<small>平日 9:00〜18:00（土日祝は要予約）</small></a>
       <a class="btn btn-line" href="https://lin.ee/ox8c9HK" target="_blank" rel="noopener">LINEで相談する</a>
       <a class="btn btn-mail" href="mailto:yoshidahoumujimusho@gmail.com">メールで相談する</a>
-      <p class="sns">SNS：<a href="https://www.facebook.com/share/156BoX4msZd/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/yoshidahoumujimusho/" target="_blank" rel="noopener">Instagram</a></p>
+      <div class="sns"><a href="https://www.facebook.com/share/156BoX4msZd/" target="_blank" rel="noopener">Facebook<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a><a href="https://www.instagram.com/yoshidahoumujimusho/" target="_blank" rel="noopener">Instagram<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
     </div>
   </div>
 
@@ -301,7 +304,7 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
         </dl>
         <details><summary>詳しく見る</summary><div class="detail">
           <h4>こんなときに</h4><ul><li>建設業を始めたい・許可を更新したい</li><li>飲食店を開業したい</li><li>中古品の売買を始めたい</li></ul>
-          <h4>主な手続き</h4><ul><li>建設業許可の新規・更新・変更</li><li>飲食店営業許可</li><li>風俗営業許可（風営法）</li><li>宅建業免許の新規・更新</li><li>古物商許可</li><li>各種届出</li></ul>
+          <h4>主な手続き</h4><ul><li>建設業許可の新規・更新・変更</li><li>飲食店営業許可</li><li>風俗営業許可（風営法）</li><li>宅建業免許の新規・更新・変更</li><li>古物商許可</li><li>各種届出</li></ul>
           <h4>必要書類の例</h4><ul><li>登記事項証明書・身分証明書</li><li>事務所や店舗の図面</li><li>経歴や資格のわかる書類</li></ul>
           <p class="small">※許可の種類により異なります。</p>
         </div></details>
