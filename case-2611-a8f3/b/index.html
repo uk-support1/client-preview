@@ -50,11 +50,11 @@ h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0;padding:0}
 .mark .sub{display:block;font:500 11px/1.5 var(--gothic);color:var(--muted);letter-spacing:.06em}
 .copy{position:absolute;inset:0;display:flex;flex-direction:row-reverse;justify-content:center;align-items:center;gap:clamp(14px,4vw,40px);padding:96px 16px 80px}
 .tate{writing-mode:vertical-rl;text-orientation:upright}
-.copy h1{font:400 min(8.4vw,6.2vh,58px)/1.5 var(--brush);letter-spacing:.14em;color:var(--ink);text-shadow:0 0 18px rgba(255,248,236,.9),0 0 2px rgba(255,248,236,.9)}
-.copy h1 span{display:block}
+.copy h1{font:400 min(8.2vw,5.4vh,56px)/1.5 var(--brush);letter-spacing:.14em;color:var(--ink);text-shadow:0 0 18px rgba(255,248,236,.9),0 0 2px rgba(255,248,236,.9)}
+.copy h1 span{display:block;white-space:nowrap}
 .copy h1 small{font-size:.55em;letter-spacing:.05em}
-.copy .sub{font:400 min(4.4vw,2.7vh,24px)/2 var(--brush);letter-spacing:.16em;color:var(--ink);text-shadow:0 0 14px rgba(255,248,236,.95);padding-top:min(18vh,200px)}
-.copy .sub span{display:block}
+.copy .sub{font:400 min(4.4vw,2.5vh,22px)/2 var(--brush);letter-spacing:.16em;color:var(--ink);text-shadow:0 0 14px rgba(255,248,236,.95);padding-top:min(18vh,200px)}
+.copy .sub span{display:block;white-space:nowrap}
 .reveal-line{opacity:0;animation:ink 1.6s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes ink{from{opacity:0;filter:blur(8px);transform:translateY(-14px)}to{opacity:1;filter:blur(0);transform:none}}
 .scroll-cue{position:absolute;right:22px;bottom:0;display:flex;flex-direction:column;align-items:center;gap:8px;font:500 11px/1 var(--gothic);letter-spacing:.3em;color:var(--ink);text-decoration:none}
@@ -62,8 +62,10 @@ h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0;padding:0}
 .scroll-cue i{position:relative;display:block;width:1px;height:64px;background:rgba(44,42,37,.25);overflow:hidden}
 .scroll-cue i::after{content:"";position:absolute;left:0;top:-30px;width:1px;height:30px;background:var(--ink);animation:drip 2.2s ease-in-out infinite}
 @keyframes drip{0%{top:-30px}70%,100%{top:64px}}
-.free-badge{position:absolute;left:18px;bottom:24px;display:grid;place-items:center;width:104px;height:104px;border-radius:50%;background:var(--green);color:#fff;text-align:center;font:400 18px/1.35 var(--brush);letter-spacing:.08em;box-shadow:0 0 0 5px rgba(248,236,223,.75)}
-.free-badge small{display:block;margin-top:2px;font:500 10.5px/1.4 var(--gothic);letter-spacing:0}
+.free-badge{position:absolute;left:18px;bottom:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:112px;height:112px;border-radius:50%;background:var(--green);color:#fff;text-align:center;font-family:var(--brush);box-shadow:0 0 0 5px rgba(248,236,223,.75)}
+.free-badge .b1{font-size:14px;line-height:1.2;letter-spacing:.2em;padding-left:.2em}
+.free-badge .b2{font-size:28px;line-height:1.15;letter-spacing:.12em;padding-left:.12em}
+.free-badge .b3{margin-top:5px;padding-top:5px;border-top:1px solid rgba(255,255,255,.55);font-size:10px;line-height:1.45;letter-spacing:.04em}
 .menu-btn{position:absolute;top:10px;right:10px;z-index:4;display:grid;place-items:center;gap:4px;width:60px;height:60px;white-space:nowrap;border:0;border-radius:50%;background:var(--paper);color:var(--ink);font:700 11px var(--gothic);cursor:pointer}
 .menu-btn b{display:block;width:22px;height:1.5px;background:currentColor;margin:0 auto 2px;box-shadow:0 6px 0 currentColor}
 
@@ -244,8 +246,10 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   .hero .hdr-inline{position:absolute;top:26px;right:30px;z-index:3;display:flex;gap:26px;list-style:none;margin:0;padding:12px 22px;background:rgba(248,236,223,.85)}
   .hero .hdr-inline a{text-decoration:none;font-weight:500;letter-spacing:.08em}
   .copy{justify-content:center;gap:56px;padding-top:120px}
-  .free-badge{left:44px;bottom:44px;width:136px;height:136px;font-size:22px}
-  .free-badge small{font-size:12.5px}
+  .free-badge{left:44px;bottom:44px;width:148px;height:148px}
+  .free-badge .b1{font-size:17px}
+  .free-badge .b2{font-size:38px}
+  .free-badge .b3{font-size:12.5px;margin-top:6px;padding-top:6px}
   .scroll-cue{right:40px}
   .hdr{height:76px;padding:0 24px}
   .hdr-nav{display:flex;gap:26px;margin-left:auto;list-style:none;padding:0}
@@ -304,7 +308,7 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
     <h1 class="tate"><span class="reveal-line" style="animation-delay:.5s">「あのときしておいて</span><span class="reveal-line" style="animation-delay:1.0s">よかった」<small>と</small></span></h1>
     <p class="tate sub"><span class="reveal-line" style="animation-delay:1.7s">いつかきっと思う日が来ます。</span><span class="reveal-line" style="animation-delay:2.1s">まずはお気軽にご相談ください。</span></p>
   </div>
-  <p class="free-badge reveal-line" style="animation-delay:2.6s">初回相談<br>無料<small>2回目以降<br>1時間5,500円</small></p>
+  <p class="free-badge reveal-line" style="animation-delay:2.6s"><span class="b1">初回相談</span><span class="b2">無料</span><span class="b3">2回目以降<br>1時間 5,500円</span></p>
   <a class="scroll-cue" href="#about"><span>スクロール</span><i></i></a>
 </header>
 
