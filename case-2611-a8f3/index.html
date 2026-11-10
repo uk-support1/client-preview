@@ -61,7 +61,10 @@ h1,h2,h3,p,ul,dl,dd,ol{margin:0;padding:0}
 
 .search{padding-bottom:40px}
 .search label{display:block;font:700 19px/1.5 var(--mincho);color:var(--green);margin-bottom:6px}
-.search input{width:100%;min-height:52px;padding:10px 14px;border:2px solid var(--green);border-radius:10px;background:#fff;color:var(--ink);font:400 16px var(--gothic)}
+.search-row{display:flex;gap:8px}
+.search-row button{flex:none;min-width:84px;min-height:52px;border:0;border-radius:10px;background:var(--green);color:#fff;font:700 16px var(--gothic);cursor:pointer}
+.svc mark{background:#ffe2c9;color:inherit;padding:0 1px;border-radius:2px}
+.search input{flex:1;min-width:0;width:100%;min-height:52px;padding:10px 14px;border:2px solid var(--green);border-radius:10px;background:#fff;color:var(--ink);font:400 16px var(--gothic)}
 .search-help{margin-top:6px;font-size:13.5px;color:var(--muted)}
 .search-none{margin-top:12px;padding:14px 16px;font-size:15px}
 [hidden]{display:none!important}
@@ -189,8 +192,11 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 
   <div class="wrap search" id="search-box" hidden>
     <label for="search">お困りごとを検索</label>
-    <input id="search" type="search" placeholder="例：相続、借金、会社設立" autocomplete="off" enterkeyhint="search">
-    <p class="search-help" id="search-status" role="status">キーワードで下のサービスを絞り込めます</p>
+    <form class="search-row" id="search-form" role="search">
+      <input id="search" type="search" placeholder="例：相続、借金、会社設立" autocomplete="off" enterkeyhint="search">
+      <button type="submit">検索</button>
+    </form>
+    <p class="search-help" id="search-status" role="status">キーワードを入れて「検索」を押すと、該当するサービスへ移動します</p>
     <p class="search-none frame" id="search-none" hidden>該当するサービスが見つかりませんでした。別の言葉で探すか、お電話・LINE・メールでご相談ください。</p>
   </div>
 
@@ -384,22 +390,45 @@ footer{border-top:2px solid var(--green);padding:18px 0;font-size:13px;color:var
 <script>
 (function(){
   var box=document.getElementById('search-box');box.hidden=false;
-  var input=document.getElementById('search'),status=document.getElementById('search-status'),none=document.getElementById('search-none');
+  var form=document.getElementById('search-form'),input=document.getElementById('search'),status=document.getElementById('search-status'),none=document.getElementById('search-none');
   var help=status.textContent,cards=[].slice.call(document.querySelectorAll('.svc')),secs=[].slice.call(document.querySelectorAll('.svc-sec'));
   var norm=function(t){return t.normalize('NFKC').toLowerCase()};
+  function unmark(){[].slice.call(document.querySelectorAll('.svc mark')).forEach(function(m){var p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize()})}
+  function mark(card,terms){
+    var w=document.createTreeWalker(card,NodeFilter.SHOW_TEXT),nodes=[],n;while(n=w.nextNode())nodes.push(n);
+    nodes.forEach(function(node){
+      var t=node.nodeValue,low=norm(t);if(low.length!==t.length)return;
+      var hits=[];terms.forEach(function(q){var i=low.indexOf(q);while(i>=0){hits.push([i,i+q.length]);i=low.indexOf(q,i+q.length)}});
+      if(!hits.length)return;hits.sort(function(a,b){return a[0]-b[0]});
+      var f=document.createDocumentFragment(),pos=0;
+      hits.forEach(function(h){if(h[0]<pos)return;f.appendChild(document.createTextNode(t.slice(pos,h[0])));var m=document.createElement('mark');m.textContent=t.slice(h[0],h[1]);f.appendChild(m);pos=h[1]});
+      f.appendChild(document.createTextNode(t.slice(pos)));node.parentNode.replaceChild(f,node);
+    });
+  }
   function run(){
+    unmark();
     var terms=norm(input.value).split(/\s+/).filter(Boolean),count=0;
     cards.forEach(function(c){
       var d=c.querySelector('details'),text=norm(c.textContent),ok=terms.every(function(t){return text.indexOf(t)>=0});
       c.hidden=!ok;if(ok)count++;
       var body=norm(d.textContent);d.open=terms.length>0&&ok&&terms.some(function(t){return body.indexOf(t)>=0});
+      if(ok&&terms.length)mark(c,terms);
     });
     secs.forEach(function(s){s.hidden=!s.querySelector('.svc:not([hidden])')});
     none.hidden=count>0;
     status.textContent=terms.length?(count?count+'件のサービスが見つかりました':''):help;
+    return count;
   }
   input.addEventListener('input',run);
   input.addEventListener('search',run);
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!input.value.trim())return;
+    var count=run();input.blur();
+    var first=document.querySelector('.svc:not([hidden])');
+    var target=count?(first.querySelector('mark')||first):none;
+    setTimeout(function(){target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:count&&target!==first?'center':'start'})},60);
+  });
   document.querySelector('.gnav').addEventListener('click',function(){if(input.value){input.value='';run()}});
 })();
 </script>
