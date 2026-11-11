@@ -99,8 +99,8 @@ section{position:relative}
 /* ごあいさつ */
 .about{padding:72px 0 210px;overflow:hidden}
 .about .ph1,.about .ph2{position:absolute;background-size:cover;background-position:center}
-.about .ph1{top:0;left:0;width:34%;height:240px;background-image:url(assets/about-book.jpg)}
-.about .ph2{right:0;bottom:30px;width:44%;height:150px;background-image:url(assets/about-spine.jpg)}
+.about .ph1{top:0;left:0;width:34%;height:240px;background-image:url(assets/about-window.jpg)}
+.about .ph2{right:0;bottom:30px;width:44%;height:150px;background-image:url(assets/about-tea.jpg)}
 .about-body{position:relative;display:flex;flex-direction:column;align-items:center;gap:32px;padding-top:150px}
 .about-body h2{font:400 clamp(26px,7.4vw,40px)/1.7 var(--brush);letter-spacing:.14em;height:auto}
 .about-body .txt{width:100%;max-width:30em}
@@ -191,14 +191,14 @@ details[open] summary::after{transform:rotate(-135deg) translate(-3px,-3px)}
 .facts dt{color:var(--muted);font-size:14.5px}
 
 /* 事務所の様子 */
-.gallery{padding-bottom:110px}
-.g-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:56px;list-style:none}
-.g-list li{position:relative}
-.g-list li:first-child{grid-column:1 / -1}
-.g-list img{width:100%;height:100%;aspect-ratio:1;object-fit:cover}
-.g-list li:first-child img{aspect-ratio:16/10}
-.g-list li::after{content:"";position:absolute;inset:8px;border:1px solid rgba(255,255,255,.55);pointer-events:none}
-.g-note{margin-top:22px;text-align:center;color:var(--muted);font-size:14.5px}
+.gallery{padding-bottom:160px}
+.g-box{position:relative;margin-top:56px}
+.g-box figure{position:relative;width:92%}
+.g-box figure::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--green);z-index:-1}
+.g-box img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.g-box .words{position:relative;width:90%;margin:-48px 0 0 auto;padding:30px 24px;background:#fff;border-top:3px solid var(--green)}
+.g-box .words h3{font:400 clamp(22px,6vw,30px)/1.6 var(--brush);letter-spacing:.12em;color:var(--green)}
+.g-box .words p{margin-top:12px}
 
 /* お問い合わせ */
 .contact{padding:100px 0;color:#fff;overflow:hidden;text-align:center}
@@ -284,9 +284,13 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   .steps li:not(:last-child)::before{left:calc(50% + 32px);right:calc(-50% + 24px);top:32px;bottom:auto;width:auto;height:1px}
   .prof{grid-template-columns:320px 1fr;gap:72px;align-items:start}
   .prof figure{width:100%}
-  .g-list{grid-template-columns:2fr 1fr 1fr;gap:18px}
-  .g-list li:first-child{grid-column:auto}
-  .g-list li:first-child img{aspect-ratio:auto}
+  .g-box figure{width:64%}
+  .g-box .words{position:absolute;right:0;bottom:-48px;width:44%;margin:0;padding:48px 44px}
+  .g-box .words{display:flex;flex-direction:row-reverse;gap:30px;align-items:flex-start}
+  .g-box .words h3{writing-mode:vertical-rl;text-orientation:upright;white-space:nowrap;flex:none}
+  .g-box .words p{margin-top:0}
+  .g-box .words p+p{margin-top:12px}
+  .g-box .words .txt{flex:1}
   .c-btns{grid-template-columns:1fr 1fr}
   .c-sns{grid-column:1 / -1}
   .office-layout{grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
@@ -571,12 +575,16 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   <section class="gallery" id="gallery">
     <div class="sec-head fx"><h2>事務所の様子</h2><p>日々の業務を支える資料とともに</p></div>
     <div class="wrap">
-      <ul class="g-list">
-        <li class="wipe"><img src="assets/g-desk.jpg" width="800" height="800" alt="執務机の上に開かれた法令集" loading="lazy"></li>
-        <li class="wipe"><img src="assets/g-shelf.jpg" width="800" height="800" alt="不動産登記や商業登記の専門書が並ぶ書棚" loading="lazy"></li>
-        <li class="wipe"><img src="assets/g-spine.jpg" width="800" height="800" alt="金文字の背表紙が並ぶ不動産登記の専門書" loading="lazy"></li>
-      </ul>
-      <p class="g-note fx">専門書を手元にそろえ、一つひとつの手続きを確かめながら進めています。</p>
+      <div class="g-box">
+        <figure class="wipe"><img src="assets/g-desk.jpg" width="1200" height="900" alt="執務机の上に開かれた法令集" loading="lazy"></figure>
+        <div class="words fx">
+          <h3>確かめながら、<br>ていねいに。</h3>
+          <div class="txt">
+          <p>机の上には、いつも法令集や専門書。ご相談の内容に合わせて一つひとつ確かめながら、手続きを進めています。</p>
+          <p>わかりにくい言葉は、かみくだいてご説明します。気になることは、どんな小さなことでもお尋ねください。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
