@@ -362,14 +362,14 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 .mark .sub{white-space:nowrap}
 .hdr .mark{max-width:none;min-width:0;flex:1}
 .hdr .nm{overflow:hidden;text-overflow:clip}
-.free-badge{width:auto;height:auto;min-width:7.4em;min-height:7.4em;aspect-ratio:1;padding:.9em;font-size:14px}
-.free-badge .b1{font-size:1em}
-.free-badge .b2{font-size:2em}
+.free-badge{width:8.2em;height:8.2em;min-width:0;min-height:0;aspect-ratio:auto;padding:0;font-size:14px}
+.free-badge .b1{font-size:1em;white-space:nowrap}
+.free-badge .b2{font-size:2em;white-space:nowrap}
 .free-badge .b3{font-size:.72em;white-space:nowrap}
 @media (min-width:860px){
   .mark .nm{font-size:30px}
   .hdr .mark .nm{font-size:23px}
-  .free-badge{font-size:17px;min-width:8.6em;min-height:8.6em}
+  .free-badge{font-size:17px;width:8.8em;height:8.8em}
   .free-badge .b2{font-size:2.25em}
 }
 /* 角を丸くする（ボタン・カード・写真） */
@@ -381,8 +381,8 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 .svc{overflow:hidden}
 .svc-box .lead,.g-box .words{overflow:hidden}
 .svc-box .img div,.svc-box .img::before,.g-box img,.g-box figure::before,.about .ph1,.about .ph2,.prof figure img,.prof figure::before,.map iframe{border-radius:var(--r)}
-.about .ph1{border-radius:0 0 var(--r) 0}
-.about .ph2{border-radius:var(--r) 0 0 0}
+.about .ph1{border-radius:0 var(--r) var(--r) 0}
+.about .ph2{border-radius:var(--r) 0 0 var(--r)}
 .svc-box .tags li{border-radius:999px}
 .faq-group{border-radius:var(--r)}
 .hero{border-radius:0 0 var(--r) var(--r);overflow:hidden}
