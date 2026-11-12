@@ -301,6 +301,31 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 }
 @media (max-width:859px){.hdr-inline{display:none}}
 @media (min-width:860px) and (max-width:1099px){.about .ph1{height:190px}.about-body{padding-top:230px}}
+/* 文字を大きく表示する設定の端末でも崩れないように：大きさを文字の大きさに合わせて伸ばす */
+.seal{width:auto;height:auto;min-width:4.6em;min-height:3em;padding:.45em .8em .45em .94em}
+.mark > span:last-child{min-width:0}
+.mark .nm{display:block;word-break:keep-all;overflow-wrap:normal}
+@media (max-width:859px){
+  .hero .mark{right:78px}
+  .mark .nm{font-size:clamp(14px,calc((100vw - 200px) / 8.2),21px)}
+}
+@media (max-width:359px){
+  .hero .mark .seal,.hdr .seal{display:none}
+  .mark .nm{font-size:clamp(14px,calc((100vw - 110px) / 7.6),22px)}
+}
+.mark .sub{white-space:nowrap}
+.hdr .mark{max-width:none;min-width:0;flex:1}
+.hdr .nm{overflow:hidden;text-overflow:clip}
+.free-badge{width:auto;height:auto;min-width:7.4em;min-height:7.4em;aspect-ratio:1;padding:.9em;font-size:14px}
+.free-badge .b1{font-size:1em}
+.free-badge .b2{font-size:2em}
+.free-badge .b3{font-size:.72em;white-space:nowrap}
+@media (min-width:860px){
+  .mark .nm{font-size:30px}
+  .hdr .mark .nm{font-size:23px}
+  .free-badge{font-size:17px;min-width:8.6em;min-height:8.6em}
+  .free-badge .b2{font-size:2.25em}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal-line{opacity:1}
@@ -317,7 +342,7 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 </div>
 
 <header class="hero" id="top">
-  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
+  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務<wbr>事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
   <ul class="hdr-inline">
     <li><a href="#services">取扱業務</a></li><li><a href="#flow">ご相談の流れ</a></li><li><a href="#profile">プロフィール</a></li><li><a href="#office">事務所案内</a></li>
   </ul>
@@ -331,7 +356,7 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 </header>
 
 <div class="hdr" id="hdr">
-  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
+  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務<wbr>事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
   <ul class="hdr-nav">
     <li><a href="#services">取扱業務</a></li><li><a href="#flow">ご相談の流れ</a></li><li><a href="#profile">プロフィール</a></li><li><a href="#office">事務所案内</a></li>
   </ul>
@@ -624,7 +649,7 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 </main>
 
 <footer>
-  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
+  <a class="mark" href="#top"><span class="seal" aria-hidden="true">司法<br>行政</span><span><span class="nm">吉田法務<wbr>事務所</span><span class="sub">リーガル行政書士事務所</span></span></a>
   <small>© 吉田法務事務所／リーガル行政書士事務所</small>
 </footer>
 
