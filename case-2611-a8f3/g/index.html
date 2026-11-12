@@ -372,6 +372,21 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   .free-badge{font-size:17px;min-width:8.6em;min-height:8.6em}
   .free-badge .b2{font-size:2.25em}
 }
+/* 角を丸くする（ボタン・カード・写真） */
+:root{--r:16px;--r-sm:12px}
+.bar a,.debt-cta a,.c-btns a,.more,.search-row button,.search input,.hdr .tel,.drawer .tel{border-radius:var(--r-sm)}
+.bar{padding-left:10px;padding-right:10px;gap:8px}
+.svc,.svc-box .lead,.ninni,.merits li,.search,.search-none,.g-box .words,.worries li{border-radius:var(--r)}
+.ninni::before{border-radius:calc(var(--r) - 6px)}
+.svc{overflow:hidden}
+.svc-box .lead,.g-box .words{overflow:hidden}
+.svc-box .img div,.svc-box .img::before,.g-box img,.g-box figure::before,.about .ph1,.about .ph2,.prof figure img,.prof figure::before,.map iframe{border-radius:var(--r)}
+.about .ph1{border-radius:0 0 var(--r) 0}
+.about .ph2{border-radius:var(--r) 0 0 0}
+.svc-box .tags li{border-radius:999px}
+.faq-group{border-radius:var(--r)}
+.hero{border-radius:0 0 var(--r) var(--r);overflow:hidden}
+.mark{border-radius:0 0 var(--r) 0}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal-line{opacity:1}
