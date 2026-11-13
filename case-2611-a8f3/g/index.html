@@ -802,8 +802,28 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
 </div>
 
 <script>
-/* 端末側で文字が拡大されている倍率を測り、見出し帯の文字だけ元の大きさに戻す */
-(function(){try{var p=document.createElement('span');p.style.cssText='position:absolute;left:-9999px;visibility:hidden;font:100px/1 sans-serif;white-space:nowrap';p.textContent='あ';document.body.appendChild(p);var s=p.getBoundingClientRect().width/100;document.body.removeChild(p);if(s>1.05&&s<4)document.documentElement.style.setProperty('--fs',(1/s).toFixed(3))}catch(e){}})();
+/* スマホの「文字サイズ」設定で文字が拡大されても、設計どおりの大きさで表示する（全ての文字が対象） */
+(function(){
+  function fix(){
+    try{
+      var els=document.querySelectorAll('body, body *'),i;
+      for(i=0;i<els.length;i++)els[i].style.fontSize='';
+      var p=document.createElement('span');
+      p.style.cssText='position:absolute;left:-9999px;visibility:hidden;font:100px/1 sans-serif;white-space:nowrap';
+      p.textContent='あ';document.body.appendChild(p);
+      var s=p.getBoundingClientRect().width/100,k=parseFloat(getComputedStyle(p).fontSize)/100;
+      document.body.removeChild(p);
+      if(!(s>1.05&&s<4))return;
+      var a=[];
+      for(i=0;i<els.length;i++)a.push(parseFloat(getComputedStyle(els[i]).fontSize));
+      for(i=0;i<els.length;i++)els[i].style.fontSize=(a[i]/k/s).toFixed(2)+'px';
+    }catch(e){}
+  }
+  window._fixTextScale=fix;
+  fix();
+  var w=window.innerWidth,t;
+  window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){if(window.innerWidth!==w){w=window.innerWidth;fix()}},200)});
+})();
 </script>
 <script>
 document.documentElement.classList.add('js');
