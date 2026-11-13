@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>吉田法務事務所｜大阪市北区の司法書士・行政書士</title>
 <meta name="description" content="大阪市北区曾根崎の司法書士・行政書士事務所。不動産登記、相続、会社設立、遺言、債務整理、許認可申請などのご相談を承ります。初回相談無料。">
@@ -360,6 +360,20 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   .mark .nm{font-size:clamp(14px,calc((100vw - 110px) / 7.6),22px)}
 }
 .mark .sub{white-space:nowrap}
+/* 端末の「文字サイズ」設定で文字が拡大されても、上の見出し帯が崩れないようにする */
+.hdr{height:auto;min-height:64px;padding-top:6px;padding-bottom:6px}
+.hdr .mark{gap:10px}
+.hdr .seal{width:auto;height:auto;min-width:0;min-height:0;padding:.4em .7em .4em .84em;white-space:nowrap}
+.hdr .nm{white-space:nowrap}
+.hdr .menu-btn{width:auto;min-width:60px;padding:0 4px}
+@media (max-width:859px){
+  .mark .nm{font-size:calc(clamp(14px,calc((100vw - 200px) / 8.2),21px) * var(--fs,1))}
+  .hdr .nm{font-size:calc(clamp(14px,calc((100vw - 200px) / 8.2),21px) * var(--fs,1))}
+  .seal{font-size:calc(14px * var(--fs,1))}
+  .hdr .seal{font-size:calc(12px * var(--fs,1))}
+  .hdr .menu-btn{font-size:calc(10.5px * var(--fs,1))}
+  .g-box .words h3{font-size:calc(clamp(22px,6vw,30px) * var(--fs,1))}
+}
 .hdr .mark{max-width:none;min-width:0;flex:1}
 .hdr .nm{overflow:hidden;text-overflow:clip}
 .free-badge{width:8.2em;height:8.2em;min-width:0;min-height:0;aspect-ratio:auto;padding:0;font-size:14px}
@@ -787,6 +801,10 @@ footer small{display:block;margin-top:22px;font-size:12px;opacity:.8}
   <a class="m" href="mailto:yoshidahoumujimusho@gmail.com">メール</a>
 </div>
 
+<script>
+/* 端末側で文字が拡大されている倍率を測り、見出し帯の文字だけ元の大きさに戻す */
+(function(){try{var p=document.createElement('span');p.style.cssText='position:absolute;left:-9999px;visibility:hidden;font:100px/1 sans-serif;white-space:nowrap';p.textContent='あ';document.body.appendChild(p);var s=p.getBoundingClientRect().width/100;document.body.removeChild(p);if(s>1.05&&s<4)document.documentElement.style.setProperty('--fs',(1/s).toFixed(3))}catch(e){}})();
+</script>
 <script>
 document.documentElement.classList.add('js');
 (function(){
