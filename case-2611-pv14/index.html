@@ -233,6 +233,24 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 @keyframes introOut{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){.intro{display:none!important}}
 
+/* 事業責任者ヒストリー（おまけ） */
+.bonus{padding-block:88px;border-bottom:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--bg) 0 14px,#F6F2EA 14px 28px)}
+.bonus .note{display:inline-block;font-size:13px;color:#8A5B2B;background:#FBEBD3;border:1px dashed #D9A867;border-radius:999px;padding:4px 14px}
+.bonus-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:start;margin-top:36px}
+@media (max-width:860px){.bonus-grid{grid-template-columns:1fr;gap:28px}}
+.tv{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px;box-shadow:0 14px 30px -22px rgba(80,60,30,.5)}
+.tv video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:#EDE7DB}
+.tv figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.8}
+.tv .tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:#B0412E;margin-right:6px}
+.history{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--ink)}
+.history li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.history b{font-family:var(--f-display);font-size:17px}
+.history p{font-size:15px;color:var(--ink)}
+.history small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.history li.fail b{color:var(--accent)}
+@media (max-width:560px){.history li{grid-template-columns:1fr;gap:4px}}
+.bonus h2{word-break:keep-all;overflow-wrap:anywhere}
+
 /* 写真 */
 .scenes img,.wide-photo img,.side-photo img,.letter aside img{display:block;width:100%;height:100%;object-fit:cover}
 .scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:64px}
@@ -440,6 +458,30 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
           <p>私たちは、あなたの思いを映像にすることだけを考えています。成し遂げたことも、成し遂げられなかったことも、すべてがあなたの人生です。その思いを、受け継ぐべき人たちへ確かに手渡すお手伝いをさせてください。</p>
           <p class="sign">ひとこま 事業責任者 / チーフディレクター　滝田 務</p>
         </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="bonus" id="takki">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="note">※ここはタッキー確認用のおまけです。公開前に消します。</span>
+        <span class="en" style="margin-top:12px">Unofficial History</span>
+        <h2>事業責任者・<wbr>滝田務ヒストリー<br><small style="font-size:.55em;color:var(--muted)">（非公式・本人未確認・諸説あり）</small></h2>
+      </div>
+      <div class="bonus-grid">
+        <figure class="tv">
+          <video controls playsinline preload="metadata" poster="video/takki-poster.jpg" width="640" height="480"><source src="video/takki.mp4" type="video/mp4"></video>
+          <figcaption><span class="tag">● 発掘映像</span>推定ガラケー時代。どこかの船の上で、何かを熱く語る若き日の滝田。何を語っているのかは、本人もたぶん覚えていない。</figcaption>
+        </figure>
+        <ol class="history">
+          <li><b>誕生</b><p>産声を上げる前に、まず照明の位置を確認したと言われている。<small>出典：なし</small></p></li>
+          <li><b>少年時代</b><p>運動会では走るより、走る友達を撮る側に回る。ゴールテープより、ゴールした友の顔が好きだった。</p></li>
+          <li><b>大学時代</b><p>のちの代表・上原と出会う。この頃にキャップとメガネの組み合わせを確立し、以後ほぼ変えていない。<small>上の映像が動かぬ証拠</small></p></li>
+          <li><b>テレビの現場へ</b><p>「すみません、もう一回いいですか」を、日本でいちばん丁寧に言える男になる。<small>本人調べではない</small></p></li>
+          <li><b>転機</b><p>祖母の映像で、親戚一同を泣かせて笑わせる。気づけば事業責任者になっていた。</p></li>
+          <li class="fail"><b>成し遂げられなかったこと</b><p>キャップ以外の帽子を、かぶりこなすこと。現在も挑戦中。<small>当社の理念どおり、この夢もヒストリーとして残します</small></p></li>
+        </ol>
       </div>
     </div>
   </section>
