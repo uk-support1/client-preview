@@ -161,76 +161,84 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 
-/* オープニング：夜明けの光がさし、フィルムが流れ込み、ひとつの「こま」に灯がともる */
-.hero{position:relative;overflow:hidden;color:var(--ink);padding-block:96px 72px;
+/* オープニング：ゆっくりと。地平の光が一本ひかれ、言葉が浮かび、ひとつの「こま」が開いて本編へ */
+.hero{position:relative;overflow:hidden;color:var(--ink);padding-block:104px 80px;
   background:linear-gradient(180deg,#F6EEDF 0%,#F8F4EC 46%,#F1F4EC 100%)}
-.hero .sun{position:absolute;left:50%;top:-180px;width:720px;height:720px;max-width:none;margin-left:-360px;border-radius:50%;
+.hero .sun{position:absolute;left:50%;top:-200px;width:760px;height:760px;max-width:none;margin-left:-380px;border-radius:50%;
   background:radial-gradient(circle,rgba(240,205,140,.55) 0%,rgba(240,205,140,.18) 38%,rgba(240,205,140,0) 66%);
-  animation:sunrise 3.2s cubic-bezier(.2,.7,.2,1) both, breathe 9s 3.2s ease-in-out infinite;pointer-events:none}
-.hero .rays{position:absolute;inset:-40% -20% auto;height:150%;pointer-events:none;opacity:.5;
-  background:repeating-conic-gradient(from 0deg at 50% 0%,rgba(255,240,210,.0) 0deg 7deg,rgba(255,236,200,.35) 8deg 9deg,rgba(255,240,210,0) 10deg 18deg);
+  animation:sunrise 5s cubic-bezier(.25,.6,.2,1) both, breathe 12s 5s ease-in-out infinite;pointer-events:none}
+.hero .rays{position:absolute;inset:-40% -20% auto;height:150%;pointer-events:none;opacity:.45;
+  background:repeating-conic-gradient(from 0deg at 50% 0%,rgba(255,240,210,0) 0deg 7deg,rgba(255,236,200,.35) 8deg 9deg,rgba(255,240,210,0) 10deg 18deg);
   -webkit-mask:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 62%);mask:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 62%);
-  animation:fadein 2.4s .4s ease both, drift 40s linear infinite}
+  animation:fadein 4s .8s ease both, drift 60s linear infinite}
 #dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero .wrap{position:relative;display:grid;justify-items:center;text-align:center;gap:28px}
-.hero .en{color:var(--gold);animation:rise 1.2s .3s ease both}
-.hero h1{font-size:clamp(38px,7.2vw,80px);font-weight:800;letter-spacing:.08em;line-height:1.4}
-.hero h1 .ln{display:block;animation:reveal 1.6s cubic-bezier(.2,.7,.2,1) both}
-.hero h1 .ln:nth-child(1){animation-delay:.6s}
-.hero h1 .ln:nth-child(2){animation-delay:1.3s}
+.hero .wrap{position:relative;display:grid;justify-items:center;text-align:center;gap:30px}
+.hero .en{color:var(--gold);animation:rise 2s .4s ease both}
+.hero h1{font-size:clamp(38px,7.2vw,80px);font-weight:800;letter-spacing:.08em;line-height:1.45}
+.hero h1 .ln{display:block;animation:reveal 2.6s cubic-bezier(.25,.6,.2,1) both}
+.hero h1 .ln:nth-child(1){animation-delay:.8s}
+.hero h1 .ln:nth-child(2){animation-delay:2.1s}
 .hero h1 em{font-style:normal;color:var(--gold);position:relative;display:inline-block}
-.hero h1 em::after{content:"";position:absolute;left:4%;right:4%;bottom:.08em;height:.08em;background:currentColor;opacity:.45;transform-origin:left;animation:draw 1s 2.4s ease both}
-.hero .lead{max-width:32em;color:var(--muted);font-size:17px;line-height:2.1;animation:rise 1.4s 2.2s ease both}
-
-/* フィルム */
-.film{width:min(860px,100%);margin-top:18px;position:relative;animation:slidein 2.6s .2s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 em::after{content:"";position:absolute;left:4%;right:4%;bottom:.06em;height:.07em;background:currentColor;opacity:.45;transform-origin:left;animation:draw 1.8s 4.2s cubic-bezier(.6,0,.2,1) both}
+.hero .lead{max-width:32em;color:var(--muted);font-size:17px;line-height:2.15;animation:rise 2.4s 3.6s ease both}
+.film{width:min(860px,100%);margin-top:20px;position:relative;animation:slidein 4s .9s cubic-bezier(.25,.6,.2,1) both}
 .film .strip{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px;padding:14px 8px;border-radius:4px;
   background:rgba(255,255,255,.55);border:1px solid var(--screen-line);position:relative}
 .film .strip::before,.film .strip::after{content:"";position:absolute;left:8px;right:8px;height:5px;
   background:radial-gradient(circle,rgba(160,140,110,.35) 1.6px,transparent 2px) 0 0/14px 5px repeat-x}
 .film .strip::before{top:4px}.film .strip::after{bottom:4px}
-.film i{display:block;aspect-ratio:4/3;border-radius:2px;background:linear-gradient(160deg,#FBF8F2,#EFE8DB);border:1px solid var(--screen-line);
-  animation:frame .6s ease both}
-.film i:nth-child(1){animation-delay:.9s}.film i:nth-child(2){animation-delay:1s}.film i:nth-child(3){animation-delay:1.1s}
-.film i:nth-child(4){animation-delay:1.2s}.film i:nth-child(6){animation-delay:1.4s}.film i:nth-child(7){animation-delay:1.5s}
-.film i:nth-child(8){animation-delay:1.6s}.film i:nth-child(9){animation-delay:1.7s}
-.film i.lit{position:relative;background:linear-gradient(160deg,#F7E2B4,#E9C487);border-color:#D9B57A;
-  animation:frame .6s 1.3s ease both, glow 2.2s 2.6s ease-out both}
+.film i{display:block;aspect-ratio:4/3;border-radius:2px;background:linear-gradient(160deg,#FBF8F2,#EFE8DB);border:1px solid var(--screen-line);animation:frame 1.2s ease both}
+.film i:nth-child(1){animation-delay:2.2s}.film i:nth-child(2){animation-delay:2.4s}.film i:nth-child(3){animation-delay:2.6s}
+.film i:nth-child(4){animation-delay:2.8s}.film i:nth-child(6){animation-delay:3.2s}.film i:nth-child(7){animation-delay:3.4s}
+.film i:nth-child(8){animation-delay:3.6s}.film i:nth-child(9){animation-delay:3.8s}
+.film i.lit{position:relative;background:linear-gradient(160deg,#F7E2B4,#E9C487);border-color:#D9B57A;animation:frame 1.2s 3s ease both, glow 3.4s 4.6s ease-out both}
 .film i.lit::after{content:"一齣";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;
-  font-size:clamp(10px,1.4vw,15px);color:#7A5A2A;letter-spacing:.1em;animation:fadein 1s 2.8s ease both}
-.film .cap{margin-top:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.22em;color:var(--screen-muted);animation:fadein 1.2s 3s ease both}
-.scroll-cue{margin-top:20px;display:grid;justify-items:center;gap:8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;color:var(--screen-muted);text-decoration:none;animation:fadein 1s 3.4s ease both}
-.scroll-cue span{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:cue 2.4s 3.6s ease-in-out infinite}
+  font-size:clamp(10px,1.4vw,15px);color:#7A5A2A;letter-spacing:.1em;animation:fadein 2s 5s ease both}
+.film .cap{margin-top:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.22em;color:var(--screen-muted);animation:fadein 2s 5.4s ease both}
+.scroll-cue{margin-top:22px;display:grid;justify-items:center;gap:8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;color:var(--screen-muted);text-decoration:none;animation:fadein 2s 6s ease both}
+.scroll-cue span{width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:cue 3.2s 6.4s ease-in-out infinite}
 
-@keyframes sunrise{from{transform:translateY(120px) scale(.85);opacity:0}to{transform:none;opacity:1}}
-@keyframes breathe{50%{transform:scale(1.05);opacity:.85}}
+@keyframes sunrise{from{transform:translateY(140px) scale(.85);opacity:0}to{transform:none;opacity:1}}
+@keyframes breathe{50%{transform:scale(1.04);opacity:.88}}
 @keyframes drift{to{transform:rotate(6deg)}}
 @keyframes fadein{from{opacity:0}}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}}
-@keyframes reveal{from{opacity:0;transform:translateY(22px);filter:blur(8px);letter-spacing:.2em}}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes reveal{from{opacity:0;transform:translateY(18px);filter:blur(10px);letter-spacing:.18em}60%{filter:blur(0)}}
 @keyframes draw{from{transform:scaleX(0)}}
-@keyframes slidein{from{opacity:0;transform:translateX(18%)}}
-@keyframes frame{from{opacity:0;transform:scale(.92)}}
-@keyframes glow{0%{box-shadow:0 0 0 0 rgba(232,190,110,0)}40%{box-shadow:0 0 0 10px rgba(232,190,110,.28),0 0 40px 10px rgba(240,205,140,.5)}100%{box-shadow:0 0 0 0 rgba(232,190,110,0),0 0 24px 4px rgba(240,205,140,.35)}}
+@keyframes slidein{from{opacity:0;transform:translateX(12%)}}
+@keyframes frame{from{opacity:0;transform:scale(.94)}}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(232,190,110,0)}45%{box-shadow:0 0 0 10px rgba(232,190,110,.25),0 0 46px 12px rgba(240,205,140,.5)}100%{box-shadow:0 0 0 0 rgba(232,190,110,0),0 0 26px 5px rgba(240,205,140,.35)}}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-@media (max-width:560px){.film .strip{grid-template-columns:repeat(5,minmax(0,1fr))}.film i:nth-child(-n+2),.film i:nth-child(n+8){display:none}.hero{padding-block:72px 56px}}
+@media (max-width:560px){.film .strip{grid-template-columns:repeat(5,minmax(0,1fr))}.film i:nth-child(-n+2),.film i:nth-child(n+8){display:none}.hero{padding-block:80px 60px}}
 @media (prefers-reduced-motion:reduce){.hero *,.hero *::before,.hero *::after{animation:none!important}#dust{display:none}}
 
-/* 冒頭の暗転なしイントロ：光の中に一つの「こま」が灯り、その中へ入っていく */
+/* イントロ（約8秒）：本編の前に、静かな序章を一度だけ */
 .hero.wait *,.hero.wait *::before,.hero.wait *::after{animation-play-state:paused!important}
-.intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:#FBF6EC;cursor:pointer;
-  animation:introOut .9s 2.1s ease forwards}
-.intro .f{width:min(220px,46vw);aspect-ratio:4/3;border-radius:3px;border:1px solid #D9B57A;
-  background:linear-gradient(160deg,#F7E2B4,#E9C487);display:grid;place-items:center;
-  font-family:var(--f-display);font-weight:800;color:#7A5A2A;font-size:clamp(20px,4vw,30px);letter-spacing:.3em;text-indent:.3em;
-  animation:introFrame 3s cubic-bezier(.3,.6,.2,1) forwards}
-.intro .f span{animation:introText 3s ease forwards}
-@keyframes introFrame{0%{opacity:0;transform:scale(.7);box-shadow:0 0 0 0 rgba(240,205,140,0)}
-  30%{opacity:1;transform:scale(1);box-shadow:0 0 60px 20px rgba(240,205,140,.55)}
-  62%{opacity:1;transform:scale(1.02);box-shadow:0 0 80px 30px rgba(240,205,140,.6)}
-  100%{opacity:0;transform:scale(9);box-shadow:0 0 0 0 rgba(240,205,140,0)}}
-@keyframes introText{0%,18%{opacity:0;letter-spacing:.6em}40%,60%{opacity:1;letter-spacing:.3em}75%,100%{opacity:0}}
-@keyframes introOut{to{opacity:0;visibility:hidden}}
+.intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;cursor:pointer;
+  background:radial-gradient(ellipse at 50% 46%,#FDF9F1 0%,#F7EFE0 70%,#F1E6D2 100%);transition:opacity 2.2s ease,visibility 0s 2.2s}
+.intro.out{opacity:0;visibility:hidden}
+.intro .stage{position:relative;display:grid;justify-items:center;gap:34px;width:min(560px,86vw)}
+.intro .words{font-family:var(--f-display);font-weight:700;color:var(--ink);text-align:center;line-height:1.9;
+  font-size:clamp(22px,4.4vw,34px);letter-spacing:.14em;transition:opacity 1.6s ease,filter 1.6s ease}
+.intro .words span{display:inline-block;opacity:0;filter:blur(8px);transform:translateY(8px);transition:opacity 1.6s ease,filter 1.6s ease,transform 1.6s ease}
+.intro .words span.on{opacity:1;filter:none;transform:none}
+.intro .words .l2{display:block}
+.intro .words em{font-style:normal;color:var(--gold)}
+.intro.fold .words{opacity:0;filter:blur(6px)}
+.intro .line{position:relative;width:100%;height:1px}
+.intro .line::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#C9A15C 20%,#C9A15C 80%,transparent);transform:scaleX(0);transition:transform 2.6s cubic-bezier(.6,0,.2,1)}
+.intro.draw .line::before{transform:scaleX(1)}
+.intro .frame{position:absolute;left:50%;top:50%;width:min(240px,52vw);aspect-ratio:4/3;transform:translate(-50%,-50%) scaleY(.004);opacity:0;
+  border:1px solid #D9B57A;border-radius:3px;background:linear-gradient(160deg,#F7E2B4,#E9C487);display:grid;place-items:center;
+  transition:transform 2.2s cubic-bezier(.6,0,.2,1),opacity .6s ease,box-shadow 2.4s ease}
+.intro .frame b{font-family:var(--f-display);font-weight:800;color:#7A5A2A;font-size:clamp(18px,3.4vw,26px);letter-spacing:.34em;text-indent:.34em;opacity:0;transition:opacity 1.8s .9s ease}
+.intro.open .frame{opacity:1;transform:translate(-50%,-50%) scaleY(1);box-shadow:0 0 70px 24px rgba(240,205,140,.5)}
+.intro.open .frame b{opacity:1}
+.intro.open .line::before{opacity:0;transition:opacity 1s ease}
+.intro.out .frame{transform:translate(-50%,-50%) scale(1.18);transition:transform 2.4s ease}
+.intro .skip{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));
+  font:inherit;font-size:14px;color:var(--muted);background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:999px;padding:8px 18px;cursor:pointer}
+.intro .skip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.intro{display:none!important}}
 
 /* 事業責任者ヒストリー（おまけ） */
@@ -281,7 +289,13 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   </div>
 </header>
 
-<div class="intro" id="intro" hidden aria-hidden="true"><div class="f"><span>ひとこま</span></div></div>
+<div class="intro" id="intro" hidden>
+  <div class="stage" aria-hidden="true">
+    <div class="words"><div class="l1"></div><div class="l2"></div></div>
+    <div class="line"><div class="frame"><b>ひとこま</b></div></div>
+  </div>
+  <button class="skip" type="button" id="skip">スキップ</button>
+</div>
 <div class="hero" id="top">
   <div class="sun" aria-hidden="true"></div>
   <div class="rays" aria-hidden="true"></div>
@@ -289,7 +303,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   <div class="wrap">
     <span class="en">Life History Film</span>
     <h1><span class="ln">あなたの思いを、</span><span class="ln"><em>映像</em>に。</span></h1>
-    <p class="lead">築き上げてきたもの。守り抜いてきたもの。そして、まだ果たせていない夢まで。経営者として歩んできた人生を、あなた自身の言葉で一本のヒストリー映像に残します。</p>
+    <p class="lead">築き上げてきたもの。守り抜いてきたもの。そして、まだ果たせていない夢まで。あなたが歩んできた人生を、あなた自身の言葉で一本のヒストリー映像に残します。</p>
     <div class="film" aria-hidden="true">
       <div class="strip"><i></i><i></i><i></i><i></i><i class="lit"></i><i></i><i></i><i></i><i></i></div>
       <p class="cap">ONE LIFE, ONE FRAME AT A TIME</p>
@@ -302,12 +316,25 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 (function(){
   var h=document.getElementById('top'),o=document.getElementById('intro');
   if(!h||!o)return;
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce)return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var seen=false;try{seen=sessionStorage.getItem('hk-intro')==='1'}catch(e){}
+  if(seen)return;
+  try{sessionStorage.setItem('hk-intro','1')}catch(e){}
   h.classList.add('wait');o.hidden=false;
-  var done=false;function go(){if(done)return;done=true;h.classList.remove('wait');setTimeout(function(){o.hidden=true},400);}
-  o.addEventListener('click',function(){o.style.animation='introOut .4s ease forwards';go();});
-  setTimeout(go,2500);
+  var w=o.querySelector('.words'),l1=w.querySelector('.l1'),l2=w.querySelector('.l2');
+  function chars(el,text){var out=[];text.split('').forEach(function(c){var s=document.createElement('span');s.textContent=c;if(c==='名'||c==='場'||c==='面'){var e=document.createElement('em');e.appendChild(s);el.appendChild(e);}else el.appendChild(s);out.push(s);});return out;}
+  var a=chars(l1,'人生は、'),b=chars(l2,'名場面で、できている。');
+  var T=[],done=false;function at(ms,fn){T.push(setTimeout(fn,ms));}
+  function finish(){if(done)return;done=true;T.forEach(clearTimeout);o.classList.add('out');h.classList.remove('wait');setTimeout(function(){o.hidden=true},2300);}
+  at(400,function(){o.classList.add('draw')});
+  a.forEach(function(s,i){at(1300+i*220,function(){s.classList.add('on')})});
+  b.forEach(function(s,i){at(2900+i*170,function(){s.classList.add('on')})});
+  at(6000,function(){o.classList.add('fold')});
+  at(6700,function(){o.classList.add('open')});
+  at(9200,finish);
+  o.addEventListener('click',finish);
+  document.getElementById('skip').addEventListener('click',function(e){e.stopPropagation();finish();});
+  addEventListener('keydown',function(e){if(e.key==='Escape')finish();});
 })();
 </script>
 <main>
