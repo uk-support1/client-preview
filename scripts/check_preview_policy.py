@@ -56,8 +56,9 @@ def main() -> int:
         problems.append("Root index.html must not list case URLs")
 
     case_dirs = sorted(path for path in ROOT.iterdir() if path.is_dir() and path.name.startswith("case-"))
-    if len(case_dirs) > 5:
-        problems.append(f"At most five active cases are allowed; found {len(case_dirs)}")
+    if len(case_dirs) >= 2:
+        names = ", ".join(path.name for path in case_dirs)
+        print(f"::warning title=確認用ページが{len(case_dirs)}件あります::{names}。確認が終わった案件は削除を検討してください。")
 
     for case in case_dirs:
         if not CASE_PATTERN.fullmatch(case.name):
