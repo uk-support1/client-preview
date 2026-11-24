@@ -217,9 +217,9 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;cursor:pointer;
   background:radial-gradient(ellipse at 50% 46%,#FDF9F1 0%,#F7EFE0 70%,#F1E6D2 100%);transition:opacity 2.2s ease,visibility 0s 2.2s}
 .intro.out{opacity:0;visibility:hidden}
-.intro .stage{position:relative;display:grid;justify-items:center;gap:34px;width:min(560px,86vw)}
+.intro .stage{position:relative;display:grid;justify-items:center;gap:34px;width:min(720px,90vw)}
 .intro .words{font-family:var(--f-display);font-weight:700;color:var(--ink);text-align:center;line-height:1.9;
-  font-size:clamp(22px,4.4vw,34px);letter-spacing:.14em;transition:opacity 1.6s ease,filter 1.6s ease}
+  font-size:clamp(16px,4.2vw,30px);letter-spacing:.12em;transition:opacity 1.6s ease,filter 1.6s ease}
 .intro .words span{display:inline-block;opacity:0;filter:blur(8px);transform:translateY(8px);transition:opacity 1.6s ease,filter 1.6s ease,transform 1.6s ease}
 .intro .words span.on{opacity:1;filter:none;transform:none}
 .intro .words .l2{display:block}
@@ -258,6 +258,15 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .history li.fail b{color:var(--accent)}
 @media (max-width:560px){.history li{grid-template-columns:1fr;gap:4px}}
 .bonus h2{word-break:keep-all;overflow-wrap:anywhere}
+
+/* 私たちが信じていること */
+.belief{padding-block:104px 96px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#F1F4EC 0%,var(--bg) 100%)}
+.belief .wrap{display:grid;justify-items:center;text-align:center;gap:28px}
+.belief .big{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,4.2vw,44px);line-height:1.7;letter-spacing:.06em}
+.belief .big em{font-style:normal;color:var(--gold)}
+.belief .rule{width:56px;height:1px;background:var(--gold)}
+.belief .prose{text-align:left;max-width:34em}
+.belief .prose p{font-size:17px;line-height:2.15}
 
 /* 写真 */
 .scenes img,.wide-photo img,.side-photo img,.letter aside img{display:block;width:100%;height:100%;object-fit:cover}
@@ -322,22 +331,35 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   try{sessionStorage.setItem('hk-intro','1')}catch(e){}
   h.classList.add('wait');o.hidden=false;
   var w=o.querySelector('.words'),l1=w.querySelector('.l1'),l2=w.querySelector('.l2');
-  function chars(el,text){var out=[];text.split('').forEach(function(c){var s=document.createElement('span');s.textContent=c;if(c==='名'||c==='場'||c==='面'){var e=document.createElement('em');e.appendChild(s);el.appendChild(e);}else el.appendChild(s);out.push(s);});return out;}
-  var a=chars(l1,'人生は、'),b=chars(l2,'名場面で、できている。');
+  function chars(el,text,hl){var out=[],k=hl?text.indexOf(hl):-1;text.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;if(k>=0&&i>=k&&i<k+hl.length){var e=document.createElement('em');e.appendChild(s);el.appendChild(e);}else el.appendChild(s);out.push(s);});return out;}
+  var a=chars(l1,'歩んできた道は、すべて正しかった。','正しかった'),b=chars(l2,'叶わなかった夢も、未来へ手渡そう。','未来へ');
   var T=[],done=false;function at(ms,fn){T.push(setTimeout(fn,ms));}
   function finish(){if(done)return;done=true;T.forEach(clearTimeout);o.classList.add('out');h.classList.remove('wait');setTimeout(function(){o.hidden=true},2300);}
   at(400,function(){o.classList.add('draw')});
-  a.forEach(function(s,i){at(1300+i*220,function(){s.classList.add('on')})});
-  b.forEach(function(s,i){at(2900+i*170,function(){s.classList.add('on')})});
-  at(6000,function(){o.classList.add('fold')});
-  at(6700,function(){o.classList.add('open')});
-  at(9200,finish);
+  a.forEach(function(s,i){at(1300+i*130,function(){s.classList.add('on')})});
+  b.forEach(function(s,i){at(4300+i*130,function(){s.classList.add('on')})});
+  at(8600,function(){o.classList.add('fold')});
+  at(9300,function(){o.classList.add('open')});
+  at(11800,finish);
   o.addEventListener('click',finish);
   document.getElementById('skip').addEventListener('click',function(e){e.stopPropagation();finish();});
   addEventListener('keydown',function(e){if(e.key==='Escape')finish();});
 })();
 </script>
 <main>
+  <section class="belief" id="belief">
+    <div class="wrap">
+      <span class="en">Our belief</span>
+      <p class="big">あなたが歩んできた道は、<br><em>すべて正しかった。</em></p>
+      <div class="rule" aria-hidden="true"></div>
+      <div class="prose">
+        <p>迷った日も、遠回りをした日も、悔しさに眠れなかった夜も。その一つひとつが、いまのあなたと、あなたが守ってきた人たちをつくってきました。</p>
+        <p>だからこそ、その道のりは、次の世代へ語り継がれるべきものだと、私たちは考えます。成し遂げたことだけではありません。成し遂げられなかったことも、叶わなかった夢も、あなたの生き様そのものです。語り継がれた夢は、いつか誰かの手で叶えられるかもしれません。</p>
+        <p>あなたの歩みのすべてを、未来へ手渡す。そのために、私たちは映像をつくります。</p>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="philosophy">
     <div class="wrap">
       <div class="sec-head">
