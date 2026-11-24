@@ -3,256 +3,357 @@
 <head>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>金城タクシー｜葛飾区の個人タクシー・ご予約承ります</title>
-  <meta name="description" content="葛飾区を拠点とする個人タクシー「金城タクシー」。トヨタ カムリ ハイブリッドで、通院・お買い物・空港送迎・観光まで丁寧にお送りします。ご予約はお電話・LINE・メールで。">
-  <link rel="alternate" hreflang="ja" href="./">
-  <link rel="alternate" hreflang="en" href="./en/">
-  <meta property="og:title" content="金城タクシー｜葛飾区の個人タクシー">
-  <meta property="og:description" content="通院・お買い物・空港送迎・観光。ご予約承ります。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>金城タクシー｜葛飾の個人タクシー — 移動を、上質な時間に。</title>
+  <meta name="description" content="葛飾区を拠点とする個人タクシー「金城タクシー」。トヨタ カムリ ハイブリッドで、通院・お買い物・空港送迎・観光まで、上質な移動をお約束します。ご予約はお電話・LINE・メールで。">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta property="og:title" content="金城タクシー｜移動を、上質な時間に。">
+  <meta property="og:description" content="葛飾の個人タクシー。通院・空港送迎・観光まで、ご予約承ります。">
   <meta property="og:image" content="img/taxi.jpg">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho+B1:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/taxi.jpg">
+  <link rel="stylesheet" href="css/luxe.css">
 </head>
-<body>
+<body class="is-loading">
 
-<header class="site-header">
+<!-- ================= OPENING ================= -->
+<div class="opening" aria-hidden="true">
+  <div class="opening__panel opening__panel--top"></div>
+  <div class="opening__panel opening__panel--bottom"></div>
+  <div class="opening__inner">
+    <div class="opening__andon"></div>
+    <div class="opening__logo gold-text">
+      <span style="animation-delay:.55s">K</span><span style="animation-delay:.62s">I</span><span style="animation-delay:.69s">N</span><span style="animation-delay:.76s">J</span><span style="animation-delay:.83s">O</span>
+    </div>
+    <div class="opening__line"></div>
+    <div class="opening__sub">PRIVATE TAXI · KATSUSHIKA TOKYO</div>
+    <div class="opening__ja">金城タクシー</div>
+  </div>
+  <button class="opening__skip" type="button">SKIP</button>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
   <div class="container">
-    <a class="logo" href="./">
-      <span class="logo-mark">個人</span>
-      <span>金城タクシー<small>KINJO TAXI</small></span>
+    <a class="brand" href="#top" aria-label="金城タクシー トップへ">
+      <span class="brand__mark"></span>
+      <span class="brand__name">KINJO<small>金城タクシー</small></span>
     </a>
     <nav class="nav" aria-label="メインメニュー">
-      <a href="#service">サービス</a>
-      <a href="#price">料金</a>
-      <a href="#reserve">ご予約</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#about">会社概要</a>
+      <a href="#concept">CONCEPT</a>
+      <a href="#car">THE CAR</a>
+      <a href="#service">SERVICE</a>
+      <a href="#price">PRICE</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="lang-switch" href="en/" hreflang="en" lang="en">English</a>
+    <a class="btn btn--small header__cta" href="#reserve">ご予約<span class="arrow"></span></a>
+    <button class="menu-btn" type="button" aria-label="メニュー" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
+<nav class="drawer" aria-label="スマホメニュー">
+  <a href="#concept"><small>CONCEPT</small>想い</a>
+  <a href="#car"><small>THE CAR</small>車両</a>
+  <a href="#service"><small>SERVICE</small>サービス</a>
+  <a href="#price"><small>PRICE</small>料金</a>
+  <a href="#reserve"><small>RESERVATION</small>ご予約</a>
+  <a href="#faq"><small>FAQ</small>よくある質問</a>
+</nav>
 
-<main>
-  <!-- ヒーロー -->
+<main id="top">
+  <!-- ================= HERO ================= -->
   <section class="hero">
+    <div class="hero__media"><img src="img/taxi.jpg" alt="金城タクシーの車両、白いトヨタ カムリ ハイブリッド" width="1170" height="878"></div>
+    <div class="hero__shade"></div>
+    <div class="hero__sweep"></div>
+
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 120 120">
+        <defs><path id="circle" d="M60,60 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs>
+        <text><textPath href="#circle">GRAND OPENING · KINJO TAXI · </textPath></text>
+      </svg>
+      <div class="seal__center"><div><b>2026</b><small>SINCE 10.01</small></div></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__eyebrow hero__fade">PRIVATE TAXI — KATSUSHIKA</div>
+      <h1 class="hero__title">
+        <span class="mask"><span>移動を、</span></span>
+        <span class="mask"><span class="gold-text">上質な時間に。</span></span>
+      </h1>
+      <p class="hero__lead hero__fade">葛飾の個人タクシー、金城タクシー。<br>静かなハイブリッドセダンと、ひとりの運転手が責任をもって。<br>通院も、空港も、特別な日の移動も、安心してお任せください。</p>
+      <div class="hero__actions hero__fade">
+        <a class="btn btn--solid" href="#reserve">ご予約はこちら<span class="arrow"></span></a>
+        <a class="btn" data-tel href="tel:+8190XXXXXXXX">TEL <span data-phone-text>090-XXXX-XXXX</span></a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">SCROLL<i></i></div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>KINJO TAXI</span><span>Private Chauffeur</span><span>Katsushika Tokyo</span><span>Since 2026</span>
+      <span>KINJO TAXI</span><span>Private Chauffeur</span><span>Katsushika Tokyo</span><span>Since 2026</span>
+    </div>
+  </div>
+
+  <!-- ================= CONCEPT ================= -->
+  <section class="section" id="concept">
+    <div class="container concept">
+      <div class="concept__text">
+        <div class="heading reveal">
+          <div class="heading__en">01 <em>/</em> CONCEPT</div>
+          <h2><span class="mask"><span>まちのタクシーに、</span></span><span class="mask"><span>おもてなしの品格を。</span></span></h2>
+        </div>
+        <p class="concept__catch reveal">ドアを開けた瞬間から、<br>目的地に着くその時まで。</p>
+        <p class="reveal" data-delay="1">2026年10月、金城タクシーは葛飾で個人タクシーとして開業しました。大きな会社のタクシーではありません。ご予約からお迎え、お送りまで、すべてを運転手ひとりが責任をもって担当します。</p>
+        <p class="reveal" data-delay="2">急がせない運転、静かな車内、丁寧な言葉づかい。毎日の通院やお買い物も、遠方からのお客様のお迎えも、同じ心でお送りします。</p>
+        <div class="concept__sign reveal" data-delay="3">運転手　金城 一平</div>
+      </div>
+      <div class="concept__visual">
+        <div class="curtain"><img src="img/detail-emblem.jpg" alt="車体の「個人」「金城タクシー」の表示" loading="lazy"></div>
+        <div class="tag">EST. 2026</div>
+        <div class="vertical">KINJO TAXI — KATSUSHIKA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE CAR ================= -->
+  <section class="section section--char" id="car">
     <div class="container">
+      <div class="heading reveal">
+        <div class="heading__en">02 <em>/</em> THE CAR</div>
+        <h2><span class="mask"><span>静けさを、乗りこなす。</span></span></h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="car-hero curtain">
+        <div class="car-hero__shade"></div>
+        <img src="img/taxi.jpg" alt="トヨタ カムリ ハイブリッドの外観" loading="lazy" data-parallax=".6">
+        <div class="car-hero__name"><small>TOYOTA</small><h3 class="gold-text">CAMRY HYBRID</h3></div>
+      </div>
+
+      <div class="specs">
+        <div class="spec reveal"><div class="spec__num gold-text"><span data-count="4" data-pad="2">00</span><sub>名</sub></div><div class="spec__label">乗車定員（お客様）</div></div>
+        <div class="spec reveal" data-delay="1"><div class="spec__num gold-text">HV</div><div class="spec__label">静かなハイブリッド</div></div>
+        <div class="spec reveal" data-delay="2"><div class="spec__num gold-text"><span data-count="1" data-pad="2">00</span><sub>人</sub></div><div class="spec__label">専任の運転手</div></div>
+        <div class="spec reveal" data-delay="3"><div class="spec__num gold-text"><span data-count="2026">0</span><sub>年</sub></div><div class="spec__label">10月1日 開業</div></div>
+      </div>
+
+      <div class="details">
+        <figure class="detail reveal">
+          <img src="img/detail-light.jpg" alt="ヘッドライトのアップ" loading="lazy">
+          <figcaption><small>DESIGN</small><b>低く、美しいシルエット</b><span>ゆとりあるセダンの後部座席で、移動の時間をくつろぎの時間に。</span></figcaption>
+        </figure>
+        <figure class="detail reveal" data-delay="1">
+          <img src="img/detail-wheel.jpg" alt="ホイールのアップ" loading="lazy">
+          <figcaption><small>COMFORT</small><b>なめらかな乗り心地</b><span>ハイブリッドならではの静かな発進で、揺れの少ない運転を心がけます。</span></figcaption>
+        </figure>
+        <figure class="detail reveal" data-delay="2">
+          <img src="img/detail-line.jpg" alt="車体の青いラインと「葛飾」の表示" loading="lazy">
+          <figcaption><small>TRUST</small><b>認可を受けた個人タクシー</b><span>東京都の認可運賃とメーターで、安心してご利用いただけます。</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE ================= -->
+  <section class="section" id="service">
+    <div class="container">
+      <div class="heading reveal">
+        <div class="heading__en">03 <em>/</em> SERVICE</div>
+        <h2><span class="mask"><span>あらゆる移動に、</span></span><span class="mask"><span>ひとつ上の安心を。</span></span></h2>
+      </div>
+      <div class="services">
+        <article class="service reveal">
+          <div class="service__no">01</div><div class="service__en">MEDICAL &amp; DAILY</div>
+          <h3>通院・お買い物</h3>
+          <p>病院の予約時間に合わせてお迎えにうかがいます。お帰りのお迎えもご相談ください。乗り降りもゆっくりで大丈夫です。</p>
+          <span class="service__line"></span>
+        </article>
+        <article class="service reveal" data-delay="1">
+          <div class="service__no">02</div><div class="service__en">AIRPORT TRANSFER</div>
+          <h3>空港送迎（羽田・成田）</h3>
+          <p>早朝・深夜の便もご予約で対応します。大きなスーツケースもトランクにお積みします。</p>
+          <span class="service__line"></span>
+        </article>
+        <article class="service reveal">
+          <div class="service__no">03</div><div class="service__en">STATION</div>
+          <h3>駅までの送迎</h3>
+          <p>金町・亀有・新小岩・青砥など、最寄り駅までの移動に。雨の日や荷物の多い日にも便利です。</p>
+          <span class="service__line"></span>
+        </article>
+        <article class="service reveal" data-delay="1">
+          <div class="service__no">04</div><div class="service__en">CHARTER &amp; TOUR</div>
+          <h3>観光・貸切</h3>
+          <p>柴又帝釈天、東京スカイツリー、浅草など。ご希望に合わせて、時間単位の貸切も承ります。</p>
+          <span class="service__line"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICE ================= -->
+  <section class="section section--char" id="price">
+    <div class="container price">
+      <div class="price__intro">
+        <div class="heading reveal">
+          <div class="heading__en">04 <em>/</em> PRICE</div>
+          <h2><span class="mask"><span>明朗な料金。</span></span></h2>
+        </div>
+        <p class="reveal">運賃は東京都の認可運賃（メーター制）です。空港への定額運賃や、時間制の貸切もご用意しています。くわしくはご予約の際にお尋ねください。</p>
+      </div>
       <div>
-        <span class="hero-badge">2026年10月1日 開業</span>
-        <h1>葛飾のまちを、<br><span class="accent">丁寧に、安心して。</span></h1>
-        <p class="lead">個人タクシーの金城タクシーです。通院やお買い物、駅・空港への送迎まで、運転手 金城が責任をもってお送りします。前日までのご予約がおすすめです。</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" data-tel href="tel:+8190XXXXXXXX">📞 <span data-phone-text>090-XXXX-XXXX</span></a>
-          <a class="btn btn-outline" href="#reserve">ネットで予約する</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="img/taxi.jpg" alt="金城タクシーの車両（白いトヨタ カムリ ハイブリッド、青いライン）" width="1170" height="878">
-      </div>
-    </div>
-  </section>
-
-  <!-- 特徴 -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <div class="en">Features</div>
-        <h2>金城タクシーの特長</h2>
-      </div>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="icon">🚗</div>
-          <h3>ゆったり静かなハイブリッド車</h3>
-          <p>トヨタ カムリ ハイブリッドを使用。広い後部座席と静かな車内で、長めの移動も快適です。</p>
-        </div>
-        <div class="card">
-          <div class="icon">🤝</div>
-          <h3>ひとりの運転手が責任をもって</h3>
-          <p>個人タクシーなので、ご予約からお送りまで同じ運転手が担当。顔なじみの安心感があります。</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌏</div>
-          <h3>海外からのお客様も歓迎</h3>
-          <p>英語ページから予約を受け付けています。ご家族・ご友人の来日時の送迎にもどうぞ。</p>
-        </div>
+        <ul class="price__list reveal" data-delay="1">
+          <li><span class="k">初乗り運賃</span><span class="v"><span class="placeholder">¥___ / _._km</span></span></li>
+          <li><span class="k">加算運賃</span><span class="v"><span class="placeholder">___m ごと ¥__</span></span></li>
+          <li><span class="k">迎車料金<small>ご予約時</small></span><span class="v"><span class="placeholder">¥___</span></span></li>
+          <li><span class="k">深夜・早朝割増<small>22:00 – 翌5:00</small></span><span class="v"><span class="placeholder">2割増</span></span></li>
+          <li><span class="k">羽田空港 定額運賃<small>葛飾区 ⇔ 羽田　高速代別</small></span><span class="v"><span class="placeholder">¥_,___</span></span></li>
+          <li><span class="k">成田空港 定額運賃<small>葛飾区 ⇔ 成田　高速代別</small></span><span class="v"><span class="placeholder">¥__,___</span></span></li>
+          <li><span class="k">観光・貸切<small>1時間あたり</small></span><span class="v"><span class="placeholder">¥_,___</span></span></li>
+          <li><span class="k">お支払い方法</span><span class="v"><span class="placeholder">現金・カード等（確認中）</span></span></li>
+        </ul>
+        <p class="price__note">※高速道路料金・有料駐車場代は別途お客様のご負担となります。</p>
       </div>
     </div>
   </section>
 
-  <!-- サービス -->
-  <section id="service" class="alt">
+  <!-- ================= FLOW ================= -->
+  <section class="section">
     <div class="container">
-      <div class="section-title">
-        <div class="en">Service</div>
-        <h2>こんなときにご利用ください</h2>
+      <div class="heading reveal">
+        <div class="heading__en">05 <em>/</em> FLOW</div>
+        <h2><span class="mask"><span>ご予約の流れ</span></span></h2>
       </div>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>🏥 通院・お買い物</h3>
-          <p>病院の予約時間に合わせてお迎えにうかがいます。お帰りのお迎えもご相談ください。</p>
-        </div>
-        <div class="card">
-          <h3>✈️ 空港送迎（羽田・成田）</h3>
-          <p>早朝・深夜の便でもご予約で対応します。大きなお荷物もトランクにお積みします。</p>
-        </div>
-        <div class="card">
-          <h3>🚉 駅までの送迎</h3>
-          <p>金町・亀有・新小岩・青砥など、最寄り駅への移動に。雨の日や荷物が多い日にも便利です。</p>
-        </div>
-        <div class="card">
-          <h3>🏮 観光・貸切</h3>
-          <p>柴又帝釈天、東京スカイツリー、浅草など、ご希望に合わせて時間単位の貸切も承ります。</p>
-        </div>
+      <div class="flow">
+        <div class="flow__bar"><i></i></div>
+        <div class="flow__step"><small>STEP 01</small><h3>ご連絡</h3><p>お電話・LINE・メール、または下のフォームからご連絡ください。</p></div>
+        <div class="flow__step"><small>STEP 02</small><h3>内容の確認</h3><p>日時・お迎え場所・行き先・人数を確認し、空き状況をお返事します。</p></div>
+        <div class="flow__step"><small>STEP 03</small><h3>ご予約確定</h3><p>運転手から確定のご連絡をした時点で、ご予約が完了します。</p></div>
+        <div class="flow__step"><small>STEP 04</small><h3>当日のお迎え</h3><p>お約束の時間にお迎えにあがります。到着時にご連絡します。</p></div>
       </div>
     </div>
   </section>
 
-  <!-- 料金 -->
-  <section id="price">
+  <!-- ================= RESERVE ================= -->
+  <section class="section reserve" id="reserve">
+    <div class="reserve__bg"><img src="img/taxi.jpg" alt="" loading="lazy"></div>
     <div class="container">
-      <div class="section-title">
-        <div class="en">Price</div>
-        <h2>料金のめやす</h2>
-        <p>運賃は東京都の認可運賃（メーター制）です。</p>
+      <div class="heading reveal">
+        <div class="heading__en">06 <em>/</em> RESERVATION</div>
+        <h2><span class="mask"><span>ご予約・お問い合わせ</span></span></h2>
       </div>
-      <table class="price-table">
-        <tr><th>初乗り運賃</th><td><span class="placeholder">〇〇〇円（〇.〇kmまで）</span></td></tr>
-        <tr><th>加算運賃</th><td><span class="placeholder">〇〇〇mごとに〇〇円</span></td></tr>
-        <tr><th>迎車料金（ご予約時）</th><td><span class="placeholder">〇〇〇円</span></td></tr>
-        <tr><th>深夜・早朝割増</th><td>22時〜翌5時は<span class="placeholder">2割増</span></td></tr>
-        <tr><th>空港定額運賃（葛飾区⇔羽田）</th><td><span class="placeholder">〇,〇〇〇円</span>（高速代別）</td></tr>
-        <tr><th>空港定額運賃（葛飾区⇔成田）</th><td><span class="placeholder">〇〇,〇〇〇円</span>（高速代別）</td></tr>
-        <tr><th>観光・貸切</th><td>1時間あたり <span class="placeholder">〇,〇〇〇円</span>（〇時間〜）</td></tr>
-        <tr><th>お支払い方法</th><td><span class="placeholder">現金／クレジットカード／交通系IC／QRコード決済（要確認）</span></td></tr>
-      </table>
-      <p class="note">※高速道路料金・有料駐車場代は別途お客様負担となります。料金は概算です。正確な金額はご予約時にお問い合わせください。</p>
-    </div>
-  </section>
-
-  <!-- ご予約の流れ -->
-  <section class="alt">
-    <div class="container">
-      <div class="section-title">
-        <div class="en">How to book</div>
-        <h2>ご予約の流れ</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><h3>ご連絡</h3><p>お電話・LINE・メール、または下のフォームからご連絡ください。</p></div>
-        <div class="step"><h3>内容の確認</h3><p>日時・お迎え場所・行き先・人数を確認し、空き状況をお返事します。</p></div>
-        <div class="step"><h3>予約確定</h3><p>運転手から確定のご連絡をした時点でご予約完了です。</p></div>
-        <div class="step"><h3>当日お迎え</h3><p>お約束の時間にお迎えにうかがいます。到着時にご連絡します。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 予約フォーム -->
-  <section id="reserve">
-    <div class="container">
-      <div class="section-title">
-        <div class="en">Reservation</div>
-        <h2>ご予約・お問い合わせ</h2>
-        <p>運転中は電話に出られないことがあります。折り返しご連絡いたします。</p>
-      </div>
-      <div class="booking">
-        <div class="contact-list">
-          <a class="btn btn-primary" data-tel href="tel:+8190XXXXXXXX">📞 お電話で予約<br><small data-phone-text>090-XXXX-XXXX</small></a>
-          <a class="btn btn-line" data-line href="#" target="_blank" rel="noopener">💬 LINEで予約<br><small>友だち追加してメッセージ</small></a>
-          <a class="btn btn-mail" data-mail href="mailto:info@example.com">✉️ メールで予約<br><small data-mail-text>info@example.com</small></a>
-          <p class="note">受付時間：<span class="placeholder">〇:〇〇〜〇〇:〇〇（〇曜定休）</span><br>前日までのご予約がおすすめです。当日のご予約は空き状況によります。</p>
-        </div>
-
-        <form id="booking-form" class="form" novalidate>
-          <div class="form-row">
-            <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input id="f-name" name="name" required autocomplete="name"></div>
-            <div class="field"><label for="f-contact">ご連絡先（電話/メール）<span class="req">必須</span></label><input id="f-contact" name="contact" required autocomplete="tel"></div>
+      <div class="reserve__grid">
+        <div class="reveal">
+          <a class="tel" data-tel href="tel:+8190XXXXXXXX">
+            <small>TELEPHONE</small>
+            <b data-phone-text>090-XXXX-XXXX</b>
+            <span>運転中は出られないことがあります。折り返しご連絡いたします。</span>
+          </a>
+          <div class="reserve__alt">
+            <a class="btn btn--line" data-line href="#" target="_blank" rel="noopener">LINEで予約する<span class="arrow"></span></a>
+            <a class="btn" data-mail href="mailto:info@example.com">メールで予約する<span class="arrow"></span></a>
           </div>
-          <div class="form-row">
+          <p class="reserve__hours">受付時間　<span class="placeholder">__:__ – __:__（_曜定休）</span><br>前日までのご予約がおすすめです。当日のご予約は空き状況によります。</p>
+        </div>
+
+        <form id="booking-form" class="form reveal" data-delay="1" novalidate>
+          <div class="form__row">
+            <div class="field"><label for="f-name">お名前<span class="req">必須</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-contact">ご連絡先（電話・メール）<span class="req">必須</span></label><input id="f-contact" name="contact" autocomplete="tel" required></div>
+          </div>
+          <div class="form__row">
             <div class="field"><label for="f-date">ご希望日<span class="req">必須</span></label><input id="f-date" type="date" name="date" required></div>
             <div class="field"><label for="f-time">お迎え時刻<span class="req">必須</span></label><input id="f-time" type="time" name="time" required></div>
           </div>
-          <div class="field"><label for="f-from">お迎え場所<span class="req">必須</span></label><input id="f-from" name="from" required placeholder="例：葛飾区〇〇 1-2-3 ／ 〇〇病院 正面玄関"></div>
-          <div class="field"><label for="f-to">行き先<span class="req">必須</span></label><input id="f-to" name="to" required placeholder="例：羽田空港 第3ターミナル"></div>
-          <div class="form-row">
-            <div class="field"><label for="f-pax">人数</label>
-              <select id="f-pax" name="pax"><option>1名</option><option>2名</option><option>3名</option><option>4名</option></select></div>
-            <div class="field"><label for="f-bags">大きな荷物</label>
-              <select id="f-bags" name="bags"><option value="">なし</option><option>1個</option><option>2個</option><option>3個以上</option></select></div>
+          <div class="field"><label for="f-from">お迎え場所<span class="req">必須</span></label><input id="f-from" name="from" placeholder="例：葛飾区〇〇 1-2-3／〇〇病院 正面玄関" required></div>
+          <div class="field"><label for="f-to">行き先<span class="req">必須</span></label><input id="f-to" name="to" placeholder="例：羽田空港 第3ターミナル" required></div>
+          <div class="form__row">
+            <div class="field"><label for="f-pax">人数</label><select id="f-pax" name="pax"><option>1名</option><option>2名</option><option>3名</option><option>4名</option></select></div>
+            <div class="field"><label for="f-bags">大きな荷物</label><select id="f-bags" name="bags"><option value="">なし</option><option>1個</option><option>2個</option><option>3個以上</option></select></div>
           </div>
           <div class="field"><label for="f-note">備考</label><textarea id="f-note" name="note" placeholder="車いす・ベビーカー・お帰りのお迎えなど"></textarea></div>
-          <p class="form-error" id="form-error" role="alert"></p>
-          <div class="send-choices">
-            <button class="btn btn-line" data-send="line" type="button">LINEで送る</button>
-            <button class="btn btn-mail" data-send="email" type="button">メールで送る</button>
+          <p class="form__error" id="form-error" role="alert"></p>
+          <div class="form__send">
+            <button class="btn btn--line" type="button" data-send="line">LINEで送る</button>
+            <button class="btn btn--solid" type="button" data-send="email">メールで送る</button>
           </div>
-          <p class="form-hint">ボタンを押すと、入力内容が入ったLINE／メールの画面が開きます。そのまま送信してください。運転手からの確定連絡をもってご予約完了となります。</p>
+          <p class="form__hint">ボタンを押すと、入力内容が入った状態でLINEまたはメールが開きます。そのまま送信してください。運転手からの確定のご連絡をもって、ご予約完了となります。</p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- 英語ページへの誘導 -->
-  <div class="en-banner">
+  <!-- ================= FAQ ================= -->
+  <section class="section section--char" id="faq">
     <div class="container">
-      <p>海外からのご家族・ご友人に<br>Visiting Tokyo? Book a taxi in English.</p>
-      <a class="btn" href="en/" hreflang="en">English page →</a>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <section id="faq" class="alt">
-    <div class="container" style="max-width:820px">
-      <div class="section-title">
-        <div class="en">FAQ</div>
-        <h2>よくある質問</h2>
+      <div class="heading heading--center reveal">
+        <div class="heading__en">07 / FAQ</div>
+        <h2><span class="mask"><span>よくあるご質問</span></span></h2>
       </div>
-      <div class="faq">
-        <details><summary>当日の予約はできますか？</summary><p>空いていれば対応いたします。運転中は電話に出られないことがあるため、LINEまたはメールでのご連絡が確実です。</p></details>
-        <details><summary>何名まで乗れますか？</summary><p>お客様は最大4名までご乗車いただけます。大きなスーツケースは2個程度までが目安です。</p></details>
-        <details><summary>車いすやベビーカーは載せられますか？</summary><p>折りたたみ式であればトランクに積めます。ご予約時にお知らせください。</p></details>
-        <details><summary>キャンセル料はかかりますか？</summary><p><span class="placeholder">前日まで無料／当日は迎車料金をいただきます（要確認）</span></p></details>
-        <details><summary>領収書は出ますか？</summary><p>はい、発行いたします。</p></details>
+      <div class="faq reveal">
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false"><em>Q.</em>当日の予約はできますか？<i></i></button><div class="faq__a"><div><p>空いていれば対応いたします。運転中は電話に出られないことがあるため、LINEまたはメールでのご連絡が確実です。</p></div></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false"><em>Q.</em>何名まで乗れますか？<i></i></button><div class="faq__a"><div><p>お客様は最大4名までご乗車いただけます。大きなスーツケースは2個程度までが目安です。</p></div></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false"><em>Q.</em>車いすやベビーカーは載せられますか？<i></i></button><div class="faq__a"><div><p>折りたたみ式であればトランクにお積みできます。ご予約時にお知らせください。</p></div></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false"><em>Q.</em>キャンセル料はかかりますか？<i></i></button><div class="faq__a"><div><p><span class="placeholder">前日まで無料／当日は迎車料金をいただきます（確認中）</span></p></div></div></div>
+        <div class="faq__item"><button class="faq__q" type="button" aria-expanded="false"><em>Q.</em>領収書は出ますか？<i></i></button><div class="faq__a"><div><p>はい、発行いたします。</p></div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- 会社概要 -->
-  <section id="about">
-    <div class="container" style="max-width:820px">
-      <div class="section-title">
-        <div class="en">About</div>
-        <h2>運転手・会社概要</h2>
+  <!-- ================= MESSAGE / ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container message">
+      <div class="message__visual"><div class="curtain"><img src="img/detail-wheel.jpg" alt="" loading="lazy"></div></div>
+      <div class="message__body">
+        <div class="heading reveal">
+          <div class="heading__en">08 <em>/</em> MESSAGE</div>
+          <h2><span class="mask"><span>ごあいさつ</span></span></h2>
+        </div>
+        <p class="reveal"><span class="placeholder">2026年10月、個人タクシーとして独立しました。〇〇年のタクシー乗務の経験を活かし、地元・葛飾のみなさまに安心してご利用いただけるよう、一回一回の乗車を大切にしています。（本人のことばに差し替え）</span></p>
+        <div class="message__name reveal"><small>金城タクシー 代表・運転手</small><b>金城 一平</b></div>
+        <table class="info reveal">
+          <tr><th>屋号</th><td>金城タクシー（個人タクシー）</td></tr>
+          <tr><th>開業</th><td>2026年10月1日</td></tr>
+          <tr><th>拠点</th><td>東京都葛飾区</td></tr>
+          <tr><th>営業区域</th><td><span class="placeholder">東京都 特別区・武三交通圏（確認中）</span></td></tr>
+          <tr><th>所属</th><td><span class="placeholder">〇〇個人タクシー協同組合</span></td></tr>
+          <tr><th>車両</th><td>トヨタ カムリ ハイブリッド</td></tr>
+        </table>
       </div>
-      <div class="card" style="margin-bottom:24px">
-        <h3>運転手 金城 一平 よりごあいさつ</h3>
-        <p><span class="placeholder">2026年10月に個人タクシーとして独立しました。〇〇年のタクシー乗務経験を活かし、地元・葛飾のみなさまに安心してご利用いただけるよう、一回一回の乗車を大切にしています。（本人のことばに差し替え）</span></p>
-      </div>
-      <table class="info-table">
-        <tr><th>屋号</th><td>金城タクシー（個人タクシー）</td></tr>
-        <tr><th>代表・運転手</th><td>金城 一平</td></tr>
-        <tr><th>開業</th><td>2026年10月1日</td></tr>
-        <tr><th>営業区域</th><td>東京都 特別区・武三交通圏（葛飾区を拠点）<span class="placeholder">要確認</span></td></tr>
-        <tr><th>所属</th><td><span class="placeholder">〇〇個人タクシー協同組合</span></td></tr>
-        <tr><th>車両</th><td>トヨタ カムリ ハイブリッド（定員 乗客4名）</td></tr>
-        <tr><th>電話</th><td><a data-tel href="tel:+8190XXXXXXXX"><span data-phone-text>090-XXXX-XXXX</span></a></td></tr>
-        <tr><th>メール</th><td><a data-mail href="mailto:info@example.com"><span data-mail-text>info@example.com</span></a></td></tr>
-      </table>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
   <div class="container">
-    <p>金城タクシー（個人タクシー）｜東京都葛飾区 ｜ <a href="en/" hreflang="en">English</a></p>
-    <p>© <span data-year>2026</span> Kinjo Taxi</p>
+    <div class="footer__cta reveal">
+      <p>次の移動は、金城タクシーで。</p>
+      <a class="btn btn--solid" href="#reserve">ご予約はこちら<span class="arrow"></span></a>
+    </div>
+    <div class="footer__big" aria-hidden="true">KINJO TAXI</div>
+    <div class="footer__meta">
+      <span>金城タクシー（個人タクシー）｜東京都葛飾区</span>
+      <span>© <span data-year>2026</span> KINJO TAXI</span>
+    </div>
   </div>
 </footer>
 
-<div class="sticky-cta">
-  <a class="btn btn-primary" data-tel href="tel:+8190XXXXXXXX">📞 電話</a>
-  <a class="btn btn-line" data-line href="#" target="_blank" rel="noopener">LINE</a>
-  <a class="btn btn-outline" href="#reserve">予約</a>
-</div>
+<nav class="mcta" aria-label="ご予約">
+  <a data-tel href="tel:+8190XXXXXXXX">電話</a>
+  <a data-line href="#" target="_blank" rel="noopener">LINE</a>
+  <a class="gold" href="#reserve">予約する</a>
+</nav>
 
-<script src="js/main.js"></script>
+<script src="js/luxe.js"></script>
 </body>
 </html>
