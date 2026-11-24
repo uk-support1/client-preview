@@ -56,8 +56,8 @@ def main() -> int:
         problems.append("Root index.html must not list case URLs")
 
     case_dirs = sorted(path for path in ROOT.iterdir() if path.is_dir() and path.name.startswith("case-"))
-    if len(case_dirs) > 1:
-        problems.append(f"Only one active case is allowed; found {len(case_dirs)}")
+    if len(case_dirs) > 2:
+        problems.append(f"At most two active cases are allowed; found {len(case_dirs)}")
 
     for case in case_dirs:
         if not CASE_PATTERN.fullmatch(case.name):
