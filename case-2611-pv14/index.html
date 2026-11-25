@@ -311,7 +311,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   h.classList.add('wait');o.hidden=false;
   var w=o.querySelector('.words'),l1=w.querySelector('.l1'),l2=w.querySelector('.l2');
   function chars(el,text,hl){var out=[],k=hl?text.indexOf(hl):-1;text.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;if(k>=0&&i>=k&&i<k+hl.length){var e=document.createElement('em');e.appendChild(s);el.appendChild(e);}else el.appendChild(s);out.push(s);});return out;}
-  var a=chars(l1,'すべて正しかったと思っているのか。','正しかった'),b=chars(l2,'すべて間違いだったと思っているのか。','間違いだった');
+  var a=chars(l1,'すべて、正しかったのだろうか。','正しかった'),b=chars(l2,'すべて、間違いだったのだろうか。','間違いだった');
   var T=[],done=false;function at(ms,fn){T.push(setTimeout(fn,ms));}
   function finish(){if(done)return;done=true;T.forEach(clearTimeout);o.classList.add('out');h.classList.remove('wait');setTimeout(function(){o.hidden=true},2300);}
   at(400,function(){o.classList.add('draw')});
@@ -332,7 +332,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
       <p class="big">正しかったことも、間違いだったことも。<br><em>そのすべてが、あなたの生き様です。</em></p>
       <div class="rule" aria-hidden="true"></div>
       <div class="prose">
-        <p>歩んできた道を振り返るとき、胸を張れる日もあれば、悔やみきれない日もあるはずです。すべて正しかったと思う方もいれば、すべて間違いだったと思う方もいるでしょう。</p>
+        <p>歩んできた道を振り返るとき、胸を張れる日もあれば、悔やみきれない日もあるはずです。すべて正しかったのだろうか。すべて間違いだったのだろうか。ふと、そう思いを巡らせる日もあるかもしれません。</p>
         <p>けれど、迷いながら下した決断も、遠回りした日々も、叶わなかった夢も、その一つひとつが、いまのあなたと、あなたが守ってきた人たちをつくってきました。正しかったのか、間違いだったのか。その答えは、あなた自身の言葉の中にあります。</p>
         <p>だから私たちは、成し遂げたことも、成し遂げられなかったことも、すべてを語っていただき、映像に残します。その言葉は、次の世代にとって、何よりの道しるべになるはずです。</p>
       </div>
