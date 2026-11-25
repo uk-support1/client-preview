@@ -241,24 +241,6 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .intro .skip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.intro{display:none!important}}
 
-/* 事業責任者ヒストリー（おまけ） */
-.bonus{padding-block:88px;border-bottom:1px solid var(--line);background:repeating-linear-gradient(-45deg,var(--bg) 0 14px,#F6F2EA 14px 28px)}
-.bonus .note{display:inline-block;font-size:13px;color:#8A5B2B;background:#FBEBD3;border:1px dashed #D9A867;border-radius:999px;padding:4px 14px}
-.bonus-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:start;margin-top:36px}
-@media (max-width:860px){.bonus-grid{grid-template-columns:1fr;gap:28px}}
-.tv{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px;box-shadow:0 14px 30px -22px rgba(80,60,30,.5)}
-.tv video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;background:#EDE7DB}
-.tv figcaption{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.8}
-.tv .tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:#B0412E;margin-right:6px}
-.history{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--ink)}
-.history li{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
-.history b{font-family:var(--f-display);font-size:17px}
-.history p{font-size:15px;color:var(--ink)}
-.history small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
-.history li.fail b{color:var(--accent)}
-@media (max-width:560px){.history li{grid-template-columns:1fr;gap:4px}}
-.bonus h2{word-break:keep-all;overflow-wrap:anywhere}
-
 /* 私たちが信じていること */
 .belief{padding-block:104px 96px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#F1F4EC 0%,var(--bg) 100%)}
 .belief .wrap{display:grid;justify-items:center;text-align:center;gap:28px}
@@ -332,7 +314,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   h.classList.add('wait');o.hidden=false;
   var w=o.querySelector('.words'),l1=w.querySelector('.l1'),l2=w.querySelector('.l2');
   function chars(el,text,hl){var out=[],k=hl?text.indexOf(hl):-1;text.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;if(k>=0&&i>=k&&i<k+hl.length){var e=document.createElement('em');e.appendChild(s);el.appendChild(e);}else el.appendChild(s);out.push(s);});return out;}
-  var a=chars(l1,'歩んできた道は、すべて正しかった。','正しかった'),b=chars(l2,'叶わなかった夢も、未来へ手渡そう。','未来へ');
+  var a=chars(l1,'すべて正しかったと思っているのか。','正しかった'),b=chars(l2,'すべて間違いだったと思っているのか。','間違いだった');
   var T=[],done=false;function at(ms,fn){T.push(setTimeout(fn,ms));}
   function finish(){if(done)return;done=true;T.forEach(clearTimeout);o.classList.add('out');h.classList.remove('wait');setTimeout(function(){o.hidden=true},2300);}
   at(400,function(){o.classList.add('draw')});
@@ -509,31 +491,6 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
           <p>私たちは、あなたの思いを映像にすることだけを考えています。成し遂げたことも、成し遂げられなかったことも、すべてがあなたの人生です。その思いを、受け継ぐべき人たちへ確かに手渡すお手伝いをさせてください。</p>
           <p class="sign">ひとこま 事業責任者 / チーフディレクター　滝田 務</p>
         </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="bonus" id="takki">
-    <div class="wrap">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="note">※ここはタッキー確認用のおまけです。公開前に消します。</span>
-        <span class="en" style="margin-top:12px">Unofficial History</span>
-        <h2>事業責任者・<wbr>滝田務ヒストリー<br><small style="font-size:.55em;color:var(--muted)">（非公式・本人未確認・諸説あり）</small></h2>
-      </div>
-      <div class="bonus-grid">
-        <figure class="tv">
-          <video controls playsinline preload="metadata" poster="video/takki-poster.jpg" width="640" height="480"><source src="video/takki.mp4" type="video/mp4"></video>
-          <figcaption><span class="tag">● 発掘映像</span>卒業旅行で、何かを熱く語る若き日の滝田。何を語っているのか、本人もたぶん覚えていない（笑）</figcaption>
-        </figure>
-        <ol class="history">
-          <li><b>誕生</b><p>鳥取県に、次男として生まれる。産声を上げる前に、まず照明の位置を確認したと言われている。<small>出典：なし</small></p></li>
-          <li><b>少年時代</b><p>バレーボールに打ち込み、鳥取県の国体選手に選ばれる。ポジションはレフトスパイカー。カメラではなく、ボールを打ち込む日々。<small>映像の道は、まだ影も形もない</small></p></li>
-          <li><b>大学時代</b><p>のちの代表・上原チャブ氏と出会う。酒の飲み方を覚え、チャリで暴走する。キャップとメガネの組み合わせも、この頃に確立。<small>上の映像が動かぬ証拠（チャリは映っていない）</small></p></li>
-          <li><b>テレビの現場へ</b><p>上原チャブ氏をアシスタントディレクターに従え、長澤まさみさん、武井咲さんへのインタビューを敢行する。<small>ADの働きぶりについては、両者の記憶に食い違いあり</small></p></li>
-          <li><b>経済の現場へ</b><p>テレビ東京「ワールドビジネスサテライト」のプロデュースを手がける。経営者の言葉を聞き続けた日々が、いまの事業につながっている。<small>たぶん</small></p></li>
-          <li><b>転機</b><p>祖母の映像で、親戚一同を泣かせて笑わせる。気づけば事業責任者になっていた。</p></li>
-          <li class="fail"><b>成し遂げられなかったこと</b><p>キャップ以外の帽子を、かぶりこなすこと。現在も挑戦中。<small>当社の理念どおり、この夢もヒストリーとして残します</small></p></li>
-        </ol>
       </div>
     </div>
   </section>
