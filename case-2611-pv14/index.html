@@ -99,17 +99,43 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .approach h3{font-size:21px;margin:6px 0 10px}
 .approach p{color:var(--muted);font-size:15.5px}
 
-/* サービス */
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-@media (max-width:900px){.services{grid-template-columns:1fr}}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px 24px;display:grid;gap:12px;align-content:start}
-.svc.main{border-color:var(--accent)}
-.svc .who{font-size:13px;color:var(--accent);font-weight:700}
-.svc h3{font-size:22px}
-.svc p{font-size:15px;color:var(--muted)}
-.svc dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;margin:4px 0 0;font-size:14px;border-top:1px solid var(--line);padding-top:12px}
-.svc dt{color:var(--muted)}
-.svc dd{margin:0;font-variant-numeric:tabular-nums}
+
+/* 料金プラン */
+.plan-group{margin-top:48px}
+.plan-group:first-of-type{margin-top:0}
+.pg-head{display:grid;gap:6px;margin-bottom:20px;padding-left:16px;border-left:3px solid var(--accent)}
+.pg-head .en{font-family:var(--f-mono);font-size:12px;color:var(--gold);letter-spacing:.08em}
+.pg-head h3{font-size:clamp(20px,2.6vw,26px)}
+.pg-head p{font-size:15px;color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.plans{grid-template-columns:1fr}}
+.plan{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px 24px;display:grid;gap:10px;align-content:start}
+.plan.rec{border:2px solid var(--accent)}
+.plan .badge{justify-self:start;font-size:12px;font-weight:700;color:#fff;background:var(--accent);padding:3px 10px;border-radius:2px}
+.plan .who{font-size:13px;color:var(--accent);font-weight:700}
+.plan h4{font-family:var(--f-display);font-size:21px;line-height:1.4}
+.plan .price{font-family:var(--f-display);font-size:34px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.2}
+.plan .price small{font-family:var(--f-body);font-size:14px;color:var(--muted);margin-left:4px}
+.plan .lead{font-size:15px;color:var(--muted)}
+.plan dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:6px 0 0;font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+.plan dt{color:var(--muted);white-space:nowrap}
+.plan dd{margin:0}
+.plan .note{font-size:13px;color:var(--muted)}
+.plan-sub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;margin-top:56px}
+@media (max-width:900px){.plan-sub{grid-template-columns:1fr}}
+.plan-sub h3{font-size:19px;margin-bottom:14px}
+.included{background:var(--accent-soft);border-radius:4px;padding:28px 24px}
+.included ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+.included li{padding-left:1.4em;position:relative}
+.included li::before{content:"";position:absolute;left:0;top:.55em;width:.6em;height:.35em;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.options table{width:100%;border-collapse:collapse;font-size:14.5px}
+.options th,.options td{text-align:left;padding:10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.options th{font-weight:500;padding-right:12px}
+.options td{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+@media (max-width:900px){.terms{grid-template-columns:1fr}}
+.terms h3{font-size:16px;margin-bottom:6px}
+.terms p{font-size:14px;color:var(--muted)}
 
 /* 流れ */
 .flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid var(--ink)}
@@ -268,14 +294,14 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-
 </head>
 <body>
+
 <header class="site-head">
   <div class="wrap">
     <a class="logo" href="#top"><b>ひとこま</b><span>ライフヒストリー映像制作</span></a>
     <nav class="gnav" aria-label="サイト内">
-      <a href="#philosophy">理念</a><a href="#unfinished">私たちが残すもの</a><a href="#approach">制作の考え方</a><a href="#service">サービス</a><a href="#message">事業責任者メッセージ</a><a href="#company">事業概要</a><a href="#contact">ご相談</a>
+      <a href="#philosophy">理念</a><a href="#unfinished">私たちが残すもの</a><a href="#approach">制作の考え方</a><a href="#service">料金プラン</a><a href="#message">事業責任者メッセージ</a><a href="#company">事業概要</a><a href="#contact">ご相談</a>
     </nav>
   </div>
 </header>
@@ -427,14 +453,153 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   <section class="sec" id="service">
     <div class="wrap">
       <div class="sec-head">
-        <span class="en">Service</span>
-        <h2>サービス</h2>
-        <p class="def">内容と撮影の規模に応じて、個別にお見積りいたします。</p>
+        <span class="en">Plan &amp; Price</span>
+        <h2>料金プラン</h2>
+        <p class="def">ご本人・ご家族のためのプランと、経営者・企業のためのプランをご用意しています。表示はすべて税込です。</p>
       </div>
-      <div class="services">
-        <div class="svc main"><span class="who">経営者・元経営者の方へ</span><h3>ライフヒストリー映像</h3><p>ご本人への複数回のインタビューを軸に、ゆかりの地での撮影、ご家族や旧知の方の証言を重ね、人生の歩みと思いを一本の映像に残します。</p><dl><dt>尺</dt><dd>30〜60分</dd><dt>制作期間</dt><dd>3〜6か月</dd></dl></div>
-        <div class="svc"><span class="who">企業の方へ</span><h3>創業者ヒストリー映像</h3><p>創業者の志と会社の歩みを、社員や取引先の言葉とともに記録します。周年行事、事業承継、社員への理念継承の場でお使いいただけます。</p><dl><dt>尺</dt><dd>20〜40分</dd><dt>制作期間</dt><dd>3〜6か月</dd></dl></div>
-        <div class="svc"><span class="who">ご遺族の方へ</span><h3>追悼ヒストリー映像</h3><p>故人を知る方々への取材と、写真や映像資料から、その方の人生と思いをたどります。社葬、お別れの会、法要で上映いただけます。</p><dl><dt>尺</dt><dd>10〜20分</dd><dt>制作期間</dt><dd>最短2週間</dd></dl></div>
+
+      <div class="plan-group">
+        <div class="pg-head"><span class="en">For you &amp; your family</span><h3>ご本人・ご家族のためのプラン</h3><p>ご自身の歩みを家族に残したい方、親御さんの人生を映像にしたいご家族へ。</p></div>
+        <div class="plans">
+          <article class="plan">
+            <span class="who">はじめての方に</span>
+            <h4>ひとこま ライト</h4>
+            <p class="price">150,000<small>円（税込）</small></p>
+            <p class="lead">一度のインタビューで、人生の歩みと家族への思いを一本にまとめます。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約15分</dd>
+              <dt>インタビュー</dt><dd>1回（約2時間）</dd>
+              <dt>証言取材</dt><dd>なし</dd>
+              <dt>お写真の取り込み</dt><dd>30枚まで</dd>
+              <dt>試写・修正</dt><dd>1回</dd>
+              <dt>納品</dt><dd>映像データ＋DVD 2枚</dd>
+              <dt>制作期間</dt><dd>約1か月</dd>
+            </dl>
+          </article>
+          <article class="plan rec">
+            <span class="badge">おすすめ</span>
+            <span class="who">しっかり残したい方に</span>
+            <h4>ひとこま スタンダード</h4>
+            <p class="price">280,000<small>円（税込）</small></p>
+            <p class="lead">二度お会いしてじっくり伺い、ご家族の言葉も重ねて、人生を章立てで描きます。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約30分</dd>
+              <dt>インタビュー</dt><dd>2回（各約2時間）</dd>
+              <dt>証言取材</dt><dd>ご家族・ご友人 1名</dd>
+              <dt>お写真の取り込み</dt><dd>60枚まで</dd>
+              <dt>試写・修正</dt><dd>2回</dd>
+              <dt>納品</dt><dd>映像データ＋DVDまたはBlu-ray 3枚、人生年表（冊子）</dd>
+              <dt>制作期間</dt><dd>約2か月</dd>
+            </dl>
+          </article>
+          <article class="plan">
+            <span class="who">ご遺族の方に</span>
+            <h4>追悼ヒストリー</h4>
+            <p class="price">200,000<small>円（税込）</small></p>
+            <p class="lead">故人を知る方々のお話と、残されたお写真・映像から、その方の人生と思いをたどります。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約10〜15分</dd>
+              <dt>インタビュー</dt><dd>ご遺族・ご友人 2名</dd>
+              <dt>お写真の取り込み</dt><dd>80枚まで（お手持ちの映像も可）</dd>
+              <dt>試写・修正</dt><dd>1回</dd>
+              <dt>納品</dt><dd>式場上映用データ＋DVD 3枚</dd>
+              <dt>制作期間</dt><dd>最短2週間</dd>
+            </dl>
+          </article>
+        </div>
+      </div>
+
+      <div class="plan-group">
+        <div class="pg-head"><span class="en">For business leaders</span><h3>経営者・企業のためのプラン</h3><p>経営者・元経営者ご本人の人生と、創業から受け継がれてきた志を残したい方へ。</p></div>
+        <div class="plans">
+          <article class="plan">
+            <span class="who">経営者・元経営者の方に</span>
+            <h4>経営者ヒストリー</h4>
+            <p class="price">600,000<small>円（税込）</small></p>
+            <p class="lead">三度のインタビューと関係者の証言、ゆかりの場所での撮影で、経営者としての歩みと胸の内を描きます。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約30〜40分</dd>
+              <dt>インタビュー</dt><dd>3回（各約2時間）</dd>
+              <dt>証言取材</dt><dd>ご家族・社員・旧知の方 3名</dd>
+              <dt>ロケ撮影</dt><dd>ゆかりの地 1か所（日帰り）</dd>
+              <dt>お写真の取り込み</dt><dd>100枚まで</dd>
+              <dt>試写・修正</dt><dd>2回</dd>
+              <dt>納品</dt><dd>映像データ＋Blu-ray 3枚、3分のダイジェスト版</dd>
+              <dt>制作期間</dt><dd>約3か月</dd>
+            </dl>
+          </article>
+          <article class="plan rec">
+            <span class="badge">最上位プラン</span>
+            <span class="who">人生の舞台をすべて訪ねたい方に</span>
+            <h4>ゆかりの地を巡る密着ヒストリー</h4>
+            <p class="price">1,000,000<small>円（税込）</small></p>
+            <p class="lead">生まれ故郷、創業の地、転機となった場所。ご本人とともに人生の舞台を訪ね歩き、その場で語られる言葉を残します。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約45〜60分</dd>
+              <dt>インタビュー</dt><dd>4回（各約2時間）</dd>
+              <dt>密着撮影</dt><dd>ゆかりの地を巡る撮影 3日間</dd>
+              <dt>証言取材</dt><dd>ご家族・社員・旧知の方 5名</dd>
+              <dt>お写真の取り込み</dt><dd>200枚まで（お手持ちの映像も可）</dd>
+              <dt>試写・修正</dt><dd>3回</dd>
+              <dt>納品</dt><dd>映像データ＋Blu-ray 5枚、5分のダイジェスト版、人生年表（冊子）</dd>
+              <dt>制作期間</dt><dd>約4〜6か月</dd>
+            </dl>
+            <p class="note">遠方への交通費・宿泊費は実費を頂戴します。</p>
+          </article>
+          <article class="plan">
+            <span class="who">企業の方に</span>
+            <h4>創業者・企業ヒストリー</h4>
+            <p class="price">800,000<small>円（税込）</small></p>
+            <p class="lead">創業者の志と会社の歩みを、社員や取引先の言葉とともに記録します。周年行事や事業承継、理念の継承に。</p>
+            <dl>
+              <dt>完成尺</dt><dd>約20〜30分</dd>
+              <dt>インタビュー</dt><dd>創業者・経営者 2回</dd>
+              <dt>証言取材</dt><dd>社員・取引先・OB 5名</dd>
+              <dt>ロケ撮影</dt><dd>社内・工場・店舗など 1日</dd>
+              <dt>お写真の取り込み</dt><dd>150枚まで（社史資料も可）</dd>
+              <dt>試写・修正</dt><dd>3回</dd>
+              <dt>納品</dt><dd>上映用データ＋Blu-ray 5枚、3分の社内共有用ダイジェスト版</dd>
+              <dt>制作期間</dt><dd>約3か月</dd>
+            </dl>
+          </article>
+        </div>
+      </div>
+
+      <div class="plan-sub">
+        <div class="included">
+          <h3>すべてのプランに含まれるもの</h3>
+          <ul>
+            <li>ご相談・事前ヒアリング（無料）</li>
+            <li>人生年表の作成と、構成・章立てのご提案</li>
+            <li>撮影機材・照明・録音一式</li>
+            <li>編集、テロップ、BGM（権利処理済み）</li>
+            <li>試写でのご確認と修正</li>
+            <li>フルHDの映像データ（MP4）</li>
+            <li>撮影素材の保管（納品後1年間）</li>
+          </ul>
+        </div>
+        <div class="options">
+          <h3>オプション（税込）</h3>
+          <table>
+            <tr><th scope="row">インタビューの追加</th><td>1回 30,000円</td></tr>
+            <tr><th scope="row">証言取材の追加</th><td>1名 20,000円</td></tr>
+            <tr><th scope="row">ロケ撮影の追加</th><td>1日 80,000円</td></tr>
+            <tr><th scope="row">お写真の追加取り込み</th><td>50枚ごと 10,000円</td></tr>
+            <tr><th scope="row">プロのナレーション</th><td>50,000円</td></tr>
+            <tr><th scope="row">ダイジェスト版（約3分）</th><td>50,000円</td></tr>
+            <tr><th scope="row">完成尺の延長</th><td>10分ごと 50,000円</td></tr>
+            <tr><th scope="row">ドローン撮影</th><td>半日 80,000円</td></tr>
+            <tr><th scope="row">上映会への立ち会い（機材込み）</th><td>30,000円</td></tr>
+            <tr><th scope="row">DVD・Blu-rayの追加</th><td>1枚 3,000円</td></tr>
+            <tr><th scope="row">撮影素材の長期保管</th><td>年 10,000円</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="terms">
+        <div><h3>お支払い</h3><p>ご契約時に半額、納品時に残りの半額を、銀行振込でお支払いいただきます。</p></div>
+        <div><h3>出張・対応エリア</h3><p>全国に伺います。東京23区内は出張費無料、それ以外の地域は交通費・宿泊費の実費を頂戴します。</p></div>
+        <div><h3>キャンセル</h3><p>撮影前のキャンセルは、ご入金額から事務手数料10,000円を引いて返金します。撮影後は、着手金の返金はいたしかねます。</p></div>
       </div>
     </div>
   </section>
@@ -451,7 +616,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <li><span class="en">Step 3</span><b>構成のご提案</b><span>章立てと取材先、撮影場所をご提案します。</span></li>
         <li><span class="en">Step 4</span><b>インタビュー・撮影</b><span>数回に分けてお話を伺い、ゆかりの地や関係者も取材します。</span></li>
         <li><span class="en">Step 5</span><b>編集・試写</b><span>試写でご確認いただき、ご納得いただけるまで仕上げます。</span></li>
-        <li><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品。上映の場にも立ち会います。</span></li>
+        <li><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品します。ご希望があれば上映の場にも立ち会います。</span></li>
       </ol>
     </div>
   </section>
@@ -507,6 +672,9 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <details><summary>体調面が心配です。撮影にはどのくらい時間がかかりますか。</summary><p>一回のインタビューは1〜2時間ほどです。ご自宅や入院先など、ご負担の少ない場所に伺います。日程もご体調に合わせて調整します。</p></details>
         <details><summary>写真や映像資料があまり残っていません。</summary><p>インタビューと、ゆかりの場所での撮影を中心に構成できます。ご家族や旧知の方への取材で、新たに資料が見つかることも少なくありません。</p></details>
         <details><summary>家族から本人に贈ることはできますか。</summary><p>はい。ご家族やご子息、会社の皆さまからのご依頼も承ります。ご本人へのお声がけの仕方から、一緒にご相談させてください。</p></details>
+        <details><summary>料金のほかに費用はかかりますか。</summary><p>東京23区外への出張の場合のみ、交通費・宿泊費の実費を頂戴します。それ以外は、お選びいただいたプランとオプションの金額がすべてです。お見積りは事前にお出しします。</p></details>
+        <details><summary>プランの途中で内容を変えられますか。</summary><p>はい。お話を伺ううちに「もっと残したい」と思われることはよくあります。インタビューや証言取材の追加、上位プランへの切り替えは、いつでもご相談ください。</p></details>
+        <details><summary>撮影の途中で体調を崩してしまったら。</summary><p>日程はいつでも延期できます。万一撮影を続けられなくなった場合も、それまでに伺ったお話とお写真で一本の映像に仕上げ、ご家族にお届けします。</p></details>
       </div>
     </div>
   </section>
@@ -520,10 +688,14 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
       <table class="company">
         <tr><th scope="row">事業名</th><td>ひとこま（仮称）</td></tr>
         <tr><th scope="row">事業責任者</th><td>滝田 務（チーフディレクター）</td></tr>
-        <tr><th scope="row">事業内容</th><td>ライフヒストリー映像、創業者ヒストリー映像、追悼ヒストリー映像の企画・取材・撮影・編集</td></tr>
+        <tr><th scope="row">事業内容</th><td>ライフヒストリー映像、経営者ヒストリー映像、創業者・企業ヒストリー映像、追悼ヒストリー映像の企画・取材・撮影・編集</td></tr>
+        <tr><th scope="row">事業開始</th><td>2027年4月（予定）</td></tr>
         <tr><th scope="row">運営会社</th><td>福祉ITパートナー（仮）</td></tr>
         <tr><th scope="row">代表者</th><td>上原 健太</td></tr>
-        <tr><th scope="row">所在地</th><td>準備中</td></tr>
+        <tr><th scope="row">所在地</th><td>〒000-0000 東京都○○区○○ 0-0-0（仮）</td></tr>
+        <tr><th scope="row">電話番号</th><td>03-0000-0000（仮）</td></tr>
+        <tr><th scope="row">メール</th><td>info@hitokoma.example（仮）</td></tr>
+        <tr><th scope="row">対応エリア</th><td>全国（東京23区外は交通費・宿泊費を実費で頂戴します）</td></tr>
       </table>
     </div>
   </section>
@@ -534,7 +706,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
     <span class="en">Contact</span>
     <h2>まずは、お話を聞かせてください。</h2>
     <p>ご相談は無料です。映像にするかどうかを決めていただくのは、お話を伺ったあとで構いません。ご本人からでも、ご家族や会社の方からでも承ります。</p>
-    <div class="box"><b>ご相談窓口</b><span>電話番号・メールアドレスは準備中です。</span></div>
+    <div class="box"><b>ご相談窓口</b><span>お電話　03-0000-0000（仮）</span><span>メール　info@hitokoma.example（仮）</span><span>受付時間　平日 10:00〜18:00（土日祝はご予約にて承ります）</span></div>
   </div>
 </section>
 <footer class="foot">
