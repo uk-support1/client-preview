@@ -100,43 +100,6 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .approach p{color:var(--muted);font-size:15.5px}
 
 
-/* 料金プラン */
-.plan-group{margin-top:48px}
-.plan-group:first-of-type{margin-top:0}
-.pg-head{display:grid;gap:6px;margin-bottom:20px;padding-left:16px;border-left:3px solid var(--accent)}
-.pg-head .en{font-family:var(--f-mono);font-size:12px;color:var(--gold);letter-spacing:.08em}
-.pg-head h3{font-size:clamp(20px,2.6vw,26px)}
-.pg-head p{font-size:15px;color:var(--muted)}
-.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-@media (max-width:900px){.plans{grid-template-columns:1fr}}
-.plan{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:28px 24px;display:grid;gap:10px;align-content:start}
-.plan.rec{border:2px solid var(--accent)}
-.plan .badge{justify-self:start;font-size:12px;font-weight:700;color:#fff;background:var(--accent);padding:3px 10px;border-radius:2px}
-.plan .who{font-size:13px;color:var(--accent);font-weight:700}
-.plan h4{font-family:var(--f-display);font-size:21px;line-height:1.4}
-.plan .price{font-family:var(--f-display);font-size:34px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.2}
-.plan .price small{font-family:var(--f-body);font-size:14px;color:var(--muted);margin-left:4px}
-.plan .lead{font-size:15px;color:var(--muted)}
-.plan dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;margin:6px 0 0;font-size:14px;border-top:1px solid var(--line);padding-top:14px}
-.plan dt{color:var(--muted);white-space:nowrap}
-.plan dd{margin:0}
-.plan .note{font-size:13px;color:var(--muted)}
-.plan-sub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px;margin-top:56px}
-@media (max-width:900px){.plan-sub{grid-template-columns:1fr}}
-.plan-sub h3{font-size:19px;margin-bottom:14px}
-.included{background:var(--accent-soft);border-radius:4px;padding:28px 24px}
-.included ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
-.included li{padding-left:1.4em;position:relative}
-.included li::before{content:"";position:absolute;left:0;top:.55em;width:.6em;height:.35em;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
-.options table{width:100%;border-collapse:collapse;font-size:14.5px}
-.options th,.options td{text-align:left;padding:10px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.options th{font-weight:500;padding-right:12px}
-.options td{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-.terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
-@media (max-width:900px){.terms{grid-template-columns:1fr}}
-.terms h3{font-size:16px;margin-bottom:6px}
-.terms p{font-size:14px;color:var(--muted)}
-
 /* 流れ */
 .flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:2px solid var(--ink)}
 @media (max-width:900px){.flow{grid-template-columns:1fr}}
@@ -276,21 +239,29 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .belief .prose{text-align:left;max-width:34em}
 .belief .prose p{font-size:17px;line-height:2.15}
 
-/* 写真 */
-.scenes img,.wide-photo img,.side-photo img,.letter aside img{display:block;width:100%;height:100%;object-fit:cover}
-.scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:64px}
-@media (max-width:720px){.scenes{grid-template-columns:1fr}}
-.scenes figure{margin:0;display:grid;gap:10px}
-.scenes .ph{aspect-ratio:3/2;border-radius:4px;overflow:hidden}
-.scenes figcaption{font-size:14px;color:var(--muted)}
-.wide-photo{margin:0 0 48px;border-radius:6px;overflow:hidden;aspect-ratio:21/9;max-width:100%}
-@media (max-width:720px){.wide-photo{aspect-ratio:3/2}}
-.unf-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
-@media (max-width:860px){.unf-grid{grid-template-columns:1fr;gap:28px}}
-.side-photo{margin:0;border-radius:6px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
-@media (max-width:860px){.side-photo{aspect-ratio:3/2}}
-.letter aside figure{margin:8px 0 0;border-radius:4px;overflow:hidden;aspect-ratio:3/2}
-.letter aside .cap{font-size:13px;color:var(--muted);margin-top:6px}
+/* 文字で見せる：縦書き、漢数字、細い金の罫 */
+.unf-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:center}
+@media (max-width:860px){.unf-grid{grid-template-columns:1fr;gap:36px}}
+.tate{margin:0;justify-self:center;padding:40px 36px;border:1px solid #D9C4A0;border-radius:2px;background:linear-gradient(160deg,#FFFDF8,#F8F0E2);position:relative}
+.tate::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,161,92,.35);pointer-events:none}
+.tate p{writing-mode:vertical-rl;font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:2;letter-spacing:.18em;color:var(--ink);height:11.5em}
+@media (max-width:860px){.tate p{font-size:22px}}
+.dreams .kn{font-family:var(--f-display);font-weight:800;font-size:30px;color:var(--gold);line-height:1}
+.approach .num{display:block;font-family:var(--f-display);font-weight:800;font-size:44px;line-height:1;color:var(--gold);padding-bottom:14px;margin-bottom:6px;border-bottom:1px solid var(--line);width:1.6em}
+.director{background:linear-gradient(180deg,var(--bg) 0%,#F6F1E7 100%)}
+.dir-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
+@media (max-width:860px){.dir-grid{grid-template-columns:1fr;gap:32px}}
+.dir-card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:2px;padding:36px 32px;display:grid;gap:6px}
+@media (max-width:560px){.dir-card{padding:28px 20px}}
+.dir-card .role{font-size:13px;color:var(--accent);font-weight:700;letter-spacing:.08em}
+.dir-card .title{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,28px)}
+.career{list-style:none;margin:18px 0 0;padding:0;display:grid}
+.career li{display:grid;gap:6px;padding:20px 0;border-top:1px solid var(--line)}
+.career b{font-family:var(--f-display);font-size:19px}
+.career span{color:var(--muted);font-size:15.5px}
+.dir-card .fine{font-size:13px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line)}
+.origin{margin:0;display:grid;gap:18px;font-family:var(--f-display);font-size:16.5px;line-height:2.1;padding-left:24px;border-left:1px solid var(--gold)}
+.origin .en{color:var(--gold)}
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -301,7 +272,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   <div class="wrap">
     <a class="logo" href="#top"><b>ひとこま</b><span>ライフヒストリー映像制作</span></a>
     <nav class="gnav" aria-label="サイト内">
-      <a href="#philosophy">理念</a><a href="#unfinished">私たちが残すもの</a><a href="#approach">制作の考え方</a><a href="#service">料金プラン</a><a href="#message">事業責任者メッセージ</a><a href="#company">事業概要</a><a href="#contact">ご相談</a>
+      <a href="#philosophy">理念</a><a href="#unfinished">私たちが残すもの</a><a href="#director">制作を率いる者</a><a href="#flow">制作の流れ</a><a href="#company">運営</a><a href="#contact">ご相談</a>
     </nav>
   </div>
 </header>
@@ -320,7 +291,7 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
   <div class="wrap">
     <span class="en">Life History Film</span>
     <h1><span class="ln">あなたの思いを、</span><span class="ln"><em>映像</em>に。</span></h1>
-    <p class="lead">築き上げてきたもの。守り抜いてきたもの。そして、まだ果たせていない夢まで。あなたが歩んできた人生を、あなた自身の言葉で一本のヒストリー映像に残します。</p>
+    <p class="lead">経営者として築き上げてきたもの。守り抜いてきたもの。そして、まだ果たせていない夢まで。あなたが歩んできた人生を、あなた自身の言葉で、一本のヒストリー映像に残します。</p>
     <div class="film" aria-hidden="true">
       <div class="strip"><i></i><i></i><i></i><i></i><i class="lit"></i><i></i><i></i><i></i><i></i></div>
       <p class="cap">ONE LIFE, ONE FRAME AT A TIME</p>
@@ -383,12 +354,6 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         </div>
       </div>
 
-      <div class="scenes">
-        <figure><div class="ph"><img src="img/daughter.jpg" alt="父の昔話に驚いて笑う娘" width="1400" height="933"></div><figcaption>家族も初めて聞いた、若い頃の話。</figcaption></figure>
-        <figure><div class="ph"><img src="img/onigiri.jpg" alt="祖父と孫がおにぎりを握る台所" width="1400" height="933"></div><figcaption>何気ない日常にこそ、その人らしさがある。</figcaption></figure>
-        <figure><div class="ph"><img src="img/letterpress.jpg" alt="活版工房で技を伝える二人" width="1400" height="933"></div><figcaption>受け継がれていく技と思い。</figcaption></figure>
-      </div>
-
       <div class="creed">
         <div><div class="k"><span class="en">Purpose</span><b>存在意義</b></div><div class="v"><h3>人の思いを、時代を越えて手渡す。</h3><p>ひとりの経営者が抱いてきた思いを、家族、社員、そして次の世代へ。言葉と表情のまま、確かに受け継がれるかたちにします。</p></div></div>
         <div><div class="k"><span class="en">Mission</span><b>使命</b></div><div class="v"><h3>お会いし、お話を伺い、その人生を一本の映像に編む。</h3><p>成し遂げたことも、成し遂げられなかったことも。人生の一場面ずつに光を当て、その方の生き様が伝わるヒストリーに仕上げます。</p></div></div>
@@ -399,21 +364,24 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 
   <section class="unfinished" id="unfinished">
     <div class="wrap">
-      <span class="en">What we preserve</span>
-      <h2>成し遂げたことだけが、<br>人生ではない。</h2>
       <div class="unf-grid">
-      <div class="prose">
-        <p>経営者の方とお話しすると、必ずと言っていいほど「本当はもっとやりたかったことがある」という言葉が出てきます。立ち上げたかった事業、果たせなかった約束、志半ばで手放した挑戦。</p>
-        <p>多くの記録は、成功と功績だけを残します。けれど、その方の生き様がもっとも表れるのは、叶わなかった夢を語るときの表情です。私たちは、成し遂げられなかったことも含めて、あなたの人生のヒストリーとして残します。その思いは、映像を通して、次にそれを叶える誰かへ託されていきます。</p>
-      </div>
-      <figure class="side-photo"><img src="img/factory.jpg" alt="町工場で遠くを見つめる創業者" width="1400" height="933"></figure>
+        <div>
+          <span class="en">What we preserve</span>
+          <h2>成し遂げたことだけが、<br>人生ではない。</h2>
+          <div class="prose">
+            <p>経営者の方とお話しすると、必ずと言っていいほど「本当はもっとやりたかったことがある」という言葉が出てきます。立ち上げたかった事業、果たせなかった約束、志半ばで手放した挑戦。</p>
+            <p>多くの記録は、成功と功績だけを残します。けれど、その方の生き様がもっとも表れるのは、叶わなかった夢を語るときの表情です。私たちは、成し遂げられなかったことも含めて、あなたの人生のヒストリーとして残します。その思いは、映像を通して、次にそれを叶える誰かへ託されていきます。</p>
+          </div>
+        </div>
+        <figure class="tate" aria-label="本当は、もっとやりたかったことがある。">
+          <p aria-hidden="true">本当は、<br>もっと<br>やりたかったことが<br>ある。</p>
+        </figure>
       </div>
       <div class="dreams">
-        <div><b>描いていた事業</b><p>時代や資金、体力の事情で実現できなかった構想。その着想と、いまも消えない熱を語っていただきます。</p></div>
-        <div><b>果たせなかった約束</b><p>恩人に、家族に、社員に。言えずにきた感謝や、果たせなかった約束を、ご自身の言葉で残します。</p></div>
-        <div><b>次の世代に託す志</b><p>後継者、お子さま、お孫さま、会社の若い社員へ。叶えてほしい夢と、大切にしてほしい考えを手渡します。</p></div>
+        <div><span class="kn" aria-hidden="true">壱</span><b>描いていた事業</b><p>時代や資金、体力の事情で実現できなかった構想。その着想と、いまも消えない熱を語っていただきます。</p></div>
+        <div><span class="kn" aria-hidden="true">弐</span><b>果たせなかった約束</b><p>恩人に、家族に、社員に。言えずにきた感謝や、果たせなかった約束を、ご自身の言葉で残します。</p></div>
+        <div><span class="kn" aria-hidden="true">参</span><b>次の世代に託す志</b><p>後継者、お子さま、お孫さま、会社の若い社員へ。叶えてほしい夢と、大切にしてほしい考えを手渡します。</p></div>
       </div>
-      <figure class="wide-photo" style="margin:48px 0 0"><img src="img/handing.jpg" alt="祖父が孫に古い手帳を手渡す手元" width="1400" height="933" style="object-position:50% 45%"></figure>
     </div>
   </section>
 
@@ -424,14 +392,41 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <h2>ヒストリー映像の章立て</h2>
         <p class="def">お一人おひとりの人生に合わせて構成しますが、多くの作品は次の流れで、生まれた日から未来へ託す思いまでをたどります。</p>
       </div>
-      <figure class="wide-photo"><img src="img/engawa.jpg" alt="縁側で庭の緑を眺め、穏やかに微笑む年配の男性" style="object-position:50% 30%" width="1400" height="933"></figure>
       <ol class="chapters">
-        <li><span class="en">Chapter 1</span><b>原点</b><span>生まれた町、ご両親、少年少女時代。人生の土台となった出来事。</span></li>
+        <li><span class="en">Chapter 1</span><b>原点</b><span>生まれた町、ご両親、少年時代。人生の土台となった出来事。</span></li>
         <li><span class="en">Chapter 2</span><b>決断</b><span>創業や転機。なぜその道を選び、何を懸けたのか。</span></li>
         <li><span class="en">Chapter 3</span><b>成し遂げたこと</b><span>築いてきた事業と、ともに歩んだ人々の証言。</span></li>
         <li class="hl"><span class="en">Chapter 4</span><b>成し遂げられなかったこと</b><span>描いていた夢、果たせなかった約束、いまも残る思い。</span></li>
         <li><span class="en">Chapter 5</span><b>託す言葉</b><span>家族へ、社員へ、次の世代へ。未来に向けたメッセージ。</span></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="sec director" id="director">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="en">Chief Director</span>
+        <h2>撮るのは、放送の第一線で<br>人の言葉と向き合ってきた者です。</h2>
+      </div>
+      <div class="dir-grid">
+        <div class="dir-card">
+          <p class="role">ひとこま チーフディレクター</p>
+          <p class="title">在京キー局 番組制作出身</p>
+          <ul class="career">
+            <li><b>放送の最前線で</b><span>在京キー局の番組制作に長年携わり、ディレクター、プロデューサーとして報道・情報番組やドキュメンタリーをつくり続けてきました。</span></li>
+            <li><b>トップの言葉を引き出す</b><span>企業のトップから、第一線で活躍する俳優・著名人まで。数えきれないインタビューの現場で、限られた時間の中から本音を引き出してきました。</span></li>
+            <li><b>人生を一本の物語に</b><span>何十時間にも及ぶ言葉の中から、その人らしさが最も表れる一瞬を選び取り、見る人の心に届く一本の物語に編み上げます。</span></li>
+          </ul>
+          <p class="fine">氏名と経歴の詳細は、ご相談の際に直接お伝えしています。</p>
+        </div>
+        <blockquote class="origin">
+          <span class="en">Origin</span>
+          <p>ひとこまの始まりは、チーフディレクターが、亡き祖母の葬儀のためにつくった一本の映像でした。</p>
+          <p>祖母の人生をたどる映像を式で流すと、家族や祖母の友人たちから、後になって何度も感謝の言葉が届きました。写真を並べるだけでは伝わらなかった思いが、映像と言葉を通して、確かに届いたのです。</p>
+          <p>同時に、悔いも残りました。祖母が本当は何を考え、何をやり残したと感じていたのか。それを本人の口から聞いておけばよかった、と。</p>
+          <p>だから私たちは、ご本人が語れるうちに、その思いを伺いに行きます。</p>
+        </blockquote>
+      </div>
     </div>
   </section>
 
@@ -441,165 +436,10 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <span class="en">Approach</span>
         <h2>制作の考え方</h2>
       </div>
-      <figure class="wide-photo"><img src="img/interview2.jpg" alt="障子の明るい和室で、笑顔で語る年配の男性と、耳を傾けるディレクター" style="object-position:50% 32%" width="1400" height="933"></figure>
       <div class="approach">
-        <div><span class="en">01</span><h3>台本はつくりません</h3><p>あらかじめ書いた言葉を読んでいただくことはありません。私たちが用意するのは問いだけです。語られる言葉はすべて、あなた自身のものです。</p></div>
-        <div><span class="en">02</span><h3>必ずお会いして伺います</h3><p>一度の撮影で終わらせず、数回にわたってお会いし、信頼関係を築きながらお話を伺います。本音は、向き合う時間の中でしか生まれません。</p></div>
-        <div><span class="en">03</span><h3>テレビの現場で培った取材力</h3><p>事業責任者でチーフディレクターの滝田は、テレビ番組の制作現場で、数多くの方に取材してきました。話を引き出す力と、人生を一本の流れとして伝える構成力を、あなたのために使います。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="service">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="en">Plan &amp; Price</span>
-        <h2>料金プラン</h2>
-        <p class="def">ご本人・ご家族のためのプランと、経営者・企業のためのプランをご用意しています。表示はすべて税込です。</p>
-      </div>
-
-      <div class="plan-group">
-        <div class="pg-head"><span class="en">For you &amp; your family</span><h3>ご本人・ご家族のためのプラン</h3><p>ご自身の歩みを家族に残したい方、親御さんの人生を映像にしたいご家族へ。</p></div>
-        <div class="plans">
-          <article class="plan">
-            <span class="who">はじめての方に</span>
-            <h4>ひとこま ライト</h4>
-            <p class="price">150,000<small>円（税込）</small></p>
-            <p class="lead">一度のインタビューで、人生の歩みと家族への思いを一本にまとめます。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約15分</dd>
-              <dt>インタビュー</dt><dd>1回（約2時間）</dd>
-              <dt>証言取材</dt><dd>なし</dd>
-              <dt>お写真の取り込み</dt><dd>30枚まで</dd>
-              <dt>試写・修正</dt><dd>1回</dd>
-              <dt>納品</dt><dd>映像データ＋DVD 2枚</dd>
-              <dt>制作期間</dt><dd>約1か月</dd>
-            </dl>
-          </article>
-          <article class="plan rec">
-            <span class="badge">おすすめ</span>
-            <span class="who">しっかり残したい方に</span>
-            <h4>ひとこま スタンダード</h4>
-            <p class="price">280,000<small>円（税込）</small></p>
-            <p class="lead">二度お会いしてじっくり伺い、ご家族の言葉も重ねて、人生を章立てで描きます。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約30分</dd>
-              <dt>インタビュー</dt><dd>2回（各約2時間）</dd>
-              <dt>証言取材</dt><dd>ご家族・ご友人 1名</dd>
-              <dt>お写真の取り込み</dt><dd>60枚まで</dd>
-              <dt>試写・修正</dt><dd>2回</dd>
-              <dt>納品</dt><dd>映像データ＋DVDまたはBlu-ray 3枚、人生年表（冊子）</dd>
-              <dt>制作期間</dt><dd>約2か月</dd>
-            </dl>
-          </article>
-          <article class="plan">
-            <span class="who">ご遺族の方に</span>
-            <h4>追悼ヒストリー</h4>
-            <p class="price">200,000<small>円（税込）</small></p>
-            <p class="lead">故人を知る方々のお話と、残されたお写真・映像から、その方の人生と思いをたどります。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約10〜15分</dd>
-              <dt>インタビュー</dt><dd>ご遺族・ご友人 2名</dd>
-              <dt>お写真の取り込み</dt><dd>80枚まで（お手持ちの映像も可）</dd>
-              <dt>試写・修正</dt><dd>1回</dd>
-              <dt>納品</dt><dd>式場上映用データ＋DVD 3枚</dd>
-              <dt>制作期間</dt><dd>最短2週間</dd>
-            </dl>
-          </article>
-        </div>
-      </div>
-
-      <div class="plan-group">
-        <div class="pg-head"><span class="en">For business leaders</span><h3>経営者・企業のためのプラン</h3><p>経営者・元経営者ご本人の人生と、創業から受け継がれてきた志を残したい方へ。</p></div>
-        <div class="plans">
-          <article class="plan">
-            <span class="who">経営者・元経営者の方に</span>
-            <h4>経営者ヒストリー</h4>
-            <p class="price">600,000<small>円（税込）</small></p>
-            <p class="lead">三度のインタビューと関係者の証言、ゆかりの場所での撮影で、経営者としての歩みと胸の内を描きます。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約30〜40分</dd>
-              <dt>インタビュー</dt><dd>3回（各約2時間）</dd>
-              <dt>証言取材</dt><dd>ご家族・社員・旧知の方 3名</dd>
-              <dt>ロケ撮影</dt><dd>ゆかりの地 1か所（日帰り）</dd>
-              <dt>お写真の取り込み</dt><dd>100枚まで</dd>
-              <dt>試写・修正</dt><dd>2回</dd>
-              <dt>納品</dt><dd>映像データ＋Blu-ray 3枚、3分のダイジェスト版</dd>
-              <dt>制作期間</dt><dd>約3か月</dd>
-            </dl>
-          </article>
-          <article class="plan rec">
-            <span class="badge">最上位プラン</span>
-            <span class="who">人生の舞台をすべて訪ねたい方に</span>
-            <h4>ゆかりの地を巡る密着ヒストリー</h4>
-            <p class="price">1,000,000<small>円（税込）</small></p>
-            <p class="lead">生まれ故郷、創業の地、転機となった場所。ご本人とともに人生の舞台を訪ね歩き、その場で語られる言葉を残します。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約45〜60分</dd>
-              <dt>インタビュー</dt><dd>4回（各約2時間）</dd>
-              <dt>密着撮影</dt><dd>ゆかりの地を巡る撮影 3日間</dd>
-              <dt>証言取材</dt><dd>ご家族・社員・旧知の方 5名</dd>
-              <dt>お写真の取り込み</dt><dd>200枚まで（お手持ちの映像も可）</dd>
-              <dt>試写・修正</dt><dd>3回</dd>
-              <dt>納品</dt><dd>映像データ＋Blu-ray 5枚、5分のダイジェスト版、人生年表（冊子）</dd>
-              <dt>制作期間</dt><dd>約4〜6か月</dd>
-            </dl>
-            <p class="note">遠方への交通費・宿泊費は実費を頂戴します。</p>
-          </article>
-          <article class="plan">
-            <span class="who">企業の方に</span>
-            <h4>創業者・企業ヒストリー</h4>
-            <p class="price">800,000<small>円（税込）</small></p>
-            <p class="lead">創業者の志と会社の歩みを、社員や取引先の言葉とともに記録します。周年行事や事業承継、理念の継承に。</p>
-            <dl>
-              <dt>完成尺</dt><dd>約20〜30分</dd>
-              <dt>インタビュー</dt><dd>創業者・経営者 2回</dd>
-              <dt>証言取材</dt><dd>社員・取引先・OB 5名</dd>
-              <dt>ロケ撮影</dt><dd>社内・工場・店舗など 1日</dd>
-              <dt>お写真の取り込み</dt><dd>150枚まで（社史資料も可）</dd>
-              <dt>試写・修正</dt><dd>3回</dd>
-              <dt>納品</dt><dd>上映用データ＋Blu-ray 5枚、3分の社内共有用ダイジェスト版</dd>
-              <dt>制作期間</dt><dd>約3か月</dd>
-            </dl>
-          </article>
-        </div>
-      </div>
-
-      <div class="plan-sub">
-        <div class="included">
-          <h3>すべてのプランに含まれるもの</h3>
-          <ul>
-            <li>ご相談・事前ヒアリング（無料）</li>
-            <li>人生年表の作成と、構成・章立てのご提案</li>
-            <li>撮影機材・照明・録音一式</li>
-            <li>編集、テロップ、BGM（権利処理済み）</li>
-            <li>試写でのご確認と修正</li>
-            <li>フルHDの映像データ（MP4）</li>
-            <li>撮影素材の保管（納品後1年間）</li>
-          </ul>
-        </div>
-        <div class="options">
-          <h3>オプション（税込）</h3>
-          <table>
-            <tr><th scope="row">インタビューの追加</th><td>1回 30,000円</td></tr>
-            <tr><th scope="row">証言取材の追加</th><td>1名 20,000円</td></tr>
-            <tr><th scope="row">ロケ撮影の追加</th><td>1日 80,000円</td></tr>
-            <tr><th scope="row">お写真の追加取り込み</th><td>50枚ごと 10,000円</td></tr>
-            <tr><th scope="row">プロのナレーション</th><td>50,000円</td></tr>
-            <tr><th scope="row">ダイジェスト版（約3分）</th><td>50,000円</td></tr>
-            <tr><th scope="row">完成尺の延長</th><td>10分ごと 50,000円</td></tr>
-            <tr><th scope="row">ドローン撮影</th><td>半日 80,000円</td></tr>
-            <tr><th scope="row">上映会への立ち会い（機材込み）</th><td>30,000円</td></tr>
-            <tr><th scope="row">DVD・Blu-rayの追加</th><td>1枚 3,000円</td></tr>
-            <tr><th scope="row">撮影素材の長期保管</th><td>年 10,000円</td></tr>
-          </table>
-        </div>
-      </div>
-
-      <div class="terms">
-        <div><h3>お支払い</h3><p>ご契約時に半額、納品時に残りの半額を、銀行振込でお支払いいただきます。</p></div>
-        <div><h3>出張・対応エリア</h3><p>全国に伺います。東京23区内は出張費無料、それ以外の地域は交通費・宿泊費の実費を頂戴します。</p></div>
-        <div><h3>キャンセル</h3><p>撮影前のキャンセルは、ご入金額から事務手数料10,000円を引いて返金します。撮影後は、着手金の返金はいたしかねます。</p></div>
+        <div><span class="num" aria-hidden="true">一</span><h3>台本はつくりません</h3><p>あらかじめ書いた言葉を読んでいただくことはありません。私たちが用意するのは問いだけです。語られる言葉はすべて、あなた自身のものです。</p></div>
+        <div><span class="num" aria-hidden="true">二</span><h3>必ずお会いして伺います</h3><p>一度の撮影で終わらせず、数回にわたってお会いし、信頼関係を築きながらお話を伺います。本音は、向き合う時間の中でしか生まれません。</p></div>
+        <div><span class="num" aria-hidden="true">三</span><h3>お一人のために、一から設計します</h3><p>決まったプランはありません。語っていただく内容、取材する方、訪ねる場所、映像の長さまで、あなたの人生に合わせて一から組み立てます。</p></div>
       </div>
     </div>
   </section>
@@ -608,15 +448,16 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
     <div class="wrap">
       <div class="sec-head">
         <span class="en">Process</span>
-        <h2>ご相談からお届けまで</h2>
+        <h2>制作の流れ</h2>
+        <p class="def">ご相談から完成まで、おおむね3か月から6か月。ご体調やご予定に合わせて、無理のない進め方をご提案します。</p>
       </div>
       <ol class="flow">
-        <li><span class="en">Step 1</span><b>ご相談</b><span>まずはお会いして、映像に残したい思いを伺います。</span></li>
+        <li><span class="en">Step 1</span><b>ご相談</b><span>まずはお会いして、映像に残したい思いと、ご覧いただきたい方を伺います。</span></li>
         <li><span class="en">Step 2</span><b>事前取材</b><span>人生の年表をともにたどり、語っていただきたい場面を整理します。</span></li>
-        <li><span class="en">Step 3</span><b>構成のご提案</b><span>章立てと取材先、撮影場所をご提案します。</span></li>
-        <li><span class="en">Step 4</span><b>インタビュー・撮影</b><span>数回に分けてお話を伺い、ゆかりの地や関係者も取材します。</span></li>
+        <li><span class="en">Step 3</span><b>構成と内容のご提案</b><span>章立て、取材先、撮影場所、制作の規模と費用をご提案します。</span></li>
+        <li><span class="en">Step 4</span><b>インタビュー・撮影</b><span>数回に分けてお話を伺い、ゆかりの地を訪ね、ご家族や旧知の方にも取材します。</span></li>
         <li><span class="en">Step 5</span><b>編集・試写</b><span>試写でご確認いただき、ご納得いただけるまで仕上げます。</span></li>
-        <li><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品します。ご希望があれば上映の場にも立ち会います。</span></li>
+        <li><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品します。上映の場にも立ち会います。</span></li>
       </ol>
     </div>
   </section>
@@ -636,66 +477,19 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
     </div>
   </section>
 
-  <section class="sec" id="message">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="en">Message</span>
-        <h2>事業責任者メッセージ</h2>
-      </div>
-      <div class="letter">
-        <aside>
-          <p class="pull">その方の思いは、<br>語られたときに<br>はじめて残る。</p>
-          <p class="en">Chief Director</p>
-          <figure><img src="img/farewell.jpg" alt="白い花に囲まれた明るい会場で、故人の笑顔の映像を見上げて微笑む参列者" width="1400" height="933"></figure>
-          <p class="cap">お別れの会での上映（イメージ）</p>
-        </aside>
-        <blockquote>
-          <p>きっかけは、祖母の葬儀でした。祖母の人生をたどる映像をつくり、式で流したところ、会場にいた家族や祖母の友人たちから、後になって何度も感謝の言葉をいただきました。写真を並べるだけでは伝わらなかった祖母の思いが、映像と言葉を通じて、確かにみんなに届いたのだと思います。</p>
-          <p>同時に、悔いも残りました。祖母が本当は何を考え、何をやり残したと感じていたのか。それを本人の口から聞いておけばよかった、と。</p>
-          <p>私はテレビ番組の制作の仕事を通じて、多くの方に話を伺ってきました。とりわけ事業を築いてこられた方々は、成し遂げたことの何倍もの「やりたかったこと」を胸に抱えています。その思いは、語られなければ、誰にも知られないまま消えてしまいます。</p>
-          <p>私たちは、あなたの思いを映像にすることだけを考えています。成し遂げたことも、成し遂げられなかったことも、すべてがあなたの人生です。その思いを、受け継ぐべき人たちへ確かに手渡すお手伝いをさせてください。</p>
-          <p class="sign">ひとこま 事業責任者 / チーフディレクター　滝田 務</p>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="faq">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="en">Q&amp;A</span>
-        <h2>よくあるご質問</h2>
-      </div>
-      <div class="faq">
-        <details><summary>人前で話すのが得意ではありません。</summary><p>台本はありませんので、うまく話す必要はありません。私たちが問いかけ、あなたが思い出すままにお話しいただく形です。数回お会いするうちに、自然に言葉が出てくる方がほとんどです。</p></details>
-        <details><summary>経営上の話や、家族にも話していないことがあります。</summary><p>お話しいただいた内容は、ご本人の了承なく外部に出すことはありません。映像に入れるかどうかも、試写の段階でご本人に決めていただきます。</p></details>
-        <details><summary>体調面が心配です。撮影にはどのくらい時間がかかりますか。</summary><p>一回のインタビューは1〜2時間ほどです。ご自宅や入院先など、ご負担の少ない場所に伺います。日程もご体調に合わせて調整します。</p></details>
-        <details><summary>写真や映像資料があまり残っていません。</summary><p>インタビューと、ゆかりの場所での撮影を中心に構成できます。ご家族や旧知の方への取材で、新たに資料が見つかることも少なくありません。</p></details>
-        <details><summary>家族から本人に贈ることはできますか。</summary><p>はい。ご家族やご子息、会社の皆さまからのご依頼も承ります。ご本人へのお声がけの仕方から、一緒にご相談させてください。</p></details>
-        <details><summary>料金のほかに費用はかかりますか。</summary><p>東京23区外への出張の場合のみ、交通費・宿泊費の実費を頂戴します。それ以外は、お選びいただいたプランとオプションの金額がすべてです。お見積りは事前にお出しします。</p></details>
-        <details><summary>プランの途中で内容を変えられますか。</summary><p>はい。お話を伺ううちに「もっと残したい」と思われることはよくあります。インタビューや証言取材の追加、上位プランへの切り替えは、いつでもご相談ください。</p></details>
-        <details><summary>撮影の途中で体調を崩してしまったら。</summary><p>日程はいつでも延期できます。万一撮影を続けられなくなった場合も、それまでに伺ったお話とお写真で一本の映像に仕上げ、ご家族にお届けします。</p></details>
-      </div>
-    </div>
-  </section>
-
   <section class="sec" id="company">
     <div class="wrap">
       <div class="sec-head">
         <span class="en">Company</span>
-        <h2>事業概要</h2>
+        <h2>運営</h2>
       </div>
       <table class="company">
         <tr><th scope="row">事業名</th><td>ひとこま（仮称）</td></tr>
-        <tr><th scope="row">事業責任者</th><td>滝田 務（チーフディレクター）</td></tr>
-        <tr><th scope="row">事業内容</th><td>ライフヒストリー映像、経営者ヒストリー映像、創業者・企業ヒストリー映像、追悼ヒストリー映像の企画・取材・撮影・編集</td></tr>
-        <tr><th scope="row">事業開始</th><td>2027年4月（予定）</td></tr>
+        <tr><th scope="row">事業内容</th><td>経営者・元経営者のライフヒストリー映像、創業者ヒストリー映像の企画・取材・撮影・編集</td></tr>
+        <tr><th scope="row">制作体制</th><td>在京キー局出身のチーフディレクターを中心とした制作チーム</td></tr>
         <tr><th scope="row">運営会社</th><td>福祉ITパートナー（仮）</td></tr>
         <tr><th scope="row">代表者</th><td>上原 健太</td></tr>
         <tr><th scope="row">所在地</th><td>〒000-0000 東京都○○区○○ 0-0-0（仮）</td></tr>
-        <tr><th scope="row">電話番号</th><td>03-0000-0000（仮）</td></tr>
-        <tr><th scope="row">メール</th><td>info@hitokoma.example（仮）</td></tr>
-        <tr><th scope="row">対応エリア</th><td>全国（東京23区外は交通費・宿泊費を実費で頂戴します）</td></tr>
       </table>
     </div>
   </section>
@@ -704,9 +498,9 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 <section class="contact" id="contact">
   <div class="wrap">
     <span class="en">Contact</span>
-    <h2>まずは、お話を聞かせてください。</h2>
-    <p>ご相談は無料です。映像にするかどうかを決めていただくのは、お話を伺ったあとで構いません。ご本人からでも、ご家族や会社の方からでも承ります。</p>
-    <div class="box"><b>ご相談窓口</b><span>お電話　03-0000-0000（仮）</span><span>メール　info@hitokoma.example（仮）</span><span>受付時間　平日 10:00〜18:00（土日祝はご予約にて承ります）</span></div>
+    <h2>ご縁のある方と、おひとりずつ。</h2>
+    <p>ひとこまは、広くご依頼を募ることはしていません。ご紹介をいただいた方と個別にお会いし、お話を伺ったうえで、内容と費用をご提案しています。ご本人からでも、ご家族や会社の方からでも承ります。</p>
+    <div class="box"><b>ご相談窓口</b><span>メール　info@hitokoma.example（仮）</span><span>ご紹介者のお名前を添えて、ご連絡ください。</span></div>
   </div>
 </section>
 <footer class="foot">
