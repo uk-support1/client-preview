@@ -263,11 +263,58 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
 .origin{margin:0;display:grid;gap:18px;font-family:var(--f-display);font-size:16.5px;line-height:2.1;padding-left:24px;border-left:1px solid var(--gold)}
 .origin .en{color:var(--gold)}
 
+/* 線画アイコンと装飾（写真の代わり） */
+.ic{width:24px;height:24px;flex:none;color:var(--accent)}
+.ic.mid{width:34px;height:34px}
+.ic.big{width:52px;height:52px}
+.vignettes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:72px}
+@media (max-width:720px){.vignettes{grid-template-columns:1fr;gap:20px}}
+.vignettes figure{margin:0;display:grid;justify-items:center;text-align:center;gap:18px;padding:36px 20px;background:linear-gradient(170deg,#FFFDF8,#F6EFE2);border:1px solid var(--line);border-radius:4px}
+.vignettes .disc{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid #DCC9A6;box-shadow:0 0 0 8px rgba(201,161,92,.09)}
+.vignettes .disc .ic{color:var(--gold)}
+.vignettes figcaption{font-family:var(--f-display);font-size:17px;line-height:1.9}
+.creed .k .ic{margin-bottom:8px}
+.dreams .dh{display:flex;align-items:center;gap:14px}
+.dreams .dh .ic{color:var(--gold)}
+.dreams .kn{font-size:22px}
+.reel{position:relative;padding:30px 14px;border-radius:4px;background:#EDE3D1;
+  background-image:radial-gradient(circle,#FBF9F5 3px,transparent 3.6px),radial-gradient(circle,#FBF9F5 3px,transparent 3.6px);
+  background-size:22px 12px,22px 12px;background-repeat:repeat-x,repeat-x;background-position:6px 9px,6px calc(100% - 9px)}
+.reel .chapters{border-top:0;gap:10px}
+.reel .chapters li{background:var(--surface);border:1px solid #DCCFB8;border-radius:3px;padding:22px 18px;min-height:190px}
+.reel .chapters li.hl{background:linear-gradient(160deg,#FBEFD6,#F1DCAF);border-color:#D9B57A}
+@media (max-width:900px){
+  .reel{padding:14px 34px;background-size:12px 22px,12px 22px;background-repeat:repeat-y,repeat-y;background-position:10px 6px,calc(100% - 10px) 6px}
+  .reel .chapters li{min-height:0;border-bottom:1px solid #DCCFB8}}
+.career li{grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:start}
+.career li .ic{grid-row:span 2;margin-top:2px}
+.origin-col{display:grid;gap:24px}
+.camera-ill{width:min(260px,70%);height:auto;color:var(--gold);justify-self:start}
+.camera-ill .spin{animation:reel 9s linear infinite}
+@keyframes reel{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.camera-ill .spin{animation:none}}
+.approach .ah{display:flex;align-items:flex-end;gap:16px;padding-bottom:14px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.approach .ah .num{border:0;padding:0;margin:0;width:auto;font-size:34px}
+.approach .ah .ic{color:var(--accent)}
+.band{background:var(--accent-soft)}
+.flow2{border-top:0;position:relative;gap:0}
+.flow2::before{content:"";position:absolute;left:28px;right:calc(100%/6 - 28px);top:28px;height:1px;background:var(--accent);opacity:.45}
+.flow2 li{padding:0 14px 0 0}
+.flow2 .dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--accent);position:relative;margin-bottom:10px}
+@media (max-width:900px){
+  .flow2::before{left:28px;right:auto;top:28px;bottom:110px;width:1px;height:auto}
+  .flow2 li{grid-template-columns:56px minmax(0,1fr);column-gap:16px;padding:12px 0;border-bottom:0}
+  .flow2 li .dot{grid-row:span 3;margin:0}}
+.tint{background:linear-gradient(180deg,#F8F3EA,var(--bg))}
+.promises > div{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:18px}
+.promises > div .ic{grid-row:span 2;color:var(--gold)}
+
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="i-talk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h12v8H8l-4 3v-3H3z"/><path d="M15 9h6v8h-1v3l-4-3h-5v-2"/></symbol><symbol id="i-tea" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h11v4a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 11h2a2 2 0 0 1 0 4h-2"/><path d="M8 3c0 2 2 2 2 4M12 3c0 2 2 2 2 4"/><path d="M4 21h14"/></symbol><symbol id="i-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h4l4-3h4a1.5 1.5 0 0 1 0 3h-3"/><path d="M6 20l3-2h6l6-5a1.5 1.5 0 0 0-2-2l-4 3"/><rect x="11" y="3" width="6" height="5" rx="1"/></symbol><symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol><symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol><symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="4"/><path d="M12 5v2M5 14H3M21 14h-2M6.5 8.5 5 7M17.5 8.5 19 7M2 19h20"/></symbol><symbol id="i-build" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l6-4v16M10 21V10l10 3v8M2 21h20M14 15h2M14 18h2M6 12h2M6 16h2"/></symbol><symbol id="i-letter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></symbol><symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 14c0-3 2-5 6-5 0 3-2 5-6 5z"/><path d="M7 21h10"/></symbol><symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="1"/><path d="M8 3l4 4 4-4M8 22h8"/></symbol><symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"/></symbol><symbol id="i-noscript" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 9h6M9 13h6M9 17h3"/><path d="M3 21 21 3"/></symbol><symbol id="i-meet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M10 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></symbol><symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M11 7 5 21M13 7l6 14M7.5 15h9"/></symbol><symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h11a2 2 0 0 1 2 2v16H8a2 2 0 0 1-2-2z"/><path d="M10 8h5M10 12h5M10 16h3"/></symbol><symbol id="i-plan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 9v11"/></symbol><symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 11l5-3v8l-5-3z"/></symbol><symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></symbol><symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12"/><path d="M12 9c-1.5-3-5-4-5-1.5S12 9 12 9s5 1 5-1.5S13.5 6 12 9z"/></symbol><symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3M12 15v2"/></symbol><symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-quiet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-5 4z"/><path d="M9 10h6"/></symbol><symbol id="i-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v11h14V9M10 13h4"/></symbol></defs></svg>
 <header class="site-head">
   <div class="wrap">
     <a class="logo" href="#top"><b>ひとこま</b><span>ライフヒストリー映像制作</span></a>
@@ -354,10 +401,16 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         </div>
       </div>
 
+      <div class="vignettes">
+        <figure><div class="disc"><svg class="ic big" aria-hidden="true"><use href="#i-talk"/></svg></div><figcaption>家族も初めて聞いた、<br>若い頃の話。</figcaption></figure>
+        <figure><div class="disc"><svg class="ic big" aria-hidden="true"><use href="#i-tea"/></svg></div><figcaption>何気ない日常にこそ、<br>その人らしさがある。</figcaption></figure>
+        <figure><div class="disc"><svg class="ic big" aria-hidden="true"><use href="#i-hands"/></svg></div><figcaption>受け継がれていく、<br>技と思い。</figcaption></figure>
+      </div>
+
       <div class="creed">
-        <div><div class="k"><span class="en">Purpose</span><b>存在意義</b></div><div class="v"><h3>人の思いを、時代を越えて手渡す。</h3><p>ひとりの経営者が抱いてきた思いを、家族、社員、そして次の世代へ。言葉と表情のまま、確かに受け継がれるかたちにします。</p></div></div>
-        <div><div class="k"><span class="en">Mission</span><b>使命</b></div><div class="v"><h3>お会いし、お話を伺い、その人生を一本の映像に編む。</h3><p>成し遂げたことも、成し遂げられなかったことも。人生の一場面ずつに光を当て、その方の生き様が伝わるヒストリーに仕上げます。</p></div></div>
-        <div><div class="k"><span class="en">Vision</span><b>目指す姿</b></div><div class="v"><h3>人生の思いを映像で残すことが、当たり前の社会へ。</h3><p>功績を讃える記念品ではなく、思いを受け継ぐための記録として。生き様を映像で残す文化を、日本の経営者から広げていきます。</p></div></div>
+        <div><div class="k"><svg class="ic mid" aria-hidden="true"><use href="#i-heart"/></svg><span class="en">Purpose</span><b>存在意義</b></div><div class="v"><h3>人の思いを、時代を越えて手渡す。</h3><p>ひとりの経営者が抱いてきた思いを、家族、社員、そして次の世代へ。言葉と表情のまま、確かに受け継がれるかたちにします。</p></div></div>
+        <div><div class="k"><svg class="ic mid" aria-hidden="true"><use href="#i-film"/></svg><span class="en">Mission</span><b>使命</b></div><div class="v"><h3>お会いし、お話を伺い、その人生を一本の映像に編む。</h3><p>成し遂げたことも、成し遂げられなかったことも。人生の一場面ずつに光を当て、その方の生き様が伝わるヒストリーに仕上げます。</p></div></div>
+        <div><div class="k"><svg class="ic mid" aria-hidden="true"><use href="#i-sun"/></svg><span class="en">Vision</span><b>目指す姿</b></div><div class="v"><h3>人生の思いを映像で残すことが、当たり前の社会へ。</h3><p>功績を讃える記念品ではなく、思いを受け継ぐための記録として。生き様を映像で残す文化を、日本の経営者から広げていきます。</p></div></div>
       </div>
     </div>
   </section>
@@ -378,9 +431,9 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         </figure>
       </div>
       <div class="dreams">
-        <div><span class="kn" aria-hidden="true">壱</span><b>描いていた事業</b><p>時代や資金、体力の事情で実現できなかった構想。その着想と、いまも消えない熱を語っていただきます。</p></div>
-        <div><span class="kn" aria-hidden="true">弐</span><b>果たせなかった約束</b><p>恩人に、家族に、社員に。言えずにきた感謝や、果たせなかった約束を、ご自身の言葉で残します。</p></div>
-        <div><span class="kn" aria-hidden="true">参</span><b>次の世代に託す志</b><p>後継者、お子さま、お孫さま、会社の若い社員へ。叶えてほしい夢と、大切にしてほしい考えを手渡します。</p></div>
+        <div><div class="dh"><svg class="ic mid" aria-hidden="true"><use href="#i-build"/></svg><span class="kn" aria-hidden="true">壱</span></div><b>描いていた事業</b><p>時代や資金、体力の事情で実現できなかった構想。その着想と、いまも消えない熱を語っていただきます。</p></div>
+        <div><div class="dh"><svg class="ic mid" aria-hidden="true"><use href="#i-letter"/></svg><span class="kn" aria-hidden="true">弐</span></div><b>果たせなかった約束</b><p>恩人に、家族に、社員に。言えずにきた感謝や、果たせなかった約束を、ご自身の言葉で残します。</p></div>
+        <div><div class="dh"><svg class="ic mid" aria-hidden="true"><use href="#i-sprout"/></svg><span class="kn" aria-hidden="true">参</span></div><b>次の世代に託す志</b><p>後継者、お子さま、お孫さま、会社の若い社員へ。叶えてほしい夢と、大切にしてほしい考えを手渡します。</p></div>
       </div>
     </div>
   </section>
@@ -392,13 +445,13 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <h2>ヒストリー映像の章立て</h2>
         <p class="def">お一人おひとりの人生に合わせて構成しますが、多くの作品は次の流れで、生まれた日から未来へ託す思いまでをたどります。</p>
       </div>
-      <ol class="chapters">
+      <div class="reel"><ol class="chapters">
         <li><span class="en">Chapter 1</span><b>原点</b><span>生まれた町、ご両親、少年時代。人生の土台となった出来事。</span></li>
         <li><span class="en">Chapter 2</span><b>決断</b><span>創業や転機。なぜその道を選び、何を懸けたのか。</span></li>
         <li><span class="en">Chapter 3</span><b>成し遂げたこと</b><span>築いてきた事業と、ともに歩んだ人々の証言。</span></li>
         <li class="hl"><span class="en">Chapter 4</span><b>成し遂げられなかったこと</b><span>描いていた夢、果たせなかった約束、いまも残る思い。</span></li>
         <li><span class="en">Chapter 5</span><b>託す言葉</b><span>家族へ、社員へ、次の世代へ。未来に向けたメッセージ。</span></li>
-      </ol>
+      </ol></div>
     </div>
   </section>
 
@@ -413,19 +466,30 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
           <p class="role">ひとこま チーフディレクター</p>
           <p class="title">在京キー局 番組制作出身</p>
           <ul class="career">
-            <li><b>放送の最前線で</b><span>在京キー局の番組制作に長年携わり、ディレクター、プロデューサーとして報道・情報番組やドキュメンタリーをつくり続けてきました。</span></li>
-            <li><b>トップの言葉を引き出す</b><span>企業のトップから、第一線で活躍する俳優・著名人まで。数えきれないインタビューの現場で、限られた時間の中から本音を引き出してきました。</span></li>
-            <li><b>人生を一本の物語に</b><span>何十時間にも及ぶ言葉の中から、その人らしさが最も表れる一瞬を選び取り、見る人の心に届く一本の物語に編み上げます。</span></li>
+            <li><svg class="ic mid" aria-hidden="true"><use href="#i-tv"/></svg><b>放送の最前線で</b><span>在京キー局の番組制作に長年携わり、ディレクター、プロデューサーとして報道・情報番組やドキュメンタリーをつくり続けてきました。</span></li>
+            <li><svg class="ic mid" aria-hidden="true"><use href="#i-mic"/></svg><b>トップの言葉を引き出す</b><span>企業のトップから、第一線で活躍する俳優・著名人まで。数えきれないインタビューの現場で、限られた時間の中から本音を引き出してきました。</span></li>
+            <li><svg class="ic mid" aria-hidden="true"><use href="#i-film"/></svg><b>人生を一本の物語に</b><span>何十時間にも及ぶ言葉の中から、その人らしさが最も表れる一瞬を選び取り、見る人の心に届く一本の物語に編み上げます。</span></li>
           </ul>
           <p class="fine">氏名と経歴の詳細は、ご相談の際に直接お伝えしています。</p>
         </div>
-        <blockquote class="origin">
+        <div class="origin-col">
+          <svg class="camera-ill" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <g class="spin" style="transform-origin:80px 45px"><circle cx="80" cy="45" r="28"/><circle cx="80" cy="45" r="5"/><path d="M80 22v14M80 54v14M57 45h14M89 45h14"/></g>
+            <g class="spin" style="transform-origin:140px 45px"><circle cx="140" cy="45" r="28"/><circle cx="140" cy="45" r="5"/><path d="M140 22v14M140 54v14M117 45h14M149 45h14"/></g>
+            <rect x="62" y="76" width="100" height="50" rx="4"/><path d="M70 76v-4h84v4"/>
+            <path d="M162 90l30-10v42l-30-10z"/><rect x="192" y="78" width="7" height="46" rx="2"/>
+            <rect x="40" y="86" width="22" height="14" rx="2"/><circle cx="84" cy="101" r="6"/>
+            <path d="M112 126v10M112 136l-38 58M112 136l38 58M112 136v58M84 176h56"/>
+            <path class="beam" d="M199 86l38-22M199 116l38 22" stroke-dasharray="3 5"/>
+          </svg>
+          <blockquote class="origin">
           <span class="en">Origin</span>
           <p>ひとこまの始まりは、チーフディレクターが、亡き祖母の葬儀のためにつくった一本の映像でした。</p>
           <p>祖母の人生をたどる映像を式で流すと、家族や祖母の友人たちから、後になって何度も感謝の言葉が届きました。写真を並べるだけでは伝わらなかった思いが、映像と言葉を通して、確かに届いたのです。</p>
           <p>同時に、悔いも残りました。祖母が本当は何を考え、何をやり残したと感じていたのか。それを本人の口から聞いておけばよかった、と。</p>
           <p>だから私たちは、ご本人が語れるうちに、その思いを伺いに行きます。</p>
         </blockquote>
+          </div>
       </div>
     </div>
   </section>
@@ -437,42 +501,42 @@ section.sec{padding-block:96px;border-bottom:1px solid var(--line)}
         <h2>制作の考え方</h2>
       </div>
       <div class="approach">
-        <div><span class="num" aria-hidden="true">一</span><h3>台本はつくりません</h3><p>あらかじめ書いた言葉を読んでいただくことはありません。私たちが用意するのは問いだけです。語られる言葉はすべて、あなた自身のものです。</p></div>
-        <div><span class="num" aria-hidden="true">二</span><h3>必ずお会いして伺います</h3><p>一度の撮影で終わらせず、数回にわたってお会いし、信頼関係を築きながらお話を伺います。本音は、向き合う時間の中でしか生まれません。</p></div>
-        <div><span class="num" aria-hidden="true">三</span><h3>お一人のために、一から設計します</h3><p>決まったプランはありません。語っていただく内容、取材する方、訪ねる場所、映像の長さまで、あなたの人生に合わせて一から組み立てます。</p></div>
+        <div><div class="ah"><svg class="ic big" aria-hidden="true"><use href="#i-noscript"/></svg><span class="num" aria-hidden="true">一</span></div><h3>台本はつくりません</h3><p>あらかじめ書いた言葉を読んでいただくことはありません。私たちが用意するのは問いだけです。語られる言葉はすべて、あなた自身のものです。</p></div>
+        <div><div class="ah"><svg class="ic big" aria-hidden="true"><use href="#i-meet"/></svg><span class="num" aria-hidden="true">二</span></div><h3>必ずお会いして伺います</h3><p>一度の撮影で終わらせず、数回にわたってお会いし、信頼関係を築きながらお話を伺います。本音は、向き合う時間の中でしか生まれません。</p></div>
+        <div><div class="ah"><svg class="ic big" aria-hidden="true"><use href="#i-compass"/></svg><span class="num" aria-hidden="true">三</span></div><h3>お一人のために、一から設計します</h3><p>決まったプランはありません。語っていただく内容、取材する方、訪ねる場所、映像の長さまで、あなたの人生に合わせて一から組み立てます。</p></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="flow">
+  <section class="sec band" id="flow">
     <div class="wrap">
       <div class="sec-head">
         <span class="en">Process</span>
         <h2>制作の流れ</h2>
         <p class="def">ご相談から完成まで、おおむね3か月から6か月。ご体調やご予定に合わせて、無理のない進め方をご提案します。</p>
       </div>
-      <ol class="flow">
-        <li><span class="en">Step 1</span><b>ご相談</b><span>まずはお会いして、映像に残したい思いと、ご覧いただきたい方を伺います。</span></li>
-        <li><span class="en">Step 2</span><b>事前取材</b><span>人生の年表をともにたどり、語っていただきたい場面を整理します。</span></li>
-        <li><span class="en">Step 3</span><b>構成と内容のご提案</b><span>章立て、取材先、撮影場所、制作の規模と費用をご提案します。</span></li>
-        <li><span class="en">Step 4</span><b>インタビュー・撮影</b><span>数回に分けてお話を伺い、ゆかりの地を訪ね、ご家族や旧知の方にも取材します。</span></li>
-        <li><span class="en">Step 5</span><b>編集・試写</b><span>試写でご確認いただき、ご納得いただけるまで仕上げます。</span></li>
-        <li><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品します。上映の場にも立ち会います。</span></li>
+      <ol class="flow flow2">
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-talk"/></svg></span><span class="en">Step 1</span><b>ご相談</b><span>まずはお会いして、映像に残したい思いと、ご覧いただきたい方を伺います。</span></li>
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-note"/></svg></span><span class="en">Step 2</span><b>事前取材</b><span>人生の年表をともにたどり、語っていただきたい場面を整理します。</span></li>
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-plan"/></svg></span><span class="en">Step 3</span><b>構成と内容のご提案</b><span>章立て、取材先、撮影場所、制作の規模と費用をご提案します。</span></li>
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-camera"/></svg></span><span class="en">Step 4</span><b>インタビュー・撮影</b><span>数回に分けてお話を伺い、ゆかりの地を訪ね、ご家族や旧知の方にも取材します。</span></li>
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-play"/></svg></span><span class="en">Step 5</span><b>編集・試写</b><span>試写でご確認いただき、ご納得いただけるまで仕上げます。</span></li>
+        <li><span class="dot"><svg class="ic mid" aria-hidden="true"><use href="#i-gift"/></svg></span><span class="en">Step 6</span><b>お届け</b><span>上映用データと保存用メディアで納品します。上映の場にも立ち会います。</span></li>
       </ol>
     </div>
   </section>
 
-  <section class="sec" id="promise">
+  <section class="sec tint" id="promise">
     <div class="wrap">
       <div class="sec-head">
         <span class="en">Our promise</span>
         <h2>思いをお預かりする者として</h2>
       </div>
       <div class="promises">
-        <div><h3>守秘の徹底</h3><p>伺ったお話、経営上の情報、ご家族に関することは、ご本人の許可なく外部に出すことはありません。必要に応じて秘密保持契約を結びます。</p></div>
-        <div><h3>公開範囲はご本人が決める</h3><p>ご家族だけで見る、社内で共有する、式で上映する。誰に見せるかは、すべてご本人とご家族のご判断に従います。</p></div>
-        <div><h3>語りたくないことは、語らなくていい</h3><p>お話しいただく内容はご本人が選べます。撮影後でも、使ってほしくない場面は必ず外します。</p></div>
-        <div><h3>長く残る形で</h3><p>何十年先にもご覧いただけるよう、複数の形式で納品し、ご希望に応じて原本データをお預かりします。</p></div>
+        <div><svg class="ic mid" aria-hidden="true"><use href="#i-lock"/></svg><h3>守秘の徹底</h3><p>伺ったお話、経営上の情報、ご家族に関することは、ご本人の許可なく外部に出すことはありません。必要に応じて秘密保持契約を結びます。</p></div>
+        <div><svg class="ic mid" aria-hidden="true"><use href="#i-eye"/></svg><h3>公開範囲はご本人が決める</h3><p>ご家族だけで見る、社内で共有する、式で上映する。誰に見せるかは、すべてご本人とご家族のご判断に従います。</p></div>
+        <div><svg class="ic mid" aria-hidden="true"><use href="#i-quiet"/></svg><h3>語りたくないことは、語らなくていい</h3><p>お話しいただく内容はご本人が選べます。撮影後でも、使ってほしくない場面は必ず外します。</p></div>
+        <div><svg class="ic mid" aria-hidden="true"><use href="#i-archive"/></svg><h3>長く残る形で</h3><p>何十年先にもご覧いただけるよう、複数の形式で納品し、ご希望に応じて原本データをお預かりします。</p></div>
       </div>
     </div>
   </section>
