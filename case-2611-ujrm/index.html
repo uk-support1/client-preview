@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>きたコーチ｜子どものためのメンタルパフォーマンスコーチ（デモ）</title>
+<meta name="description" content="子どものためのメンタルパフォーマンスコーチ・北村（きた）のホームページ。試合で力を出しきるための「心の練習」を、競技の枠をこえて届けます。">
+<meta name="theme-color" content="#1e2a5e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <a class="brand" href="#top" aria-label="きたコーチ トップへ">
+    <span class="brand__mark" aria-hidden="true"></span>
+    <span class="brand__name">きたコーチ</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="メインメニュー">
+    <ul>
+      <li><a href="#about">メンタルコーチとは</a></li>
+      <li><a href="#breathe">体験する</a></li>
+      <li><a href="#menu">メニュー</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+    <a class="btn btn--sun nav__cta" href="#contact">相談する</a>
+  </nav>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="メニューを開く">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero__inner wrap">
+    <div class="hero__text">
+      <p class="hero__role">子どものためのメンタルパフォーマンスコーチ</p>
+      <h1 class="hero__title">
+        <span class="hero__line">心も、</span>
+        <span class="hero__line">練習できる。</span>
+      </h1>
+      <p class="hero__lead">
+        「本番になると、いつものプレーができない」。<br>
+        それは気持ちが弱いからではなく、<br class="sp-hide">心の使い方を、まだ練習していないだけ。<br>
+        体や技と同じように、心にも練習メニューがあります。
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--sun" href="#contact">まずは話してみる</a>
+        <a class="btn btn--ghost" href="#about">メンタルコーチってなに？</a>
+      </div>
+    </div>
+
+    <figure class="board" aria-label="作戦ボード：きんちょうしたら、深呼吸して、いまに集中。ミスしても切りかえて、いつものプレーへ。">
+      <svg class="board__svg" viewBox="0 0 520 440" role="img" aria-hidden="true">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1 L8 5 L1 9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arrowSun" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M1 1 L8 5 L1 9" fill="none" stroke="#ffa62b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <!-- field -->
+        <g class="board__field">
+          <rect x="18" y="18" width="484" height="404" rx="14"/>
+          <line x1="260" y1="18" x2="260" y2="422"/>
+          <circle cx="260" cy="220" r="54"/>
+          <path d="M18 150 h52 v140 h-52"/>
+          <path d="M502 150 h-52 v140 h52"/>
+        </g>
+
+        <!-- play 1: 緊張 → 呼吸 -->
+        <g class="node n1">
+          <circle cx="92" cy="96" r="30"/>
+          <text x="92" y="102">緊張</text>
+        </g>
+        <path class="chalk c1" d="M118 112 C 160 150, 170 190, 200 206" marker-end="url(#arrow)"/>
+
+        <g class="node n2">
+          <circle cx="232" cy="222" r="34"/>
+          <text x="232" y="229">呼吸</text>
+        </g>
+        <path class="chalk c2" d="M266 214 C 300 190, 318 170, 336 150" marker-end="url(#arrow)"/>
+
+        <g class="node n3">
+          <circle cx="364" cy="128" r="32"/>
+          <text x="364" y="122" class="sm">いまに</text>
+          <text x="364" y="142" class="sm">集中</text>
+        </g>
+        <path class="chalk c3" d="M394 116 C 408 86, 410 70, 420 62" marker-end="url(#arrow)"/>
+
+        <g class="node node--goal n4">
+          <circle cx="452" cy="58" r="26"/>
+          <path d="M452 44 l4.2 8.6 9.4 1.4-6.8 6.6 1.6 9.4-8.4-4.4-8.4 4.4 1.6-9.4-6.8-6.6 9.4-1.4z"/>
+        </g>
+        <text class="board__note n4" x="462" y="106">いつもの<tspan x="462" dy="18">プレー</tspan></text>
+
+        <!-- play 2: ミス → 切りかえ -->
+        <g class="cross n5">
+          <path d="M150 330 l26 26 M176 330 l-26 26"/>
+          <text x="163" y="390">ミス</text>
+        </g>
+        <path class="chalk chalk--sun c5" d="M188 340 C 250 360, 330 330, 352 172" marker-end="url(#arrowSun)"/>
+        <text class="board__note board__note--sun n6" x="300" y="372">切りかえ</text>
+      </svg>
+      <figcaption class="board__caption">きたコーチの作戦ボード。心の動きにも、ちゃんと「型」があります。</figcaption>
+    </figure>
+  </div>
+
+  <ul class="sports" aria-label="対象の競技">
+    <li>ラグビー</li><li>バスケットボール</li><li>武道</li><li>ボクシング</li><li>サッカー</li><li>野球</li><li>水泳</li><li>陸上</li><li>ダンス</li><li>そして、あらゆる競技</li>
+  </ul>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about section" id="about">
+  <div class="wrap">
+    <h2 class="h2">メンタルパフォーマンスコーチって、<br class="sp-only">なにをする人？</h2>
+    <p class="about__lead">
+      スポーツのチームには、体をきたえるコーチと、技術を教えるコーチがいます。メンタルパフォーマンスコーチは、その3人目。<strong>心の使い方</strong>を練習するコーチです。海外のプロや代表チームでは当たり前になりつつある役割を、子どもたちの身近に届けたいと考えています。
+    </p>
+
+    <div class="trio">
+      <article class="trio__item">
+        <p class="trio__kanji" aria-hidden="true">体</p>
+        <h3>フィジカルコーチ</h3>
+        <p>走る・跳ぶ・当たる。体力と体の使い方をきたえます。</p>
+      </article>
+      <article class="trio__item">
+        <p class="trio__kanji" aria-hidden="true">技</p>
+        <h3>技術コーチ</h3>
+        <p>パス・シュート・型。競技ごとの技術を教えます。</p>
+      </article>
+      <article class="trio__item trio__item--mind">
+        <p class="trio__kanji" aria-hidden="true">心</p>
+        <h3>メンタルパフォーマンスコーチ</h3>
+        <p>緊張との付き合い方、集中のつくり方、ミスからの切りかえ。競技をこえて使える「心の技術」を練習します。</p>
+      </article>
+    </div>
+
+    <div class="diff">
+      <h3 class="diff__title">カウンセリングとは、ここがちがいます</h3>
+      <dl class="diff__list">
+        <div>
+          <dt>目的</dt>
+          <dd>悩みを治すことではなく、持っている力を本番で出しきること。</dd>
+        </div>
+        <div>
+          <dt>やり方</dt>
+          <dd>話を聞くだけで終わらず、呼吸・ルーティン・目標づくりなどを実際に練習します。</dd>
+        </div>
+        <div>
+          <dt>対象</dt>
+          <dd>「心が弱い子」のためのものではありません。もっと上手くなりたい、すべての子のために。</dd>
+        </div>
+      </dl>
+      <p class="diff__note">医療や治療が必要と感じられる場合は、専門の医療機関をご案内します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Voices ===== -->
+<section class="voices section" id="voices">
+  <div class="wrap">
+    <h2 class="h2">こんな声、聞こえていませんか？</h2>
+    <div class="voices__cols">
+      <div class="voices__group">
+        <h3 class="voices__who">子どもたちから</h3>
+        <ul class="bubbles">
+          <li>練習ではできるのに、試合になると手がふるえる。</li>
+          <li>一回ミスすると、そのあとずっと引きずっちゃう。</li>
+          <li>レギュラーになれなくて、なんで続けてるのか分からなくなった。</li>
+          <li>みんなの前で失敗するのがこわい。</li>
+        </ul>
+      </div>
+      <div class="voices__group voices__group--adult">
+        <h3 class="voices__who">保護者・指導者から</h3>
+        <ul class="bubbles bubbles--adult">
+          <li>試合のあと、どんな言葉をかければいいか迷う。</li>
+          <li>「気持ちで負けるな」以外の伝え方を知りたい。</li>
+          <li>やる気の波が大きくて、どう支えればいいのか分からない。</li>
+        </ul>
+      </div>
+    </div>
+    <p class="voices__answer">その「どうしよう」を、<br class="sp-only">一緒に練習メニューに変えていきます。</p>
+  </div>
+</section>
+
+<!-- ===== Breathe (interactive) ===== -->
+<section class="breathe section" id="breathe">
+  <div class="wrap breathe__inner">
+    <div class="breathe__text">
+      <h2 class="h2 h2--light">1分だけ、心の練習をしてみよう</h2>
+      <p>
+        試合の前、フリースローの前、組み手の前。トップ選手も使っている、いちばんシンプルな心の技術が「呼吸」です。円が大きくなったら吸って、小さくなったら吐く。3回くり返します。
+      </p>
+      <p class="breathe__hint">息を吐く時間を長くすると、体がリラックスしやすくなります。</p>
+    </div>
+    <div class="breathe__tool">
+      <div class="orb" id="orb">
+        <div class="orb__ring" aria-hidden="true"></div>
+        <div class="orb__core" aria-hidden="true"></div>
+        <p class="orb__label" id="orbLabel" aria-live="polite">準備ができたら<br>はじめよう</p>
+        <p class="orb__count" id="orbCount" aria-hidden="true"></p>
+      </div>
+      <button class="btn btn--sun breathe__btn" id="breatheBtn" type="button">はじめる</button>
+      <ol class="breathe__rounds" id="rounds" aria-label="進み具合">
+        <li></li><li></li><li></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Values ===== -->
+<section class="values section" id="values">
+  <div class="wrap">
+    <h2 class="h2">大切にしていること</h2>
+    <div class="values__list">
+      <article class="value">
+        <h3>主役は、いつも子ども</h3>
+        <p>答えを教えるより、子ども自身が「こうしてみたい」と気づけるように問いかけます。自分で決めたことは、本番でも自分を支えてくれます。</p>
+      </article>
+      <article class="value">
+        <h3>競技の枠をこえて</h3>
+        <p>ラグビーもバスケも武道も、心の動きには共通点があります。いろいろな競技の現場を知っているからこそ、その子の競技に合わせた言葉で伝えます。</p>
+      </article>
+      <article class="value">
+        <h3>根拠のある方法で</h3>
+        <p>スポーツ心理学・心理学の考え方をもとに、子どもにも分かる形に置きかえて練習します。根性論だけには頼りません。</p>
+      </article>
+      <article class="value">
+        <h3>スポーツを、楽しいままに</h3>
+        <p>勝つことも大事。でもそれ以上に、スポーツを好きでいつづけられることが大事。結果より先に、心が育つ時間をつくります。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Menu ===== -->
+<section class="menu section" id="menu">
+  <div class="wrap">
+    <h2 class="h2">メニュー</h2>
+    <p class="section__lead">対面・オンラインどちらでも。内容と料金はご相談のうえで決めています。</p>
+    <div class="menu__list">
+      <article class="plan">
+        <div class="plan__photo photo-slot" data-label="写真：1対1のセッション風景"></div>
+        <div class="plan__body">
+          <h3>個別セッション</h3>
+          <p class="plan__for">小学生〜高校生の選手と、その保護者</p>
+          <p>その子の競技や目標に合わせて、緊張との付き合い方、試合前のルーティン、目標の立て方などを一緒につくります。</p>
+          <p class="plan__meta">1回 60分目安／料金はお問い合わせください</p>
+        </div>
+      </article>
+      <article class="plan">
+        <div class="plan__photo photo-slot" data-label="写真：チームでのワークショップ"></div>
+        <div class="plan__body">
+          <h3>チーム・スクール向けワークショップ</h3>
+          <p class="plan__for">スポーツ少年団、部活動、クラブチーム</p>
+          <p>体を動かしながら学べるワークで、チーム全体の「心の準備」をそろえます。大会前の単発実施も。</p>
+          <p class="plan__meta">60〜90分／人数に合わせて調整します</p>
+        </div>
+      </article>
+      <article class="plan">
+        <div class="plan__photo photo-slot" data-label="写真：保護者・指導者向け講座"></div>
+        <div class="plan__body">
+          <h3>保護者・指導者向け講座</h3>
+          <p class="plan__for">保護者会、指導者研修、学校</p>
+          <p>試合の前後にかける言葉、やる気の支え方など、大人ができる関わり方を一緒に考えます。</p>
+          <p class="plan__meta">講演・研修のご依頼もお受けしています</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Flow ===== -->
+<section class="flow section" id="flow">
+  <div class="wrap">
+    <h2 class="h2">はじめるまでの流れ</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num" aria-hidden="true">1</span>
+        <h3>お問い合わせ</h3>
+        <p>InstagramやXのメッセージから、気軽にどうぞ。</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">2</span>
+        <h3>はじめの面談</h3>
+        <p>お子さんの競技や、いま気になっていることを聞かせてください。</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">3</span>
+        <h3>セッション</h3>
+        <p>その子に合った練習メニューで、心の技術を身につけます。</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">4</span>
+        <h3>試合でためして、ふりかえる</h3>
+        <p>やってみてどうだったか。うまくいったことも、次の練習につなげます。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Profile ===== -->
+<section class="profile section" id="profile">
+  <div class="wrap profile__inner">
+    <div class="profile__photo photo-slot photo-slot--portrait" data-label="写真：北村さんのポートレート"></div>
+    <div class="profile__text">
+      <p class="profile__role">メンタルパフォーマンスコーチ for kids</p>
+      <h2 class="profile__name">北村 <span>（きた）</span></h2>
+      <p>
+        子どもたちに「心の練習」を届けたくて、メンタルパフォーマンスコーチとして活動しています。ラグビー、バスケットボール、武道、ボクシングなど、いろいろな競技の現場で子どもたちと関わってきました。
+      </p>
+      <p>
+        グラウンドで見てきたのは、力はあるのに、本番で出しきれずに悔しがる子どもたちの姿。心の使い方を少し知っているだけで、その子の表情もプレーも変わります。日本中の子どもたちに、当たり前のようにメンタルコーチがいる。そんな未来をつくりたいと思っています。
+      </p>
+      <dl class="profile__facts">
+        <div><dt>専門</dt><dd>スポーツ心理学・心理学をもとにしたメンタルトレーニング</dd></div>
+        <div><dt>関わってきた競技</dt><dd>ラグビー（キッズのタグラグビーほか）、バスケットボール、武道、ボクシング</dd></div>
+        <div><dt>資格</dt><dd>JSPO公認スポーツ指導者、JBA公認D級コーチ<span class="todo">※表記はご本人に確認予定</span></dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="wrap gallery">
+    <div class="photo-slot" data-label="写真：グラウンドでの指導"></div>
+    <div class="photo-slot" data-label="写真：子どもたちと"></div>
+    <div class="photo-slot" data-label="写真：活動のようす"></div>
+  </div>
+</section>
+
+<!-- ===== Together ===== -->
+<section class="together section" id="together">
+  <div class="wrap together__inner">
+    <svg class="together__net" viewBox="0 0 600 260" aria-hidden="true">
+      <g class="net__lines">
+        <path d="M80 70 L300 130"/><path d="M80 200 L300 130"/><path d="M300 130 L520 60"/><path d="M300 130 L520 200"/>
+        <path d="M80 70 L80 200"/><path d="M520 60 L520 200"/><path d="M300 130 L300 30"/><path d="M300 130 L300 236"/>
+      </g>
+      <g class="net__dots">
+        <circle cx="80" cy="70" r="9"/><circle cx="80" cy="200" r="9"/><circle cx="520" cy="60" r="9"/><circle cx="520" cy="200" r="9"/>
+        <circle cx="300" cy="30" r="7"/><circle cx="300" cy="236" r="7"/>
+        <circle class="net__center" cx="300" cy="130" r="16"/>
+      </g>
+    </svg>
+    <h2 class="together__title">競技の枠をこえて、<br>仲間を探しています。</h2>
+    <p class="together__text">
+      子ども向けのメンタルパフォーマンスコーチは、日本ではまだ新しい仕事です。指導者、保護者、専門家、競技団体。立場や競技はちがっても、子どもたちの心を育てたい人とつながりたいと思っています。
+    </p>
+    <a class="btn btn--sun" href="#contact">一緒にやりたい、と伝える</a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq section" id="faq">
+  <div class="wrap wrap--narrow">
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq__list">
+      <details>
+        <summary>何歳から受けられますか？</summary>
+        <p>小学生から高校生までを中心にしています。低学年のお子さんは、遊びの要素を多めにして進めます。年齢に迷ったら、まずご相談ください。</p>
+      </details>
+      <details>
+        <summary>競技をしていなくても大丈夫ですか？</summary>
+        <p>大丈夫です。発表会や受験など、「本番で力を出したい」場面すべてに心の技術は使えます。</p>
+      </details>
+      <details>
+        <summary>保護者も同席できますか？</summary>
+        <p>はい。はじめの面談はご一緒にどうぞ。セッション中は、お子さんが話しやすい形をご相談しながら決めます。</p>
+      </details>
+      <details>
+        <summary>オンラインでも受けられますか？</summary>
+        <p>はい。ビデオ通話でのセッションにも対応しています。チーム向けワークショップは対面がおすすめです。</p>
+      </details>
+      <details>
+        <summary>どのくらい続ければ変わりますか？</summary>
+        <p>呼吸のように、その日から使える技術もあります。一方で、本番で自然に使えるようになるには、体の練習と同じでくり返しが大切です。目安はご相談のときにお伝えします。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact section" id="contact">
+  <div class="wrap contact__inner">
+    <h2 class="h2 h2--light">まずは、話してみませんか。</h2>
+    <p>
+      「うちの子に合うのかな」という段階でも大丈夫です。<br class="sp-hide">
+      InstagramやXのメッセージから、気軽にご連絡ください。
+    </p>
+    <div class="contact__links">
+      <a class="contact__link" href="https://www.instagram.com/smeckjp/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg>
+        <span>Instagramでメッセージ</span>
+      </a>
+      <a class="contact__link" href="https://x.com/smeckjp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4 L20 20 M20 4 L4 20"/></svg>
+        <span>Xでメッセージ</span>
+      </a>
+    </div>
+    <p class="contact__note">メールでのお問い合わせ窓口は準備中です。</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p class="brand brand--footer"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">きたコーチ</span></p>
+    <p class="footer__desc">子どものためのメンタルパフォーマンスコーチ</p>
+    <p class="footer__copy"><small>&copy; 2026 Kitamura</small></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
